@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~ 6796
+
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="colorPrimary">#e14b4b</color>
+    <color name="colorPrimaryDark">#f14b41</color>
+    <color name="colorAccent">#e14b4b</color>
+    <!-- 下载按钮-->
+    <color name="btn_green_normal">#6dc343</color>
+    <color name="btn_green_click">#5da639</color>
+
+    <!-- 商户资料背景色 -->
+    <color name="merchant_background">#9b9b9b</color>
+    <color name="benn_built">#787878</color>
+    <!--商品相关-->
+    <color name="goods_type_bg_pressed">#d9d9d9</color>
+    <color name="gray">#b7b7b7</color>
+    <color name="red">#ff3030</color>
+    <color name="small_gray">#EBEBEB</color>
+    <color name="bg_color">#f1f1f1</color>
+
+
+    <color name="ph_line">#cccccc</color>
+    <color name="indicator_yellow">#FFEA00</color>
+    <color name="actionbar_title_color">#ffdddd</color>
+
+    <color name="translucent_full">#00000000</color>
+    <color name="translucent_15_black">#26000000</color>
+
+    <color name="grid_line">#d2d2d2</color>
+    <color name="add_and_sub">#dbdcdd</color>
+    <color name="ads_edit">#c9cacb</color>
+    <color name="tab_bg">#ff4f4f</color>
+
+    <color name="logout_pressed">#dc4545</color>
+    <color name="logout_normal">#ff4f4f</color>
+
+    <color name="bottom_default_txt">#6a6f7c</color>
+
+    <!-- renwohua  -->
+    <color name="activity_default_bg">#efeff4</color>
+    <color name="green">#6dc343</color>
+
+    <color name="round_backgroundColor">#8e8e93</color>
+    <color name="round_progressColor">#00c4bf</color>
+    <color name="round_roundBackground">#FFFFFF</color>
+    <color name="color_c12">#00aaef</color>
+    <color name="color_c14">#ff5252</color>
+    <color name="color_3F000000">#3F000000</color>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/personal_main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <LinearLayout
+        android:id="@+id/personalinfo_myhead_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/personalinfo_myheadimg"
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+
+        <ImageView
+            android:id="@+id/personalinfo_head_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/personal_head_default"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_arrow"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <ImageView
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <LinearLayout
+        android:id="@+id/personalinfo_username_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/personalinfo_username"
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+        <TextView
+            android:id="@+id/personalinfo_username_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/default_padding"
+            android:text=""
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:background="@color/color_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personalinfo_resetPW_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/personalinfo_resetPW"
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_arrow"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/default_padding"
+        android:background="@color/color_line"/>
+
+    <LinearLayout
+        android:id="@+id/personalinfo_clean_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/personalinfo_clean"
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+
+        <TextView
+            android:id="@+id/shop_cache_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/default_padding"
+            android:text=""
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:src="@mipmap/right_arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:background="@color/color_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personalinfo_version_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/personalinfo_version"
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+
+        <TextView
+            android:id="@+id/shop_virsion_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:gravity="right"
+            android:layout_marginRight="@dimen/default_padding"
+            android:text=""
+            android:textSize="@dimen/personal_item_size"
+            android:textColor="@color/personal_item_tx"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <Button
+        android:id="@+id/personalinfo_exit_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/register_padding"
+        android:layout_marginLeft="@dimen/register_padding"
+        android:textSize="@dimen/login_button_text"
+        android:background="@drawable/red_full_selector"
+        android:textColor="@color/color_white"
+        android:text="@string/personalinfo_exit"/>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/default_padding">
+
+    <com.corelib.widget.RoundImageView
+        android:id="@+id/item_circle_head_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/member_item_ic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_circle_name_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="#3689AE"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_circle_content_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="内容"
+            android:textColor="@color/color_black"
+            android:textSize="16sp" />
+
+        <com.corelib.widget.MyGridView
+            android:id="@+id/item_circle_picture_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/item_circle_time_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:textColor="#AAAAAA"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_circle_num_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:layout_toLeftOf="@+id/item_circle_reply_iv"
+                android:textColor="#AAAAAA"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/item_circle_reply_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ia_delete"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

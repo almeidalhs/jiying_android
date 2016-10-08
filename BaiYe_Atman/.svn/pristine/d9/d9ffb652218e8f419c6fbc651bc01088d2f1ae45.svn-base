@@ -1,0 +1,367 @@
+package com.corelib.base;
+
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.Volley;
+import com.corelib.util.LogUtils;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.corelib.iimp.IInit;
+import com.corelib.net.IHttpInterface;
+import com.corelib.net.MemoryAndDiskBitmapCache;
+import com.corelib.net.request.YLBGsonRequest;
+import com.corelib.net.IVolleyListener;
+import com.corelib.util.YLBConversionUtils;
+import com.corelib.widget.WaitingDialog;
+
+import java.io.File;
+import java.util.Map;
+
+import third.me.imid.swipebacklayout.lib.app.SwipeBackActivity;
+
+/**
+ * Created by loyee on 15-12-09.
+ */
+public abstract class BaseAppCompatActivity extends SwipeBackActivity implements IVolleyListener, IHttpInterface, IInit, PullToRefreshBase.OnRefreshListener2 {
+
+    protected static final int MAX_CACHE_SIZE = 50 * 1024 * 1024;
+    private RequestQueue mDataQueue = null;
+    /**
+     * 图片请求队列
+     */
+    private RequestQueue mImageQueue = null;
+    /**
+     * 数据请求队列
+     */
+    private ImageLoader mImageLoader = null;
+    public WaitingDialog mWaitingDialog = null;
+    protected LayoutInflater mLayoutInflater = null;
+    /**
+     * 该标志位表示第一次进入先初始化init(包含基本数据和网络获取数据)
+     */
+    private boolean isFirstInto = true;
+    /**
+     * 是否返回界面时刷新数据 默认不刷新
+     */
+    public boolean isRefreshNetworkData = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        initVolley();
+    }
+
+    @Override
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+    }
+
+    /**
+     * 初始化
+     */
+    protected void init() {
+        initWidget();
+        initIntentAndMemData();
+        doInitBaseHttp();
+    }
+
+    /**
+     * 该方法会重新刷新doInitBaseHttp中所请求的数据
+     */
+    protected void resumeToRefreshBaseData() {
+        doInitBaseHttp();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (isFirstInto) {
+            init();
+            isFirstInto = false;
+        }
+        if (isRefreshNetworkData && !isFirstInto) {
+            resumeToRefreshBaseData();
+        }
+    }
+
+    @Override
+    public ImageLoader getImageLoader() {
+        return mImageLoader;
+    }
+
+    /**
+     * 给View添加图片使用默认处理
+     *
+     * @param imageView
+     * @param imgUrl
+     * @param defaultResId
+     */
+    @Override
+    public void setBitmapToImageView(ImageView imageView, String imgUrl, int defaultResId) {
+        getImageLoader().get(imgUrl, new DefaultImageListener(imageView, defaultResId));
+    }
+
+    /**
+     * 给View添加图片自定义处理
+     *
+     * @param imgUrl
+     */
+    public void setBitmapToImageView(String imgUrl, ImageLoader.ImageListener listener) {
+        getImageLoader().get(imgUrl, listener);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        RequestQueue.RequestFilter filter = new RequestQueue.RequestFilter() {
+            @Override
+            public boolean apply(Request<?> request) {
+                return true;
+            }
+        };
+        mImageQueue.cancelAll(filter);
+        mDataQueue.cancelAll(filter);
+        mImageQueue.stop();
+        mDataQueue.stop();
+    }
+
+    /**
+     * 开启加载Loading
+     */
+    public void showLoading() {
+        if (mWaitingDialog == null) {
+            mWaitingDialog = new WaitingDialog(this);
+        }
+        mWaitingDialog.setCanceledOnTouchOutside(true);
+        mWaitingDialog.startAnimation();
+        mWaitingDialog.setCancelable(true);
+        if (mWaitingDialog.isShowing()) {
+            return;
+        }
+        if (!isFinishing()) {
+            mWaitingDialog.show();
+        }
+    }
+
+    /**
+     * 关闭加载Loading
+     */
+    public void cancelLoading() {
+        try {
+            if (mWaitingDialog != null && mWaitingDialog.isShowing()) {
+                mWaitingDialog.stopAnimation();
+                mWaitingDialog.dismiss();
+            }
+        } catch (Exception e){
+        }
+    }
+
+    public void showToast(String msg) {
+        Toast.makeText(BaseApplication.getContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    /*
+     *   for fragment
+     */
+    @Override
+    public void sendHttpRequest(String url, Map<String, Object> params, Class clz, IVolleyListener listener) {
+        mDataQueue.add(YLBGsonRequest.createPostRequest(url, params, clz, listener));
+    }
+
+    @Override
+    public void sendHttpGetRequest(String url, Class clz, boolean showLodding, IVolleyListener listener) {
+        mDataQueue.add(YLBGsonRequest.createGetRequest(url, clz, listener));
+    }
+
+    @Override
+    public void sendHttpPutRequest(String url, Class clz, boolean showLodding, IVolleyListener listener) {
+        mDataQueue.add(YLBGsonRequest.createPutRequest(url, clz, listener));
+    }
+
+    @Override
+    public void sendHttpRequest(String url, Map<String, Object> params, Class clz, boolean showLodding, IVolleyListener listener) {
+        if (showLodding) {
+            showLoading();
+        }
+        this.sendHttpRequest(url, params, clz, listener);
+    }
+
+    @Override
+    public void cancelRequest(final String url) {
+        if (url == null)
+            return;
+        mDataQueue.cancelAll(new RequestQueue.RequestFilter() {
+            @Override
+            public boolean apply(Request<?> request) {
+                if (request instanceof YLBGsonRequest) {
+                    try {
+                        String requestUrl = (String) request.getTag();
+                        return requestUrl.equals(url);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        });
+    }
+
+    private void initVolley() {
+        isFirstInto = true;
+        File cacheDir = getCacheDir();
+        mDataQueue = Volley.newRequestQueue(this);
+        mImageQueue = Volley.newRequestQueue(this);
+        MemoryAndDiskBitmapCache ylbDiskBitmapCache = new MemoryAndDiskBitmapCache(cacheDir, MAX_CACHE_SIZE, BaseApplication.getMemoryCache());
+        mImageLoader = new ImageLoader(mImageQueue, ylbDiskBitmapCache);
+        mWaitingDialog = new WaitingDialog(this);
+        mLayoutInflater = LayoutInflater.from(this);
+    }
+
+    /**
+     * 基本网络请求
+     */
+    @Override
+    public void doInitBaseHttp() {
+
+    }
+
+    /**
+     * 初始化可支持上下啦的控件
+     *
+     * @param refreshMode       刷新模式从PullMode中间取
+     * @param pullToRefreshBase 基类View 可传多个不同的View
+     */
+    protected void initRefreshView(PullToRefreshBase.Mode refreshMode, PullToRefreshBase... pullToRefreshBase) {
+        if (pullToRefreshBase != null) {
+            for (PullToRefreshBase refreshBase : pullToRefreshBase) {
+                refreshBase.setOnRefreshListener(this);
+                refreshBase.onRefreshComplete();
+                refreshBase.setMode(refreshMode);
+            }
+        } else {
+            YLBConversionUtils.showToast("请实例化对象");
+        }
+    }
+
+
+    /**
+     * 初始化可支持上下啦的控件
+     *
+     * @param refreshMode       刷新模式从PullMode中间取
+     * @param pullToRefreshBase 基类View 可传多个不同的View
+     */
+    protected void initRefreshView(PullToRefreshBase.Mode refreshMode, PullToRefreshBase.OnRefreshListener2 listener2, PullToRefreshBase... pullToRefreshBase) {
+        if (pullToRefreshBase != null) {
+            for (PullToRefreshBase refreshBase : pullToRefreshBase) {
+                refreshBase.setOnRefreshListener(listener2);
+                refreshBase.onRefreshComplete();
+                refreshBase.setMode(refreshMode);
+            }
+        } else {
+            YLBConversionUtils.showToast("请实例化对象");
+        }
+    }
+
+    /**
+     * 数据加载完调用
+     *
+     * @param refreshMode 刷新完成后设置下拉上啦模式
+     */
+    protected void onLoad(final PullToRefreshBase.Mode refreshMode, PullToRefreshBase... pullToRefreshBase) {
+        if (pullToRefreshBase != null) {
+            for (final PullToRefreshBase refreshBase : pullToRefreshBase) {
+                try {
+                    refreshBase.onRefreshComplete();
+                    refreshBase.setMode(refreshMode);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+//                /**
+//                 * 延时取消加载（Pull本身一些奇怪现象）
+//                 */
+//                refreshBase.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        //hj add - 有时候界面destroy，refreshBase已经销毁，空指针
+//                        try {
+//                            refreshBase.onRefreshComplete();
+//                            refreshBase.setMode(refreshMode);
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }, 500);
+            }
+        } else {
+            YLBConversionUtils.showToast("请实例化对象");
+        }
+    }
+
+    /**
+     * 初始化基本变量及数据
+     */
+    @Override
+    public void initIntentAndMemData() {
+    }
+
+    @Override
+    public void onViewClick(View v) {
+
+    }
+
+    /**
+     * 下拉刷新
+     *
+     * @param refreshView
+     */
+    @Override
+    public void onPullDownToRefresh(PullToRefreshBase refreshView) {
+
+    }
+
+    /**
+     * 上拉刷新
+     *
+     * @param refreshView
+     */
+    @Override
+    public void onPullUpToRefresh(PullToRefreshBase refreshView) {
+
+    }
+
+    /**
+     * 初始化控件
+     *
+     * @param v
+     */
+    @Override
+    public void initWidget(View... v) {
+
+    }
+
+//    //hj removed 会导致有些逻辑没有走我的createIntent，走了这个
+//    /**
+//     * 该方法建议实现用于Activity跳转
+//     *
+//     * @param context
+//     * @param objects
+//     * @return
+//     */
+//    public static Intent createIntent(Context context, Object... objects) {
+//        return null;
+//    }
+
+}

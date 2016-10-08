@@ -1,0 +1,30 @@
+// Generated code from Butter Knife. Do not modify!
+package com.atman.baiye.base;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class SimpleTitleBarActivity$$ViewBinder<T extends com.atman.baiye.base.SimpleTitleBarActivity> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131493141, "field 'tvTitle'");
+    target.tvTitle = finder.castView(view, 2131493141, "field 'tvTitle'");
+    view = finder.findRequiredView(source, 2131493142, "field 'ivBack'");
+    target.ivBack = finder.castView(view, 2131493142, "field 'ivBack'");
+    view = finder.findRequiredView(source, 2131493143, "field 'tvRight'");
+    target.tvRight = finder.castView(view, 2131493143, "field 'tvRight'");
+    view = finder.findRequiredView(source, 2131493140, "field 'rlTitle'");
+    target.rlTitle = finder.castView(view, 2131493140, "field 'rlTitle'");
+    view = finder.findRequiredView(source, 2131493075, "field 'llRoot'");
+    target.llRoot = finder.castView(view, 2131493075, "field 'llRoot'");
+  }
+
+  @Override public void unbind(T target) {
+    target.tvTitle = null;
+    target.ivBack = null;
+    target.tvRight = null;
+    target.rlTitle = null;
+    target.llRoot = null;
+  }
+}

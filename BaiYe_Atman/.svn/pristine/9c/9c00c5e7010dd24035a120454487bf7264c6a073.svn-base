@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/personal_head_default.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/personal_head_default.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_finsh_gray.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_finsh_gray.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shopinfo_describe_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shopinfo_describe_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_proposal_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_proposal_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_back.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/ic_back.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/right_arrow.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/right_arrow.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_phone.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_phone.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_cs_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_cs_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/personal_top_bg.jpg",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/personal_top_bg.jpg"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_addr_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_addr_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_back_gray.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/ic_back_gray.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shopinfo_addr_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shopinfo_addr_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_about_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_about_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/personal_head_bg.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/personal_head_bg.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_password.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_password.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shopinfo_phone_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shopinfo_phone_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_password_gray.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_password_gray.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_name_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_name_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_phone_gray.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_phone_gray.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shopinfo_type_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shopinfo_type_ic.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/register_finsh.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/register_finsh.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/shop_friends_ic.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xhdpi/shop_friends_ic.png"
+    }
+]

@@ -1,0 +1,49 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="main_top_height">48dp</dimen>
+    <dimen name="default_padding">15dp</dimen>
+    <dimen name="login_padding">30dp</dimen>
+    <dimen name="main_bottom_height">58dp</dimen>
+
+    <dimen name="main_top_text_size">18sp</dimen>
+    <dimen name="main_bottom_text_size">13sp</dimen>
+    <dimen name="cs_phone_text">15sp</dimen>
+
+    <!--login-->
+    <dimen name="login_button_hight">40dp</dimen>
+    <dimen name="login_edittext_hight">43dp</dimen>
+    <dimen name="login_edittext_spacing">15dp</dimen>
+    <dimen name="login_button_top_spacing">25dp</dimen>
+    <dimen name="login_padding_spacing">40dp</dimen>
+    <dimen name="login_button_text">20sp</dimen>
+    <dimen name="login_forgetPW_text">14sp</dimen>
+    <dimen name="login_edittext_padding">15dp</dimen>
+    <dimen name="login_edittext_right_padding">5dp</dimen>
+    <dimen name="login_edittext_text">18sp</dimen>
+
+    <!--register-->
+    <dimen name="register_marginTop">10dp</dimen>
+    <dimen name="register_top_one">20sp</dimen>
+    <dimen name="register_top_two">15sp</dimen>
+    <dimen name="register_finish_top">55sp</dimen>
+    <dimen name="register_tx">17sp</dimen>
+    <dimen name="register_finish_tx">25sp</dimen>
+    <dimen name="register_finish_two_tx">15sp</dimen>
+    <dimen name="register_finish_two_top">10dp</dimen>
+    <dimen name="register_ic_wight">40dp</dimen>
+    <dimen name="register_padding">50dp</dimen>
+
+    <!--personal-->
+    <dimen name="personal_item_hight">50dp</dimen>
+    <dimen name="personal_item_hight_45">45dp</dimen>
+    <dimen name="personal_item_size">15sp</dimen>
+    <dimen name="personal_item_edit_size">14sp</dimen>
+    <dimen name="personal_item_ic">20dp</dimen>
+
+    <!--shopinfo-->
+    <dimen name="shop_top_tx">20sp</dimen>
+</resources>

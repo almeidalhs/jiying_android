@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCE0E3"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_coupon_denomination"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addcoupon_denomination_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_denomination_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_coupon_number"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"  />
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addcoupon_number_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_number_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_coupon_limit"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addcoupon_limit_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_limit_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_coupon_limitnumber"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addcoupon_limitnumber_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_limitnumber_hint"
+                    android:text="1"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addcoupon_starttime_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@drawable/white_hollow_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullcut_add_starttime"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/addcoupon_starttime_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_time_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/right_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:background="@color/color_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addcoupon_endtime_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@drawable/white_hollow_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullcut_add_endtime"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/addcoupon_endtime_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/add_coupon_time_hint"
+                    android:singleLine="true"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/right_arrow" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_coupon_explain"
+                    android:textColor="@color/personal_item_tx"
+                    android:textSize="@dimen/personal_item_size" />
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addcoupon_describe_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/gray_red_edittext_bg_selector"
+                    android:gravity="left|top"
+                    android:hint="@string/add_coupon_explain_hint"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:padding="5dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:background="@color/color_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/coupon_add_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_hollow_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/finish" />
+
+            <TextView
+                android:id="@+id/coupon_add_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/fullcut_add_ok"
+                android:textColor="#EC5D44"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

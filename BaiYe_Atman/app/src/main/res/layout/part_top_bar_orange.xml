@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_top_height"
+        android:background="@color/main_title_orange_color">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/main_top_text_size" />
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_back_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/default_padding"
+            android:text=""
+            android:textColor="@color/color_white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/nav_right_ll"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/iv_right_ok"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/nav_btn_icon_right_ok" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

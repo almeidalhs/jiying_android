@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\myworkspace\renwohua\corelib\src\main\res"><file name="dt_dialog_enter_anim" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\dt_dialog_enter_anim.xml" qualifiers="" type="anim"/><file name="dt_dialog_exit_anim" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\dt_dialog_exit_anim.xml" qualifiers="" type="anim"/><file name="slide_left_in" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\slide_left_in.xml" qualifiers="" type="anim"/><file name="slide_left_out" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\slide_left_out.xml" qualifiers="" type="anim"/><file name="slide_right_in" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\slide_right_in.xml" qualifiers="" type="anim"/><file name="slide_right_out" path="D:\myworkspace\renwohua\corelib\src\main\res\anim\slide_right_out.xml" qualifiers="" type="anim"/><file name="bottom_tab_text_color" path="D:\myworkspace\renwohua\corelib\src\main\res\color\bottom_tab_text_color.xml" qualifiers="" type="color"/><file name="ab_btn_selector" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\ab_btn_selector.xml" qualifiers="" type="drawable"/><file name="active_circle" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\active_circle.xml" qualifiers="" type="drawable"/><file name="barcolor" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\barcolor.xml" qualifiers="" type="drawable"/><file name="checkbox_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\checkbox_bg.xml" qualifiers="" type="drawable"/><file name="corners_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\corners_bg.xml" qualifiers="" type="drawable"/><file name="corners_bg2" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\corners_bg2.xml" qualifiers="" type="drawable"/><file name="dialog_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\dialog_bg.9.png" qualifiers="" type="drawable"/><file name="index_dots_page_focused" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\index_dots_page_focused.xml" qualifiers="" type="drawable"/><file name="index_dots_page_normal" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\index_dots_page_normal.xml" qualifiers="" type="drawable"/><file name="index_dot_normal" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\index_dot_normal.xml" qualifiers="" type="drawable"/><file name="indicator_autocrop" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\indicator_autocrop.xml" qualifiers="" type="drawable"/><file name="input_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\input_bg.9.png" qualifiers="" type="drawable"/><file name="loading2" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\loading2.9.png" qualifiers="" type="drawable"/><file name="loading_drawable" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\loading_drawable.xml" qualifiers="" type="drawable"/><file name="logout_btn_selector" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\logout_btn_selector.xml" qualifiers="" type="drawable"/><file name="page_selector" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\page_selector.xml" qualifiers="" type="drawable"/><file name="pb_loading_b" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\pb_loading_b.xml" qualifiers="" type="drawable"/><file name="point_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\point_bg.xml" qualifiers="" type="drawable"/><file name="tab_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\tab_bg.xml" qualifiers="" type="drawable"/><file name="tab_circle" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\tab_circle.xml" qualifiers="" type="drawable"/><file name="text_bar_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable\text_bar_bg.xml" qualifiers="" type="drawable"/><file name="arrow_right" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\arrow_right.png" qualifiers="xxhdpi" type="drawable"/><file name="back" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\back.png" qualifiers="xxhdpi" type="drawable"/><file name="bg_tab" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\bg_tab.png" qualifiers="xxhdpi" type="drawable"/><file name="button_back" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\button_back.png" qualifiers="xxhdpi" type="drawable"/><file name="button_message" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\button_message.png" qualifiers="xxhdpi" type="drawable"/><file name="button_more" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\button_more.png" qualifiers="xxhdpi" type="drawable"/><file name="button_next" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\button_next.png" qualifiers="xxhdpi" type="drawable"/><file name="checkbox_select" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\checkbox_select.png" qualifiers="xxhdpi" type="drawable"/><file name="checkbox_select_true" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\checkbox_select_true.png" qualifiers="xxhdpi" type="drawable"/><file name="diver" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\diver.png" qualifiers="xxhdpi" type="drawable"/><file name="dt_dialog_bg" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\dt_dialog_bg.9.png" qualifiers="xxhdpi" type="drawable"/><file name="edit" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\edit.png" qualifiers="xxhdpi" type="drawable"/><file name="filter" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\filter.png" qualifiers="xxhdpi" type="drawable"/><file name="ico_loading_b" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ico_loading_b.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_add_black_24dp" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_add_black_24dp.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_cool_play_normal" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_cool_play_normal.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_cool_play_pressed" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_cool_play_pressed.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_dashboard" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_dashboard.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_discuss" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_discuss.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_event" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_event.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_false" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_false.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_forum" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_forum.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_headset" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_headset.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_menu" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_menu.png" qualifiers="xxhdpi" type="drawable"/><file name="ic_refresh" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ic_refresh.png" qualifiers="xxhdpi" type="drawable"/><file name="ip_comments" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ip_comments.png" qualifiers="xxhdpi" type="drawable"/><file name="ip_comments_pressed" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\ip_comments_pressed.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_icon_bao" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_icon_bao.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_icon_money" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_icon_money.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic1" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic1.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic10" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic10.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic11" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic11.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic12" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic12.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic13" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic13.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic14" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic14.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic15" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic15.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic16" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic16.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic2" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic2.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic3" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic3.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic4" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic4.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic5" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic5.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic6" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic6.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic7" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic7.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic8" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic8.png" qualifiers="xxhdpi" type="drawable"/><file name="loading_pic9" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\loading_pic9.png" qualifiers="xxhdpi" type="drawable"/><file name="page_off" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\page_off.png" qualifiers="xxhdpi" type="drawable"/><file name="page_on" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\page_on.png" qualifiers="xxhdpi" type="drawable"/><file name="search" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\search.png" qualifiers="xxhdpi" type="drawable"/><file name="shadow_bottom" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\shadow_bottom.png" qualifiers="xxhdpi" type="drawable"/><file name="shadow_left" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\shadow_left.png" qualifiers="xxhdpi" type="drawable"/><file name="shadow_right" path="D:\myworkspace\renwohua\corelib\src\main\res\drawable-xxhdpi\shadow_right.png" qualifiers="xxhdpi" type="drawable"/><file name="dt_now_page_loading" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\dt_now_page_loading.xml" qualifiers="" type="layout"/><file name="emptyview" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\emptyview.xml" qualifiers="" type="layout"/><file name="errorview" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\errorview.xml" qualifiers="" type="layout"/><file name="loadingview" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\loadingview.xml" qualifiers="" type="layout"/><file name="recycle_item_footer" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\recycle_item_footer.xml" qualifiers="" type="layout"/><file name="refresh_cube_ptr_classic_default_header" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\refresh_cube_ptr_classic_default_header.xml" qualifiers="" type="layout"/><file name="swipeback_layout" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\swipeback_layout.xml" qualifiers="" type="layout"/><file name="text_tab" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\text_tab.xml" qualifiers="" type="layout"/><file name="view_ratingbar" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\view_ratingbar.xml" qualifiers="" type="layout"/><file name="ylb_recyclerview_layout" path="D:\myworkspace\renwohua\corelib\src\main\res\layout\ylb_recyclerview_layout.xml" qualifiers="" type="layout"/><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="RoundProgressBar">
+        <attr format="dimension" name="roundProgressWidth"/>
+        <attr format="color" name="backgroundColor"/>
+        <attr format="color" name="progressColor"/>
+        <attr format="color" name="roundBackground"/>
+        <attr format="integer" name="maxProgress"/>
+        <attr format="integer" name="progress"/>
+        <attr name="style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable><declare-styleable name="SwipeBackLayout">
+        <attr format="dimension" name="edge_size"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="all" value="3"/>
+        </attr>
+        <attr format="reference" name="shadow_left"/>
+        <attr format="reference" name="shadow_right"/>
+        <attr format="reference" name="shadow_bottom"/>
+    </declare-styleable><declare-styleable name="SnailIncomeView">
+        <attr format="dimension" name="roundWidth"/>
+        <attr format="color" name="textColor"/>
+        <attr format="dimension" name="textSize"/>
+        <attr format="string" name="note"/>
+    </declare-styleable><attr format="reference" name="SwipeBackLayoutStyle"/><declare-styleable name="CircleImageView">
+        <attr format="dimension" name="border_width"/>
+        <attr format="color" name="border_color"/>
+    </declare-styleable><declare-styleable name="MyRatingBar">
+        <attr format="reference" name="defaultImage"/>
+        <attr format="reference" name="defaultImagePressed"/>
+        <attr format="integer" name="defaultImageNum"/>
+    </declare-styleable><declare-styleable name="PagerSlidingTabStrip">
+        <attr format="color" name="indicatorColor"/>
+        <attr format="color" name="underlineColor"/>
+        <attr format="color" name="dividerColor"/>
+        <attr format="dimension" name="indicatorHeight"/>
+        <attr format="dimension" name="underlineHeight"/>
+        <attr format="dimension" name="dividerPadding1"/>
+        <attr format="dimension" name="tabPaddingLeftRight"/>
+        <attr format="dimension" name="scrollOffset"/>
+        <attr format="reference" name="tabBackground1"/>
+        <attr format="boolean" name="shouldExpand"/>
+        <attr format="boolean" name="textAllCaps1"/>
+    </declare-styleable></file><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\colors.xml" qualifiers=""><color name="color_c12">#00aaef</color><color name="color_c14">#ff5252</color><color name="indicator_yellow">#FFEA00</color><color name="small_gray">#EBEBEB</color><color name="translucent_full">#00000000</color><color name="logout_pressed">#dc4545</color><color name="round_roundBackground">#FFFFFF</color><color name="round_progressColor">#00c4bf</color><color name="grid_line">#d2d2d2</color><color name="translucent_15_black">#26000000</color><color name="bg_color">#f1f1f1</color><color name="activity_default_bg">#efeff4</color><color name="color_3F000000">#3F000000</color><color name="btn_green_normal">#6dc343</color><color name="ph_line">#cccccc</color><color name="colorPrimary">#e14b4b</color><color name="bottom_default_txt">#6a6f7c</color><color name="tab_bg">#ff4f4f</color><color name="colorAccent">#e14b4b</color><color name="red">#ff3030</color><color name="window_background">#FFF5F5F5</color><color name="benn_built">#787878</color><color name="round_backgroundColor">#8e8e93</color><color name="colorPrimaryDark">#f14b41</color><color name="btn_green_click">#5da639</color><color name="add_and_sub">#dbdcdd</color><color name="green">#6dc343</color><color name="merchant_background">#9b9b9b</color><color name="goods_type_bg_pressed">#d9d9d9</color><color name="actionbar_title_color">#ffdddd</color><color name="ads_edit">#c9cacb</color><color name="logout_normal">#ff4f4f</color><color name="gray">#b7b7b7</color></file><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\dimens.xml" qualifiers=""><dimen name="sectionSize">15sp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="sectionNotificationSize">10sp</dimen><dimen name="sliding_slop">32dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="card_margin">16dp</dimen><dimen name="radio_btn_padding">5dp</dimen><dimen name="list_item_avatar_size">40dp</dimen><dimen name="sectionNormalHeight">48dp</dimen><dimen name="sliding_overlay_blur_size">4dp</dimen><dimen name="content_frame_radio_text_size">10sp</dimen><dimen name="mini_margin_12">12dp</dimen><dimen name="detail_backdrop_height">256dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="default_title_height">60dp</dimen><dimen name="mini_margin_5">5dp</dimen><dimen name="sectionSquareIconSize">40dp</dimen><dimen name="default_title_padding_left_or_right">5dp</dimen><dimen name="sectionRowMarginHorizontal">16sp</dimen></file><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\roundimage_attribute.xml" qualifiers=""><declare-styleable name="roundedimageview">
+        <attr format="dimension" name="border_thickness"/>
+        <attr format="color" name="border_inside_color"/>
+        <attr format="color" name="border_outside_color"/>
+    </declare-styleable></file><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\styles.xml" qualifiers=""><style name="OverlaySwipeBackTheme" parent="SwipeBackTheme">
+        <item name="windowActionBarOverlay">true</item>
+    </style><style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style><style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style><style name="DT_DIALOG_THEME" parent="android:Theme.Dialog">
+        <item name="android:padding">0dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:background">@drawable/dt_dialog_bg</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style><style name="BaseStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#00c4bf</item>
+        <item name="colorAccent">#00c4bf</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowBackground">@color/activity_default_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style><style name="PopupDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 自己想要的背景 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style><style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style><style name="RadioButton">
+        <item name="android:background">@drawable/ab_btn_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/content_frame_radio_text_size</item>
+        <item name="android:padding">@dimen/radio_btn_padding</item>
+    </style><style mce_bogus="1" name="DT_DIALOG_ANIMATIONS" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dt_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dt_dialog_exit_anim</item>
+    </style><style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style><style name="SwipeBackTheme" parent="YLBAppStyle">
+
+        <!--<item name="selectableItemBackground">@drawable/ab_btn_selector</item>-->
+
+    </style><style name="YLBAppStyle2" parent="BaseStyle">
+        <item name="android:windowIsTranslucent">false</item>
+    </style><style name="CropButton">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/ab_btn_selector</item>
+    </style><style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style><style name="head_goods_tab">
+        <item name="android:textSize">0sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">0dp</item>
+    </style><style name="radio_navigation_bar_bottom_tab">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:background">@drawable/tab_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:singleLine">true</item>
+    </style><style name="YLBAppStyle" parent="BaseStyle">
+    </style><style name="DT_DIALOG_Translucent" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style></file><file path="D:\myworkspace\renwohua\corelib\src\main\res\values\ylbstrings.xml" qualifiers=""><string name="title_erevyday_package">天天礼包</string><string name="forget_pwd_tips_top">请输入您要找回的账号所绑定的手机号码</string><string name="authFailureError">授权出错</string><string name="tuijian_tips">推荐您加入的好友</string><string name="parseError">解析出错</string><string name="serverError">服务器链接异常</string><string name="forget_pwd_tips_2">客服热线:400-019-2828</string><string name="timeoutError">啊哦，网络堵车了: (\n请您再试一次</string><string name="tips_has_no_phone_and_pwd">请输入正确的用户名或密码~</string><string name="networkError">网络链接异常</string><string name="forget_pwd_code">请输入您收到的验证码</string><string name="forget_pwd_reset">重置密码</string><string name="ylb_agreement">同意《永利宝理财服务条款》</string><string name="clientError">客户端链接异常</string><string name="forget_pwd_next">下一步</string><string name="ylb_phone">请填写您的手机号</string><string name="tuijian">填写推荐人</string><string name="forget_pwd_tips">如未绑定手机或者其他问题请咨询客服</string><string name="noConnectionError">无法链接</string></file></source><source path="D:\myworkspace\renwohua\corelib\build\generated\res\rs\debug"/><source path="D:\myworkspace\renwohua\corelib\build\generated\res\generated\debug"/></dataSet><dataSet config="debug"><source path="D:\myworkspace\renwohua\corelib\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable><declare-styleable name="SnailIncomeView"><attr format="dimension" name="roundWidth"/><attr format="color" name="textColor"/><attr format="dimension" name="textSize"/><attr format="string" name="note"/></declare-styleable><declare-styleable name="MyRatingBar"><attr format="reference" name="defaultImage"/><attr format="reference" name="defaultImagePressed"/><attr format="integer" name="defaultImageNum"/></declare-styleable><declare-styleable name="SwipeBackLayout"><attr format="dimension" name="edge_size"/><attr name="edge_flag"><enum name="left" value="0"/><enum name="right" value="1"/><enum name="bottom" value="2"/><enum name="all" value="3"/></attr><attr format="reference" name="shadow_left"/><attr format="reference" name="shadow_right"/><attr format="reference" name="shadow_bottom"/></declare-styleable><declare-styleable name="PagerSlidingTabStrip"><attr format="color" name="indicatorColor"/><attr format="color" name="underlineColor"/><attr format="color" name="dividerColor"/><attr format="dimension" name="indicatorHeight"/><attr format="dimension" name="underlineHeight"/><attr format="dimension" name="dividerPadding1"/><attr format="dimension" name="tabPaddingLeftRight"/><attr format="dimension" name="scrollOffset"/><attr format="reference" name="tabBackground1"/><attr format="boolean" name="shouldExpand"/><attr format="boolean" name="textAllCaps1"/></declare-styleable><declare-styleable name="roundedimageview"><attr format="dimension" name="border_thickness"/><attr format="color" name="border_inside_color"/><attr format="color" name="border_outside_color"/></declare-styleable><declare-styleable name="RoundProgressBar"><attr format="dimension" name="roundProgressWidth"/><attr format="color" name="backgroundColor"/><attr format="color" name="progressColor"/><attr format="color" name="roundBackground"/><attr format="integer" name="maxProgress"/><attr format="integer" name="progress"/><attr name="style"><enum name="STROKE" value="0"/><enum name="FILL" value="1"/></attr></declare-styleable></configuration></mergedItems></merger>

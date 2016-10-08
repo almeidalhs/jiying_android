@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/tabName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:text="公告"
+            android:textColor="#8e8e93"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tab_circle"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/tabName"
+            android:background="@drawable/tab_circle" />
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/layout/text_tab.xml --><!-- From: file:/D:/myworkspace/renwohua/corelib/build/intermediates/bundles/debug/res/layout/text_tab.xml -->

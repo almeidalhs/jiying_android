@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/tab_fullcut"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:dividerPadding="6dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <RadioButton
+            android:id="@+id/tab_fullcut_now"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/fullcut_now"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_black" />
+
+        <RadioButton
+            android:id="@+id/tab_fullcut_notstart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/fullcut_notstart"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_black" />
+
+        <RadioButton
+            android:id="@+id/tab_fullcut_expired"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/fullcut_expired"
+            android:textColor="@drawable/tab_text_selector"
+            android:textSize="14sp" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <ImageView
+        android:id="@+id/fullcut_empty_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp"
+        android:visibility="gone"
+        android:background="#DCE0E3"
+        android:src="@mipmap/fullcut_empty_im"
+        android:layout_weight="1"/>
+
+    <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#DCE0E3"
+        ptr:ptrMode="both" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/fullcut_add_ll"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/white_hollow_selector"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/goods_management_add"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#EC5D44"
+                android:textSize="16sp"
+                android:text="@string/fullcut_add"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

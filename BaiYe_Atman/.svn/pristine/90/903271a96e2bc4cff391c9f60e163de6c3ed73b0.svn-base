@@ -1,0 +1,13 @@
+package com.atman.baiye.home;
+
+import com.atman.baiye.base.BaiYeBaseFragment;
+
+/**
+ * 描述
+ * 作者 tangbingliang
+ * 时间 16/4/11 14:09
+ * 邮箱 bltang@atman.com
+ * 电话 18578909061
+ */
+public class HomeFragment extends BaiYeBaseFragment{
+}

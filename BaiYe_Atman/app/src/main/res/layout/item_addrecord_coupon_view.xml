@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_addrecord_coupon_root_ll"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/item_addrecord_coupon_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#424242"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:text="name"/>
+
+        <TextView
+            android:id="@+id/item_addrecord_coupon_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#959595"
+            android:textSize="10sp"
+            android:singleLine="true"
+            android:text="name"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_addrecord_coupon_select_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/addrecord_active_unselect"/>
+
+</LinearLayout>

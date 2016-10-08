@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaiYe_Atman.iml" filepath="$PROJECT_DIR$/BaiYe_Atman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-volley/android-volley.iml" filepath="$PROJECT_DIR$/android-volley/android-volley.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/choicepicture_library/choicepicture_library.iml" filepath="$PROJECT_DIR$/choicepicture_library/choicepicture_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/corelib/corelib.iml" filepath="$PROJECT_DIR$/corelib/corelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/draglistview_library/draglistview_library.iml" filepath="$PROJECT_DIR$/draglistview_library/draglistview_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handmark_pull_library/handmark_pull_library.iml" filepath="$PROJECT_DIR$/handmark_pull_library/handmark_pull_library.iml" />
+    </modules>
+  </component>
+</project>

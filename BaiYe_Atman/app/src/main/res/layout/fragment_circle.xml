@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/circle_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_top_height"
+        android:background="@color/main_title_orange_color">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/main_top_text_size" />
+
+        <ImageView
+            android:id="@+id/publish_iv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/share_ic"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pullToRefreshListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/color_line"
+            android:listSelector="@drawable/white_hollow_selector"
+            android:dividerHeight="1px"
+            android:scrollbars="none"
+            android:background="@color/color_white"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="disabled"
+            ptr:ptrScrollingWhileRefreshingEnabled="true" />
+
+        <ImageView
+            android:id="@+id/circle_totop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@mipmap/news_totop"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

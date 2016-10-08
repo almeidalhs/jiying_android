@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/refresh_line"
+            android:layout_width="1px"
+            android:layout_height="0dp"
+            android:layout_marginLeft="110dp"
+            android:background="#00aaef" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="5dp"
+            android:layout_marginLeft="110dp"
+            android:background="#00aaef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/loading_icon_money" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:text="新浪支付资金托管"
+                android:textColor="#00aaef"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="5dp"
+            android:layout_marginLeft="110dp"
+            android:background="#00aaef" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/loading_icon_bao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:text="阳光亿元保险战略合作"
+                android:textColor="#00aaef"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="1px"
+                android:layout_height="10dp"
+                android:layout_marginLeft="110dp"
+                android:background="#00aaef" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ptr_classic_header_rotate_view_header_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ptr_classic_header_rotate_view_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00aaef"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/ptr_classic_header_rotate_view_header_last_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="#00aaef"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ptr_classic_header_rotate_view_header_text">
+
+            <ImageView
+                android:id="@+id/ptr_classic_header_rotate_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ptr_rotate_arrow" />
+
+            <ProgressBar
+                android:id="@+id/ptr_classic_header_rotate_view_progressbar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+<!-- From: file:/Users/srain/git/android-Ultra-Pull-To-Refresh/ptr-lib/res/layout/cube_ptr_classic_default_header.xml --><!-- From: file:/home/loyee/work/renwohua/app/build/intermediates/exploded-aar/in.srain.cube/ultra-ptr/1.0.11/res/layout/cube_ptr_classic_default_header.xml -->

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.atman.jishang.widget.SlidingButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <RelativeLayout
+        android:id="@+id/item_fullcut_root_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/layout_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="5dp"
+                android:background="#C7C7CC"
+                android:gravity="center"
+                android:text="编 辑"
+                android:textColor="#DDFFFFFF"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#ff0000"
+                android:gravity="center"
+                android:text="删 除"
+                android:textColor="#DDFFFFFF"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/item_addrecord_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:id="@+id/item_addrecord_name_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="商品"
+                android:textColor="@color/color_black" />
+
+            <TextView
+                android:id="@+id/item_addrecord_price_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:text="单价/元"
+                android:textColor="@color/main_title_orange_color" />
+
+            <TextView
+                android:id="@+id/item_addrecord_down_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="－"
+                android:textColor="@color/color_black" />
+
+            <TextView
+                android:id="@+id/item_addrecord_num_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="@color/color_black" />
+
+            <TextView
+                android:id="@+id/item_addrecord_up_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="＋"
+                android:textColor="@color/color_black" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.atman.jishang.widget.SlidingButtonView>

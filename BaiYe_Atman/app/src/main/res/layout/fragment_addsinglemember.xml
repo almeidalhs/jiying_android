@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.corelib.widget.CustomScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <com.corelib.widget.RoundImageView
+                    android:id="@+id/addsinglemember_head_iv"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/member_item_ic" />
+
+                <TextView
+                    android:id="@+id/addsinglemember_head_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="点击\n更改"
+                    android:textColor="@color/color_white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:id="@+id/add_goods_name_rl"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_goods_name"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addsinglemember_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="姓名"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/addmember_telephone_iv"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/addmember_telephone_ic"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addsinglemember_mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="电话"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:id="@+id/addmenber_gender_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="true"
+                android:background="@drawable/white_hollow_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="性别"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/addsinglemember_sex_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="true"
+                    android:text="女"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/right_arrow" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="客户类型"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:showDividers="middle">
+
+                    <RadioButton
+                        android:id="@+id/addmenber_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/addmember_gender_selector"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="普通"
+                        android:textColor="@color/color_black"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/addmenber_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/addmember_gender_selector"
+                        android:gravity="center"
+                        android:paddingRight="10dp"
+                        android:text="VIP"
+                        android:textColor="@color/color_black"
+                        android:textSize="12sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="地址"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addsinglemember_addr_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="地址"
+                    android:singleLine="true"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addmenber_more_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:clickable="true"
+                    android:background="@drawable/white_hollow_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/default_padding"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="生日"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/addsinglemember_birthday_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/right_arrow" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/color_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/default_padding"
+                    android:paddingRight="@dimen/default_padding">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="微信号"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                    <com.corelib.widget.MyCleanEditText
+                        android:id="@+id/addsinglemember_weixin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:digits="@string/register_name_digits"
+                        android:background="@null"
+                        android:inputType="textCapCharacters"
+                        android:gravity="center_vertical|right"
+                        android:hint="微信号"
+                        android:singleLine="true"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/color_white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/default_padding"
+                    android:paddingRight="@dimen/default_padding">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|left"
+                        android:text="QQ号"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                    <com.corelib.widget.MyCleanEditText
+                        android:id="@+id/addsinglemember_qq_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="QQ号"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="备注"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dp">
+
+                    <com.corelib.widget.MyCleanEditText
+                        android:id="@+id/addsinglemember_remarks_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gray_red_edittext_bg_selector"
+                        android:gravity="left|top"
+                        android:hint="备注"
+                        android:maxLines="5"
+                        android:minLines="5"
+                        android:padding="5dp"
+                        android:textColor="@color/color_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="会员照片"
+                    android:textColor="@color/color_black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:gravity="center_vertical"
+                    android:minHeight="45dp"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/default_padding"
+                    android:paddingRight="@dimen/default_padding">
+
+                    <com.corelib.widget.MyGridView
+                        android:id="@+id/noScrollgridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="3dp"
+                        android:numColumns="4"
+                        android:scrollbars="none"
+                        android:verticalSpacing="10dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addmenber_display_ll"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_white"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/color_line" />
+
+                <TextView
+                    android:id="@+id/addmenber_display_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="30dp"
+                    android:textColor="#2570F6"
+                    android:text="更多信息"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.corelib.widget.CustomScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:id="@+id/addmember_finish_ll"
+        android:layout_below="@+id/sc"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/white_hollow_selector"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/finish"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+            android:text="@string/add_goods_finish"/>
+    </LinearLayout>
+
+</LinearLayout>

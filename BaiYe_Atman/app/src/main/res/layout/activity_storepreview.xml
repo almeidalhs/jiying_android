@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/storepreview_top_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/part_storepreview_top_bar" />
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullToRefreshScrollView"
+        android:layout_below="@+id/storepreview_top_bar_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#D9D9D9"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        ptr:ptrScrollingWhileRefreshingEnabled="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/part_storepreview_top_head" />
+
+            <LinearLayout
+                android:id="@+id/storepreview_tab_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <!--顶部tab标签容器-->
+                <android.support.design.widget.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tab_layout"
+                    android:background="@color/color_white"
+                    app:tabIndicatorColor="#ED9E95"
+                    app:tabSelectedTextColor="#ED9E95"
+                    app:tabTextColor="@color/color_black">
+
+                </android.support.design.widget.TabLayout>
+
+                <ImageView
+                    android:id="@+id/storepreview_more_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/goods_class_more"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/store_empty_tx"
+                    android:layout_marginTop="140dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/color_black"
+                    android:text="您的店铺暂无上架的商品"/>
+
+                <com.corelib.widget.MyGridView
+                    android:id="@+id/storepreview_grid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_horizontal"
+                    android:padding="2dp"
+                    android:horizontalSpacing="4dp"
+                    android:verticalSpacing="4dp"
+                    android:numColumns="2"
+                    android:stretchMode="columnWidth"
+                    android:background="#D9D9D9"/>
+            </RelativeLayout>
+
+
+            <com.corelib.widget.NoSwipeViewPager
+                android:id="@+id/info_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/storepreview_top_tab_ll"
+        android:layout_below="@+id/storepreview_top_bar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:background="@color/color_white"
+            android:orientation="horizontal">
+
+            <!--顶部tab标签容器-->
+            <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/top_tab_layout"
+                android:background="@color/color_white"
+                app:tabIndicatorColor="#ED9E95"
+                app:tabSelectedTextColor="#ED9E95"
+                app:tabTextColor="@color/color_black">
+
+            </android.support.design.widget.TabLayout>
+
+            <ImageView
+                android:id="@+id/top_storepreview_more_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/goods_class_more"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line"/>
+    </LinearLayout>
+
+</RelativeLayout>

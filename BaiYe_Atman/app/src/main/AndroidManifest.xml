@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atman.jishang">
+
+    <uses-sdk android:minSdkVersion="4"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 读短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".ui.base.BaiYeBaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BaiYeAppStyle">
+        <activity
+            android:name="com.atman.jishang.ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BaiYeAppStyle"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.atman.jishang.ui.MainActivity"></activity>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.LoginActivity"></activity>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.RegisterSeedMessageActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.RegisterSetPassWordActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.AgreementActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.RegisterFinishActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.loginandregister.ResetWordActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.AboutActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.FeedbackSuggestionActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.RecommendFriendsActivity"/>
+
+        <activity android:name=".ui.personal.EditShopActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.PersonalInformationActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.CreateShopActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.ResetPassWordActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.ChannelEditorActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.WebPageActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.personal.ShopInformationActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.StorePreviewActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.StorePreviewCouponListViewActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.GoodsDetailsActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.EditGoodsActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.BindingEquipmentActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.PhotoEditActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.classification.GoodsClasesActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.classification.AddGoodsClassActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.classification.EditGoodsClassActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.classification.EditGoodsClassNameActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListByClassActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.AddGoodsActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListManagementActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.goods.ScanCodeActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.MarketingManagementActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.fullcut.FullCutActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.fullcut.AddFullCutActivity"/>
+
+        <activity android:name=".ui.marketing.fullcut.FullCutDetailsActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.coupon.CouponActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.coupon.AddCouponActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.coupon.EditCouponActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.coupon.CouponDetailsActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.marketing.coupon.ReceiveCouponRecordsActivity"/>
+
+        <activity android:name=".ui.member.MemberListActivity"/>
+
+        <activity android:name=".ui.member.AddMemberActivity"/>
+
+        <activity android:name=".ui.member.MemberConditionFilterActivity"/>
+
+        <activity android:name=".ui.member.MemberDetailsActivity"/>
+
+        <activity android:name=".ui.member.EditMemberInformationActivity"/>
+
+        <activity android:name=".ui.member.records.MemberRecordsActivity"/>
+
+        <activity android:name=".ui.member.tag.MemberTagManagementActivity"/>
+
+        <activity android:name=".ui.member.records.AddMemberRecordsActivity"/>
+
+        <activity android:name=".ui.member.tag.CreateTagActivity"/>
+
+        <activity android:name="com.atman.jishang.widget.showimage.ShowWebImageActivity"/>
+
+        <activity android:name=".ui.circle.PublishActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.orders.OrderDetailActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.orders.OrderManageActivity"/>
+
+        <activity android:name="com.atman.jishang.ui.home.orders.OrderBatchManageActivity"/>
+
+        <!--友盟相关-->
+        <meta-data android:value="5729baca67e58e3594001276" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="b497399e2469db28e7f2c238c6713e1c" android:name="UMENG_MESSAGE_SECRET" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <activity
+            android:name="com.atman.jishang.wxapi.WXEntryActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
+        <activity
+            android:name=".sina.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+        </activity>
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--友盟相关-->
+
+    </application>
+
+</manifest>

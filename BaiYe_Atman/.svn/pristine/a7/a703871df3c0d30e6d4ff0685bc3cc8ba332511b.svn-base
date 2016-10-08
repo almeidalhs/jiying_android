@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="picture_browsing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/corelib/libs/picture_browsing.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

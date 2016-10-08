@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imageview1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ip_comments" />
+
+    <ImageView
+        android:id="@+id/imageview2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ip_comments" />
+
+    <ImageView
+        android:id="@+id/imageview3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ip_comments" />
+
+    <ImageView
+        android:id="@+id/imageview4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ip_comments" />
+
+    <ImageView
+        android:id="@+id/imageview5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/ip_comments" />
+
+</LinearLayout><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/layout/view_ratingbar.xml -->

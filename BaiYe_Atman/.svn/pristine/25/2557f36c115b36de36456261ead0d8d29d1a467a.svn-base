@@ -1,0 +1,144 @@
+package com.atman.baiye.base;
+
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.text.TextUtils;
+import android.util.DisplayMetrics;
+import android.util.Log;
+
+import com.atman.baiye.net.model.LoginResultModel;
+import com.corelib.base.BaseApplication;
+import com.corelib.util.DeviceUtils;
+import com.umeng.message.PushAgent;
+import com.umeng.onlineconfig.OnlineConfigAgent;
+
+/**
+ * 描述 基础App application类，用于存储全局变量和初始化数据
+ * 作者 tangbingliang
+ * 时间 16/4/11 09:22
+ * 邮箱 bltang@atman.com
+ * 电话 18578909061
+ */
+public class BaiYeBaseApplication extends BaseApplication{
+
+    private static Context mContext = null;
+    protected static BaiYeBaseApplication mInstance;
+    public static String mToken = "0";
+    public static LoginResultModel mLoginResultModel = null;
+    public static String mDeviceToken = "";
+    public static String mVersionName = "";
+    public static String mChannel = "";
+    private DisplayMetrics displayMetrics = null;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mContext = getApplicationContext();
+        mInstance = this;
+
+        UMmengInit();
+        mVersionName = getAppInfo();
+        mChannel = getAppMetaData(mContext, "UMENG_CHANNEL");
+
+        Log.e("tag",">>>>mDeviceToken:"+mDeviceToken);
+        Log.e("tag",">>>>mVersionName:"+mVersionName);
+        Log.e("tag",">>>>mChannel:"+mChannel);
+    }
+
+    private void UMmengInit() {
+//        mDeviceToken = UmengRegistrar.getRegistrationId(mContext);
+        //获取友盟在线参数,app更新使用
+        OnlineConfigAgent.getInstance().updateOnlineConfig(this);
+        //启动umen推送
+        PushAgent mPushAgent = PushAgent.getInstance(this);
+        mPushAgent.enable();
+        mDeviceToken = mPushAgent.getRegistrationId();
+        if (mDeviceToken.isEmpty()) {
+            BaseApplication.mToken = DeviceUtils.getDeviceId();
+        } else {
+            BaseApplication.mToken = mDeviceToken;
+        }
+    }
+
+    public BaiYeBaseApplication(){
+        mInstance = this;
+    }
+
+    public static Context getContext(){
+        return mContext;
+    }
+
+    public static BaiYeBaseApplication getApp(){
+        return mInstance;
+    }
+
+    private String getAppInfo() {
+        try {
+            String pkName = this.getPackageName();
+            String versionName = this.getPackageManager().getPackageInfo(pkName, 0).versionName;
+            int versionCode = this.getPackageManager().getPackageInfo(pkName, 0).versionCode;
+            return versionName;
+        } catch (Exception e) {
+        }
+        return null;
+    }
+
+    /**
+     * 获取application中指定的meta-data
+     * @return 如果没有获取成功(没有对应值，或者异常)，则返回值为空
+     */
+    public static String getAppMetaData(Context ctx, String key) {
+        if (ctx == null || TextUtils.isEmpty(key)) {
+            return null;
+        }
+        String resultData = null;
+        try {
+            PackageManager packageManager = ctx.getPackageManager();
+            if (packageManager != null) {
+                ApplicationInfo applicationInfo = packageManager.getApplicationInfo(ctx.getPackageName(), PackageManager.GET_META_DATA);
+                if (applicationInfo != null) {
+                    if (applicationInfo.metaData != null) {
+                        resultData = applicationInfo.metaData.getString(key);
+                    }
+                }
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return resultData;
+    }
+
+    public float getScreenDensity() {
+        if (this.displayMetrics == null) {
+            setDisplayMetrics(getResources().getDisplayMetrics());
+        }
+        return this.displayMetrics.density;
+    }
+
+    public void setDisplayMetrics(DisplayMetrics DisplayMetrics) {
+        this.displayMetrics = DisplayMetrics;
+    }
+
+    public int dp2px(float f) {
+        return (int) (0.5F + f * getScreenDensity());
+    }
+
+    public int px2dp(float pxValue) {
+        return (int) (pxValue / getScreenDensity() + 0.5f);
+    }
+
+    //获取应用的data/data/....File目录
+    public String getFilesDirPath() {
+        return getFilesDir().getAbsolutePath();
+    }
+
+    //获取应用的data/data/....Cache目录
+    public String getCacheDirPath() {
+        return getCacheDir().getAbsolutePath();
+    }
+
+
+
+}

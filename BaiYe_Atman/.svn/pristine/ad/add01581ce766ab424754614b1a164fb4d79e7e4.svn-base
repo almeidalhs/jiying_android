@@ -1,0 +1,258 @@
+[
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/indicator_bg_top.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/handmark_pull_library/unspecified/res/drawable/indicator_bg_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_common_gradient_green.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_common_gradient_green.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_wifi_disable.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_wifi_disable.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/tab_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/tab_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/loading2.9.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/loading2.9.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_common_gradient_orange.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_common_gradient_orange.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/loading_drawable.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/loading_drawable.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_dialog_material_background_light.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_ok_bg_tap.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_ok_bg_tap.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_ok_bg_focused.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_ok_bg_focused.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_close_bg_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_close_bg_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_cancel_bg_tap.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_cancel_bg_tap.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/snackbar_background.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/drawable/snackbar_background.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/indicator_autocrop.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/indicator_autocrop.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/active_circle.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/active_circle.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/tb_munion_icon.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/tb_munion_icon.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/index_dot_normal.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/index_dot_normal.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/barcolor.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/barcolor.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/input_bg.9.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/input_bg.9.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/ab_btn_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/ab_btn_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/text_bar_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/text_bar_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_cancel_bg_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_cancel_bg_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/index_dots_page_focused.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/index_dots_page_focused.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/point_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/point_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/drag_frame.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.marshalchen.ultimaterecyclerview/library/0.3.18/res/drawable/drag_frame.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/logout_btn_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/logout_btn_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/indicator_bg_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/handmark_pull_library/unspecified/res/drawable/indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/corners_bg2.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/corners_bg2.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/checkbox_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/checkbox_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/pb_loading_b.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/pb_loading_b.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/page_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/page_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_cancel_bg_focused.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_cancel_bg_focused.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_cancel_bg_normal.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_cancel_bg_normal.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/tab_circle.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/tab_circle.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_dialog_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_dialog_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_common_gradient_red.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_common_gradient_red.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_title_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_title_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/tb_munion_item_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/tb_munion_item_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/dialog_bg.9.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/dialog_bg.9.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_ok_bg_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_ok_bg_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/fab_background.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/design/22.2.1/res/drawable/fab_background.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/corners_bg.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/corners_bg.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_check_selector.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_check_selector.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/umeng_update_button_ok_bg_normal.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/BaiYe_Atman/update/unspecified/res/drawable/umeng_update_button_ok_bg_normal.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_edit_text_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/index_dots_page_normal.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/src/main/res/drawable/index_dots_page_normal.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/res/merged/release/drawable/abc_ratingbar_full_material.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/corelib/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/drawable/abc_ratingbar_full_material.xml"
+    }
+]

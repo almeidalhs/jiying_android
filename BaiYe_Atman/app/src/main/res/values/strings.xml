@@ -1,0 +1,237 @@
+<resources>
+    <string name="app_name">即商</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="response_not_correct">服务器返回的数据格式不对</string>
+    <string name="customer_service_telephone">有疑问请拨打即商客服电话\n400-820-5310</string>
+    <string name="service_telephone">tel:400-820-5310</string>
+    <string name="service_telephone_tx">400-820-5310</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="company_name">上海阿特门计算机技术有限公司</string>
+
+    <!--登陆界面-->
+    <string name="login_title">登录</string>
+    <string name="login_username">账号</string>
+    <string name="login_password">密码</string>
+    <string name="login_login">登&#160;&#160;&#160;&#160;录</string>
+    <string name="login_register">注&#160;&#160;&#160;&#160;册</string>
+    <string name="login_forget_pw">忘记密码？</string>
+    <string name="login_username_hint">请输入手机号码</string>
+    <string name="login_username_right">请输入正确的手机号码</string>
+    <string name="login_password_hint">请输入密码</string>
+
+    <!--注册界面-->
+    <string name="register_top">即商百业&#160;营销互联</string>
+    <string name="register_top_two">传统行业的互联网升级</string>
+    <string name="register_phone_tx">手机号</string>
+    <string name="register_code_tx">验证码</string>
+    <string name="register_phone_hint">请输入手机号码</string>
+    <string name="register_wran">轻触上面的“下一步”按钮，即表示你同意</string>
+    <string name="register_agreement">《即商用户协议》</string>
+    <string name="register_agreement_title">即商用户协议</string>
+    <string name="register_next">下一步</string>
+    <string name="register_code_wran_one">请输入验证码</string>
+    <string name="register_code_wran_two">请输入正确的验证码</string>
+    <string name="register_title">注册</string>
+    <string name="register_password">密码</string>
+    <string name="register_password_wran">请设置登录密码</string>
+    <string name="register_finish">恭喜，注册成功！</string>
+    <string name="register_finish_two">5s内自动跳转到首页</string>
+
+    <!--重新设置密码-->
+    <string name="resetPW_title">重新设置密码</string>
+    <string name="resetPW_newpw_tx">新密码</string>
+
+    <!--地步菜单-->
+    <string name="tab_home">首页</string>
+    <string name="tab_message">资讯</string>
+    <string name="tab_personal">个人</string>
+    <string name="tab_test">测试</string>
+
+    <!--个人中心-->
+    <string name="personal_title">个人</string>
+    <string name="personal_name">商铺名</string>
+    <string name="personal_nametx">商铺名称</string>
+    <string name="personal_phonetx">联系电话</string>
+    <string name="personal_signature">商铺签名</string>
+    <string name="personal_shopInfo">店铺信息</string>
+    <string name="personal_recommend">推荐朋友</string>
+    <string name="personal_proposal">意见反馈</string>
+    <string name="personal_cs">联系客服</string>
+    <string name="personal_about">关于我们</string>
+
+    <!--店铺信息-->
+    <string name="shop_top_tx">点击\n更改背景图片</string>
+    <string name="shop_name">店铺名称</string>
+    <string name="shop_phone">联系电话</string>
+    <string name="shop_phone_wran">请输入正确的联系电话</string>
+    <string name="shop_address">店铺地址</string>
+    <string name="shop_type">行业类型</string>
+    <string name="shop_description">店铺描述</string>
+    <string name="shop_commit_tx">提&#160;交</string>
+
+    <!--创建店铺-->
+    <string name="create_shop_title_tx">创建店铺</string>
+    <string name="create_shop_pop_title_tx">行业类型</string>
+
+    <!--个人信息-->
+    <string name="personalinfo_title">个人信息</string>
+    <string name="personalinfo_username">账号信息</string>
+    <string name="personalinfo_resetPW">修改密码</string>
+    <string name="personalinfo_clean">清除缓存</string>
+    <string name="personalinfo_version">版本号：</string>
+    <string name="personalinfo_exit">退出登录</string>
+    <string name="personalinfo_myheadimg">我的头像</string>
+
+    <!--修改密码-->
+    <string name="reset_password_title">修改密码</string>
+    <string name="reset_password_old">旧密码</string>
+    <string name="reset_password_old_wran">请输入旧密码</string>
+    <string name="reset_password_new">新密码</string>
+    <string name="reset_password_new_wran">请输入新密码</string>
+    <string name="reset_password_comf">重复新密码</string>
+    <string name="reset_password_comf_wran">请输入重复新密码</string>
+    <string name="reset_password_comf_wran2">两次输入的新密码不一致，请重新输入</string>
+    <string name="reset_password_bt">确&#160;定</string>
+
+    <!--意见反馈-->
+    <string name="feedback_sugg_hint">请在此处键入意见...</string>
+
+    <!--频道管理-->
+    <string name="channel_title">功能列表</string>
+    <string name="channel_my_function">我的功能列表</string>
+    <string name="channel_other_function">其他功能</string>
+    <string name="channel_title_right_normal">编辑</string>
+    <string name="channel_title_right_ing">完成</string>
+
+    <!--店铺预览-->
+    <string name="storepreview_title">店铺预览</string>
+    <string name="storepreview_title_right">分享\n店铺</string>
+    <string name="storepreview_title_search">输入商品名称</string>
+
+    <!--商品管理-->
+    <string name="goodsmanagement_right_tx">分类</string>
+    <string name="goodsmanagement_onsale_tx">出售中</string>
+    <string name="goodsmanagement_undershelf_tx">已下架</string>
+    <string name="goodsmanagement_add_tx">新增商品</string>
+    <string name="goodsmanagement_manage_tx">批量管理</string>
+
+    <!--商品分类-->
+    <string name="goodsclases_title">商品分类</string>
+    <string name="goodsclases_add">新建分类</string>
+    <string name="goodsclases_editor">编辑分类</string>
+
+    <!--新建商品分类-->
+    <string name="add_goodsclass_title">新建分类</string>
+    <string name="add_goodsclass_ok">保存</string>
+    <string name="add_goodsclass_hint">请输入要新建的分类名</string>
+
+    <!--商品分类编辑-->
+    <string name="edit_goodsclass_title">编辑分类</string>
+    <string name="edit_goodsclass_finish">完成</string>
+    <string name="edit_goodsclass_hint">请输入新的分类名</string>
+    <string name="edit_goodsclass_name_title">修改分类名</string>
+    <string name="edit_goodsclass_name_right">保存</string>
+
+    <!--新增商品-->
+    <string name="add_goods_title">新增商品</string>
+    <string name="add_goods_info">商品信息</string>
+    <string name="add_goods_describe">商品描述</string>
+    <string name="add_goods_picture">商品图片</string>
+    <string name="add_goods_code">条码</string>
+    <string name="add_goods_code_hint">0000000000000</string>
+    <string name="add_goods_name">名称</string>
+    <string name="add_goods_name_hint">商品名称</string>
+    <string name="add_goods_class">分类</string>
+    <string name="add_goods_class_hint">默认分类</string>
+    <string name="add_goods_purprice">进价</string>
+    <string name="add_goods_price_hint">¥ 0</string>
+    <string name="add_goods_price">售价</string>
+    <string name="add_goods_specifications">规格</string>
+    <string name="add_goods_specifications_hint">尺码 颜色 型号</string>
+    <string name="add_goods_stock">库存</string>
+    <string name="add_goods_stock_hint">0</string>
+    <string name="add_goods_finish">完成</string>
+    <string name="add_goods_goon">完成并继续添加</string>
+    <string name="add_goods_scancode_title">条形/二维码扫描</string>
+
+    <!--商品管理-->
+    <string name="goods_management_unshelve">下架</string>
+    <string name="goods_management_change">分类至</string>
+
+    <!--商品详情-->
+    <string name="goodsdetail_title">商品详情</string>
+    <string name="goodsdetail_edit">编辑</string>
+    <string name="goodsdetail_shelves">上架</string>
+    <string name="goodsdetail_unshelve">下架</string>
+    <string name="goodsdetail_delete">删除</string>
+
+    <!--营销管理-->
+    <string name="marketingmanagement_title">营销管理</string>
+
+    <!--满减-->
+    <string name="fullcut_title">全场满减</string>
+    <string name="fullcut_add">添加满减活动</string>
+    <string name="fullcut_all">全&#160;部</string>
+    <string name="fullcut_notstart">未开始</string>
+    <string name="fullcut_now">进行中</string>
+    <string name="fullcut_expired">已结束</string>
+    <string name="fullcut_add_title">添加满减活动</string>
+    <string name="fullcut_add_ok">确认添加</string>
+    <string name="fullcut_add_name">活动名称</string>
+    <string name="fullcut_add_starttime">开始时间</string>
+    <string name="fullcut_add_endtime">结束时间</string>
+    <string name="fullcut_add_add">添加活动</string>
+    <string name="fullcut_add_remark">活动说明</string>
+
+    <!--优惠券-->
+    <string name="coupon_title">优惠券</string>
+    <string name="coupon_notstart">未开始</string>
+    <string name="coupon_now">进行中</string>
+    <string name="coupon_finish">已结束</string>
+    <string name="coupon_add">添加优惠券</string>
+    <string name="add_coupon_title">添加优惠券</string>
+    <string name="add_coupon_denomination">券面金额</string>
+    <string name="add_coupon_denomination_hint">优惠金额</string>
+    <string name="add_coupon_number">数&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;量</string>
+    <string name="add_coupon_number_hint">可领取的优惠券数量</string>
+    <string name="add_coupon_limit">订单金额</string>
+    <string name="add_coupon_limit_hint">使用券的最低订单金额</string>
+    <string name="add_coupon_limitnumber">限领数量</string>
+    <string name="add_coupon_limitnumber_hint">每人限领优惠券数</string>
+    <string name="add_coupon_time_hint">请选择</string>
+    <string name="add_coupon_public">在店中公开领取</string>
+    <string name="add_coupon_displayfinish">展示已领完的券</string>
+    <string name="add_coupon_explain">优惠券说明</string>
+    <string name="add_coupon_explain_hint">内容会出现在你分享的领券页面（50个字内）</string>
+
+    <!--编辑优惠券-->
+    <string name="edit_coupon_title">编辑优惠券</string>
+
+    <!--优惠券详情-->
+    <string name="coupon_details_title">优惠券详情</string>
+    <string name="receive_coupon_records_title">领取记录</string>
+
+    <!--会员-->
+    <string name="memberlist_title">会员管理</string>
+    <string name="memberlist_title_topright">筛选</string>
+    <string name="memberlist_search_hint">输入会员姓名/电话/性别等等</string>
+    <string name="add_member_title">新增会员</string>
+    <string name="add_member_top_left">增加会员</string>
+    <string name="add_member_top_right">批量导入</string>
+    <string name="add_member_hint">必填</string>
+
+    <string name="register_name_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+
+    <!--订单详情-->
+    <string name="orderdetail_id">订单编号</string>
+    <string name="orderdetail_money">订单金额</string>
+    <string name="orderdetail_goods">商&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;品</string>
+    <string name="orderdetail_remarks">备&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;注</string>
+    <string name="orderdetail_time">创建时间</string>
+    <string name="orderdetail_state">状&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;态</string>
+    <string name="ordermanage_goodsinfo">商品信息:</string>
+    <string name="ordermanage_id">订单编号:</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_class_popwin_ll"
+    android:orientation="vertical"
+    android:background="@color/color_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/item_class_popwin_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/color_black"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="15sp"
+        android:text="fenlei"/>
+</LinearLayout>

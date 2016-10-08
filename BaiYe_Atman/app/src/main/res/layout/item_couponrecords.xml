@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/item_records_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="手机号"
+            android:textColor="#585858" />
+
+        <TextView
+            android:id="@+id/item_records_isuser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="是否使用"
+            android:textColor="#585858" />
+
+        <TextView
+            android:id="@+id/item_records_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="日期"
+            android:textColor="#585858" />
+
+        <TextView
+            android:id="@+id/item_records_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="识别码"
+            android:visibility="gone"
+            android:textColor="#585858" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_records_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_line" />
+
+</LinearLayout>

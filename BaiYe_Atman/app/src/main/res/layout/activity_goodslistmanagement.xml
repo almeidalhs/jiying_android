@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pullToRefreshListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:divider="@color/color_line"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:background="@color/color_white"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="disabled"
+        ptr:ptrScrollingWhileRefreshingEnabled="true" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/goodsmanagement_add_ll"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/white_hollow_selector"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@mipmap/goods_management_add"/>
+
+            <TextView
+                android:id="@+id/goodsmanagement_shelce_tx"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                android:text="@string/goods_management_unshelve"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/goodsmanagement_manage_ll"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/white_hollow_selector"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:src="@mipmap/goods_management_manage"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                android:text="@string/goods_management_change"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

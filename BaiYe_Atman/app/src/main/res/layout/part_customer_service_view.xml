@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:paddingBottom="15dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/CS_telephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="@dimen/cs_phone_text"
+        android:background="@drawable/white_hollow_selector"
+        android:textColor="@color/login_CSphone_color"
+        android:text="@string/customer_service_telephone"/>
+</LinearLayout>

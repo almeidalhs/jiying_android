@@ -1,0 +1,21 @@
+<resources>
+    <string name="networkError">网络链接异常</string>
+    <string name="clientError">客户端链接异常</string>
+    <string name="serverError">服务器链接异常</string>
+    <string name="authFailureError">授权出错</string>
+    <string name="parseError">解析出错</string>
+    <string name="noConnectionError">无法链接</string>
+    <string name="timeoutError">啊哦，网络堵车了: (\n请您再试一次</string>
+    <string name="tips_has_no_phone_and_pwd">请输入正确的用户名或密码~</string>
+    <string name="tuijian">填写推荐人</string>
+    <string name="tuijian_tips">推荐您加入的好友</string>
+    <string name="ylb_agreement">同意《永利宝理财服务条款》</string>
+    <string name="forget_pwd_tips">如未绑定手机或者其他问题请咨询客服</string>
+    <string name="forget_pwd_tips_top">请输入您要找回的账号所绑定的手机号码</string>
+    <string name="forget_pwd_tips_2">客服热线:400-019-2828</string>
+    <string name="ylb_phone">请填写您的手机号</string>
+    <string name="forget_pwd_code">请输入您收到的验证码</string>
+    <string name="forget_pwd_next">下一步</string>
+    <string name="forget_pwd_reset">重置密码</string>
+    <string name="title_erevyday_package">天天礼包</string>
+</resources>

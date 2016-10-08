@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/exp_section_ripple_wrapper_click"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:id="@+id/errorMsg"
+        android:textColor="#000000"
+        android:layout_centerInParent="true"
+        android:text="错误"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/layout/errorview.xml --><!-- From: file:/D:/myworkspace/renwohua/corelib/build/intermediates/bundles/debug/res/layout/errorview.xml -->

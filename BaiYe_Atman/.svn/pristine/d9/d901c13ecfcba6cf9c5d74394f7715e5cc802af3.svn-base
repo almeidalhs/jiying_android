@@ -1,0 +1,61 @@
+package com.atman.baiye.base;
+
+import com.atman.baiye.model.LoginModel;
+import com.atman.baiye.utils.Constant;
+import com.corelib.util.ObjectCacheToFile;
+
+/**
+ * 描述
+ * 作者 tangbingliang
+ * 时间 16/4/11 09:53
+ * 邮箱 bltang@atman.com
+ * 电话 18578909061
+ */
+public class CacheManager {
+
+    //用户登录信息
+    private LoginModel loginModel;
+    private static CacheManager instance = null;
+
+    private CacheManager() {
+
+    }
+
+    public static CacheManager getInstance() {
+        if (instance == null) {
+            synchronized (CacheManager.class) {
+                if (instance == null) {
+                    instance = new CacheManager();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public LoginModel getLoginModel() {
+        if (loginModel != null) {
+            return loginModel;
+        }
+        try {
+            loginModel = (LoginModel) ObjectCacheToFile.getCache(Constant.Cache.LOGINMODEL, LoginModel.class, BaiYeBaseApplication.getContext());
+            return loginModel;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public void setLoginModel(LoginModel loginModel) {
+        this.loginModel = loginModel;
+        ObjectCacheToFile.doCache(Constant.Cache.LOGINMODEL, loginModel, BaiYeBaseApplication.getContext());
+    }
+
+    public void clear() {
+        loginModel = null;
+        ObjectCacheToFile.doCache(Constant.Cache.LOGINMODEL, loginModel, BaiYeBaseApplication.getContext());
+    }
+
+    public void init() {
+        getLoginModel();
+    }
+
+}

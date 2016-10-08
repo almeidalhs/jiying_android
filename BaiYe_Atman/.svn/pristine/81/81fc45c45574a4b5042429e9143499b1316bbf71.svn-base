@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atman.baiye">
+
+    <uses-sdk android:minSdkVersion="4"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".base.BaiYeBaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/BaiYeAppStyle">
+        <activity
+            android:name=".main.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MainActivity"></activity>
+
+        <activity android:name=".personal.loginandregister.LoginActivity"></activity>
+
+        <activity android:name=".personal.loginandregister.RegisterSeedMessageActivity"/>
+
+        <activity android:name=".personal.loginandregister.RegisterSetPassWordActivity"/>
+
+        <activity android:name=".personal.loginandregister.AgreementActivity"/>
+
+        <activity android:name=".personal.loginandregister.RegisterFinishActivity"/>
+
+        <activity android:name=".personal.loginandregister.ResetWordActivity"/>
+
+        <activity android:name=".personal.AboutActivity"/>
+
+        <activity android:name=".personal.FeedbackSuggestionActivity"/>
+
+        <activity android:name=".personal.RecommendFriendsActivity"/>
+
+        <activity android:name=".personal.ShopInformationActivity"/>
+
+        <activity android:name=".personal.PersonalInformationActivity"/>
+
+        <activity android:name=".personal.CreateShopActivity"/>
+
+        <activity android:name=".personal.ResetPassWordActivity"/>
+
+        <!--友盟相关-->
+        <meta-data android:value="57149464e0f55ad331000b0d" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="atman_android" android:name="UMENG_CHANNEL"/>
+        <meta-data android:value="ada9e5f94040e5ca604c6730c9985cbd" android:name="UMENG_MESSAGE_SECRET" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!--友盟相关-->
+
+    </application>
+
+</manifest>

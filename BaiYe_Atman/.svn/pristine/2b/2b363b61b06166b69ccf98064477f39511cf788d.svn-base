@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_back_old.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xxhdpi/ic_back_old.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

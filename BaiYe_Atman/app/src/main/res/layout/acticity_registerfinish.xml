@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/part_register_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/register_ic_wight"
+                android:layout_height="@dimen/register_ic_wight"
+                android:src="@mipmap/register_phone"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:src="@drawable/red_dotted_line"/>
+
+            <ImageView
+                android:layout_width="@dimen/register_ic_wight"
+                android:layout_height="@dimen/register_ic_wight"
+                android:src="@mipmap/register_password"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:src="@drawable/red_dotted_line"/>
+
+            <ImageView
+                android:layout_width="@dimen/register_ic_wight"
+                android:layout_height="@dimen/register_ic_wight"
+                android:src="@mipmap/register_finsh"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/register_finish_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_finish"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/register_finish_tx"/>
+
+        <TextView
+            android:id="@+id/register_time_tx"
+            android:layout_marginTop="@dimen/register_finish_two_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_finish_two"
+            android:textColor="@color/register_finish_tx"
+            android:textSize="@dimen/register_finish_two_tx"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/part_customer_service_view"/>
+
+</LinearLayout>

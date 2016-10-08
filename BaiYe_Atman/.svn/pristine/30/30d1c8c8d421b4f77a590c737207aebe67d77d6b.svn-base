@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="SwipeBackLayoutStyle"/>
+    <color name="actionbar_title_color">#ffdddd</color>
+    <color name="activity_default_bg">#efeff4</color>
+    <color name="add_and_sub">#dbdcdd</color>
+    <color name="ads_edit">#c9cacb</color>
+    <color name="benn_built">#787878</color>
+    <color name="bg_color">#f1f1f1</color>
+    <color name="bottom_default_txt">#6a6f7c</color>
+    <color name="btn_green_click">#5da639</color>
+    <color name="btn_green_normal">#6dc343</color>
+    <color name="colorAccent">#e14b4b</color>
+    <color name="colorPrimary">#e14b4b</color>
+    <color name="colorPrimaryDark">#f14b41</color>
+    <color name="color_3F000000">#3F000000</color>
+    <color name="color_c12">#00aaef</color>
+    <color name="color_c14">#ff5252</color>
+    <color name="goods_type_bg_pressed">#d9d9d9</color>
+    <color name="gray">#b7b7b7</color>
+    <color name="green">#6dc343</color>
+    <color name="grid_line">#d2d2d2</color>
+    <color name="indicator_yellow">#FFEA00</color>
+    <color name="logout_normal">#ff4f4f</color>
+    <color name="logout_pressed">#dc4545</color>
+    <color name="merchant_background">#9b9b9b</color>
+    <color name="ph_line">#cccccc</color>
+    <color name="red">#ff3030</color>
+    <color name="round_backgroundColor">#8e8e93</color>
+    <color name="round_progressColor">#00c4bf</color>
+    <color name="round_roundBackground">#FFFFFF</color>
+    <color name="small_gray">#EBEBEB</color>
+    <color name="tab_bg">#ff4f4f</color>
+    <color name="translucent_15_black">#26000000</color>
+    <color name="translucent_full">#00000000</color>
+    <color name="window_background">#FFF5F5F5</color>
+    <declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable>
+    <declare-styleable name="MyRatingBar"><attr format="reference" name="defaultImage"/><attr format="reference" name="defaultImagePressed"/><attr format="integer" name="defaultImageNum"/></declare-styleable>
+    <declare-styleable name="PagerSlidingTabStrip"><attr format="color" name="indicatorColor"/><attr format="color" name="underlineColor"/><attr format="color" name="dividerColor"/><attr format="dimension" name="indicatorHeight"/><attr format="dimension" name="underlineHeight"/><attr format="dimension" name="dividerPadding1"/><attr format="dimension" name="tabPaddingLeftRight"/><attr format="dimension" name="scrollOffset"/><attr format="reference" name="tabBackground1"/><attr format="boolean" name="shouldExpand"/><attr format="boolean" name="textAllCaps1"/></declare-styleable>
+    <declare-styleable name="RoundProgressBar"><attr format="dimension" name="roundProgressWidth"/><attr format="color" name="backgroundColor"/><attr format="color" name="progressColor"/><attr format="color" name="roundBackground"/><attr format="integer" name="maxProgress"/><attr format="integer" name="progress"/><attr name="style"><enum name="STROKE" value="0"/><enum name="FILL" value="1"/></attr></declare-styleable>
+    <declare-styleable name="SnailIncomeView"><attr format="dimension" name="roundWidth"/><attr format="color" name="textColor"/><attr format="dimension" name="textSize"/><attr format="string" name="note"/></declare-styleable>
+    <declare-styleable name="SwipeBackLayout"><attr format="dimension" name="edge_size"/><attr name="edge_flag"><enum name="left" value="0"/><enum name="right" value="1"/><enum name="bottom" value="2"/><enum name="all" value="3"/></attr><attr format="reference" name="shadow_left"/><attr format="reference" name="shadow_right"/><attr format="reference" name="shadow_bottom"/></declare-styleable>
+    <declare-styleable name="roundedimageview"><attr format="dimension" name="border_thickness"/><attr format="color" name="border_inside_color"/><attr format="color" name="border_outside_color"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="content_frame_radio_text_size">10sp</dimen>
+    <dimen name="default_title_height">60dp</dimen>
+    <dimen name="default_title_padding_left_or_right">5dp</dimen>
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+    <dimen name="mini_margin_12">12dp</dimen>
+    <dimen name="mini_margin_5">5dp</dimen>
+    <dimen name="radio_btn_padding">5dp</dimen>
+    <dimen name="sectionNormalHeight">48dp</dimen>
+    <dimen name="sectionNotificationSize">10sp</dimen>
+    <dimen name="sectionRowMarginHorizontal">16sp</dimen>
+    <dimen name="sectionSize">15sp</dimen>
+    <dimen name="sectionSquareIconSize">40dp</dimen>
+    <dimen name="sliding_overlay_blur_size">4dp</dimen>
+    <dimen name="sliding_slop">32dp</dimen>
+    <string name="authFailureError">授权出错</string>
+    <string name="clientError">客户端链接异常</string>
+    <string name="forget_pwd_code">请输入您收到的验证码</string>
+    <string name="forget_pwd_next">下一步</string>
+    <string name="forget_pwd_reset">重置密码</string>
+    <string name="forget_pwd_tips">如未绑定手机或者其他问题请咨询客服</string>
+    <string name="forget_pwd_tips_2">客服热线:400-019-2828</string>
+    <string name="forget_pwd_tips_top">请输入您要找回的账号所绑定的手机号码</string>
+    <string name="networkError">网络链接异常</string>
+    <string name="noConnectionError">无法链接</string>
+    <string name="parseError">解析出错</string>
+    <string name="serverError">服务器链接异常</string>
+    <string name="timeoutError">啊哦，网络堵车了: (\n请您再试一次</string>
+    <string name="tips_has_no_phone_and_pwd">请输入正确的用户名或密码~</string>
+    <string name="title_erevyday_package">天天礼包</string>
+    <string name="tuijian">填写推荐人</string>
+    <string name="tuijian_tips">推荐您加入的好友</string>
+    <string name="ylb_agreement">同意《永利宝理财服务条款》</string>
+    <string name="ylb_phone">请填写您的手机号</string>
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+    <style name="BaseStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#00c4bf</item>
+        <item name="colorAccent">#00c4bf</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowBackground">@color/activity_default_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="CropButton">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/ab_btn_selector</item>
+    </style>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style mce_bogus="1" name="DT_DIALOG_ANIMATIONS" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dt_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dt_dialog_exit_anim</item>
+    </style>
+    <style name="DT_DIALOG_THEME" parent="android:Theme.Dialog">
+        <item name="android:padding">0dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:background">@drawable/dt_dialog_bg</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="DT_DIALOG_Translucent" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="OverlaySwipeBackTheme" parent="SwipeBackTheme">
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+    <style name="PopupDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 自己想要的背景 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="RadioButton">
+        <item name="android:background">@drawable/ab_btn_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">@dimen/content_frame_radio_text_size</item>
+        <item name="android:padding">@dimen/radio_btn_padding</item>
+    </style>
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+    <style name="SwipeBackTheme" parent="YLBAppStyle">
+
+        <!--<item name="selectableItemBackground">@drawable/ab_btn_selector</item>-->
+
+    </style>
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="YLBAppStyle" parent="BaseStyle">
+    </style>
+    <style name="YLBAppStyle2" parent="BaseStyle">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+    <style name="head_goods_tab">
+        <item name="android:textSize">0sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="radio_navigation_bar_bottom_tab">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:background">@drawable/tab_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>

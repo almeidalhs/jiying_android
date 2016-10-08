@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/personal_item_hight"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/personal_item_hight"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消费满 ¥"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/item_addfullcut_next_price_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="0"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="减"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ¥"
+            android:textColor="@color/color_main_red"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/item_addfullcut_next_discount_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="0"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/item_addfullcut_next_delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/item_addfull_delete" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_fullcut_next_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginBottom="2dp"
+        android:background="@color/color_line" />
+
+</LinearLayout>

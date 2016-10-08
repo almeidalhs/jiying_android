@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/color_white"
+    android:padding="@dimen/default_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:text="设备标识:"/>
+
+        <TextView
+            android:id="@+id/bindingequipment_account_tx"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#333333"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:text="设备密码:"/>
+
+        <com.corelib.widget.MyCleanEditText
+            android:id="@+id/bindingequipment_password_et"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:password="true"
+            android:paddingLeft="@dimen/login_edittext_padding"
+            android:paddingRight="@dimen/login_edittext_right_padding"
+            android:background="@drawable/gray_red_edittext_bg_selector"
+            android:hint="请输入设备密码"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bindingequipment_commit_bt"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/login_button_text"
+        android:background="@drawable/red_full_selector"
+        android:textColor="@color/color_white"
+        android:text="绑定此设备"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="将此终端设备与当前登陆账号绑定"/>
+
+
+</LinearLayout>

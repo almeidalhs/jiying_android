@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">百业</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="response_not_correct">服务器返回的数据格式不对</string>
+    <string name="customer_service_telephone">有疑问请拨打即商客服电话\n400-820-5310</string>
+    <string name="service_telephone">tel:400-820-5310</string>
+    <string name="service_telephone_tx">400-820-5310</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+
+    <!--登陆界面-->
+    <string name="login_title">登录</string>
+    <string name="login_username">账号</string>
+    <string name="login_password">密码</string>
+    <string name="login_login">登&#160;&#160;&#160;&#160;录</string>
+    <string name="login_register">注&#160;&#160;&#160;&#160;册</string>
+    <string name="login_forget_pw">忘记密码？</string>
+    <string name="login_username_hint">请输入手机号码</string>
+    <string name="login_username_right">请输入正确的手机号码</string>
+    <string name="login_password_hint">请输入密码</string>
+
+    <!--注册界面-->
+    <string name="register_top">即应百业&#160;营销互联</string>
+    <string name="register_phone_tx">手机号</string>
+    <string name="register_code_tx">验证码</string>
+    <string name="register_phone_hint">请输入手机号码</string>
+    <string name="register_wran">轻触上面的“下一步”按钮，即表示你同意</string>
+    <string name="register_agreement">《即商用户协议》</string>
+    <string name="register_agreement_title">即商用户协议</string>
+    <string name="register_next">下一步</string>
+    <string name="register_code_wran_one">请输入验证码</string>
+    <string name="register_code_wran_two">请输入正确的验证码</string>
+    <string name="register_title">注册</string>
+    <string name="register_password">密码</string>
+    <string name="register_password_wran">请设置登录密码</string>
+    <string name="register_finish">恭喜，注册成功！</string>
+    <string name="register_finish_two">5s内自动跳转到首页</string>
+
+    <!--重新设置密码-->
+    <string name="resetPW_title">重新设置密码</string>
+    <string name="resetPW_newpw_tx">新密码</string>
+
+    <!--地步菜单-->
+    <string name="tab_home">首页</string>
+    <string name="tab_message">消息</string>
+    <string name="tab_personal">个人</string>
+    <string name="tab_test">测试</string>
+
+    <!--个人中心-->
+    <string name="personal_title">个人</string>
+    <string name="personal_name">商铺名</string>
+    <string name="personal_signature">商铺签名</string>
+    <string name="personal_shopInfo">店铺信息</string>
+    <string name="personal_recommend">推荐朋友</string>
+    <string name="personal_proposal">反馈建议</string>
+    <string name="personal_cs">联系客服</string>
+    <string name="personal_about">关于我们</string>
+
+    <!--店铺信息-->
+    <string name="shop_top_tx">点击\n更改背景图片</string>
+    <string name="shop_name">店铺名称</string>
+    <string name="shop_phone">联系电话</string>
+    <string name="shop_address">店铺地址</string>
+    <string name="shop_type">行业类型</string>
+    <string name="shop_description">店铺描述</string>
+    <string name="shop_commit_tx">提&#160;交</string>
+
+    <!--创建店铺-->
+    <string name="create_shop_title_tx">创建店铺</string>
+    <string name="create_shop_pop_title_tx">行业类型</string>
+
+    <!--个人信息-->
+    <string name="personalinfo_title">个人信息</string>
+    <string name="personalinfo_username">账号信息</string>
+    <string name="personalinfo_resetPW">修改密码</string>
+    <string name="personalinfo_clean">清除缓存</string>
+    <string name="personalinfo_version">版本号：</string>
+    <string name="personalinfo_exit">退出登录</string>
+
+    <!--修改密码-->
+    <string name="reset_password_title">修改密码</string>
+    <string name="reset_password_old">旧密码</string>
+    <string name="reset_password_old_wran">请输入旧密码</string>
+    <string name="reset_password_new">新密码</string>
+    <string name="reset_password_new_wran">请输入新密码</string>
+    <string name="reset_password_comf">重复新密码</string>
+    <string name="reset_password_comf_wran">请输入重复新密码</string>
+    <string name="reset_password_bt">确&#160;定</string>
+
+</resources>

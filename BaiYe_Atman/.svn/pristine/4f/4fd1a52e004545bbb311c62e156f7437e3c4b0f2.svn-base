@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/ico_loading_b"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0.0"
+        android:toDegrees="360.0"
+        /><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/drawable/pb_loading_b.xml --><!-- From: file:/D:/myworkspace/renwohua/corelib/build/intermediates/bundles/debug/res/drawable/pb_loading_b.xml -->

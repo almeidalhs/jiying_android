@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColor="@color/color_black"
+                android:text="@string/add_goods_info"/>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_code"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_code"/>
+                <TextView
+                    android:id="@+id/add_goods_code_txb"
+                    android:layout_toRightOf="@+id/add_goods_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/add_goods_code"
+                    android:textColor="@color/color_black"/>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_code_tx"
+                    android:layout_toRightOf="@+id/add_goods_code_txb"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_code_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:id="@+id/add_goods_code_bt"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:src="@mipmap/ic_goods_code_bt"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_name"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_name"/>
+
+                <RelativeLayout
+                    android:id="@+id/add_goods_name_rl"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_goods_name"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="@string/add_goods_name"
+                        android:textColor="@color/color_black"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_name_et"
+                    android:layout_toRightOf="@+id/add_goods_name_rl"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_name_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_goods_class_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@drawable/white_hollow_selector">
+                <ImageView
+                    android:id="@+id/add_goods_class"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_class"/>
+
+                <RelativeLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_goods_class"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="@string/add_goods_class"
+                        android:textColor="@color/color_black"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/add_goods_class_tx"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_class_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:src="@mipmap/right_arrow"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_purprice"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_purprice"/>
+
+                <TextView
+                    android:id="@+id/add_goods_purprice_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/add_goods_purprice"
+                    android:textSize="15sp"
+                    android:text="@string/add_goods_purprice"
+                    android:textColor="@color/color_black"/>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_purprice_et"
+                    android:layout_toRightOf="@+id/add_goods_purprice_tx"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_price_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_price"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_price"/>
+
+                <RelativeLayout
+                    android:id="@+id/add_goods_price_rl"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_goods_price"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/add_goods_price_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:text="@string/add_goods_price"
+                        android:textColor="@color/color_black"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_price_et"
+                    android:layout_toRightOf="@+id/add_goods_price_rl"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_price_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_specifications"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_specifications"/>
+
+                <TextView
+                    android:id="@+id/add_goods_specifications_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/add_goods_specifications"
+                    android:textSize="15sp"
+                    android:text="@string/add_goods_specifications"
+                    android:textColor="@color/color_black"/>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_specifications_et"
+                    android:layout_toRightOf="@+id/add_goods_specifications_tx"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:hint="@string/add_goods_specifications_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_white">
+                <ImageView
+                    android:id="@+id/add_goods_stock"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_goods_stock"/>
+
+                <TextView
+                    android:id="@+id/add_goods_stock_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/add_goods_stock"
+                    android:textSize="15sp"
+                    android:text="@string/add_goods_stock"
+                    android:textColor="@color/color_black"/>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_stock_et"
+                    android:layout_toRightOf="@+id/add_goods_stock_tx"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="15sp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:hint="@string/add_goods_stock_hint"
+                    android:textColor="@color/color_black"/>
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/color_line"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColor="@color/color_black"
+                android:text="@string/add_goods_describe"/>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/add_goods_describe_et"
+                    android:background="@drawable/gray_red_edittext_bg_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minLines="5"
+                    android:maxLines="5"
+                    android:textColor="@color/color_black"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColor="@color/color_black"
+                android:text="@string/add_goods_picture"/>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:padding="@dimen/default_padding">
+
+                <com.corelib.widget.MyGridView
+                    android:id="@+id/noScrollgridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="10dp"
+                android:background="@color/color_line"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/add_goods_finish_ll"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/white_hollow_selector"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/finish"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                android:text="@string/add_goods_finish"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/add_goods_goon_ll"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/white_hollow_selector"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/goods_management_add"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                android:text="@string/add_goods_goon"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

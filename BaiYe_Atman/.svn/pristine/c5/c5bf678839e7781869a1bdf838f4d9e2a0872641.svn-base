@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/login_top_img.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/login_top_img.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_personal_pressed.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_personal_pressed.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_message_normal.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_message_normal.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_home_normal.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_home_normal.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_message_pressed.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_message_pressed.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_personal_normal.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_personal_normal.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/tab_home_pressed.png",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/app/src/main/res/mipmap-hdpi/tab_home_pressed.png"
+    }
+]

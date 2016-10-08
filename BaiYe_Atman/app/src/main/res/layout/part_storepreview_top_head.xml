@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/part_store_preview_head_rl"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@mipmap/personal_top_bg"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/part_store_preview_headbg_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/personal_top_bg" />
+
+        <LinearLayout
+            android:id="@+id/part_store_preview_head_ll"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/part_store_preview_head_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/personal_head_default" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/part_store_preview_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/part_store_preview_shopaddre_tx"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/part_store_preview_head_ll"
+            android:singleLine="true"
+            android:text="@string/personal_name"
+            android:textColor="@color/color_white" />
+
+        <ImageView
+            android:id="@+id/add_icon_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/part_store_preview_head_ll"
+            android:src="@mipmap/shop_addr_ic"/>
+
+        <TextView
+            android:id="@+id/part_store_preview_shopaddre_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/add_icon_iv"
+            android:singleLine="true"
+            android:text="@string/personal_signature"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/part_store_preview_shopsignature_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#33000000"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="@string/personal_signature"
+            android:textColor="@color/color_white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/storepreview_fullcut_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#694767"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/red_bg"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:text="减"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/storepreview_fullcut_tx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+    <com.corelib.widget.MyGridView
+        android:id="@+id/storepreview_coupon_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="5dp"
+        android:background="@color/color_white"
+        android:numColumns="3"
+        android:padding="5dp"/>
+
+</LinearLayout>

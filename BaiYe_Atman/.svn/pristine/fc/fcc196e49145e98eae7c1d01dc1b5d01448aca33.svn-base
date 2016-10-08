@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/recycler_view_item_footer"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip">
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_centerHorizontal="true"
+        android:indeterminateDrawable="@drawable/pb_loading_b"
+        android:indeterminateDuration="2000"/>
+
+    <TextView
+        android:id="@+id/footview_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:text="load..."/>
+
+</RelativeLayout><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/layout/recycle_item_footer.xml -->

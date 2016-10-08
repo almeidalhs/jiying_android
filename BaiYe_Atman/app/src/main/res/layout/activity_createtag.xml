@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="30dp">
+
+    <com.corelib.widget.MyCleanEditText
+        android:id="@+id/add_tag_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:paddingLeft="@dimen/login_edittext_padding"
+        android:paddingRight="@dimen/login_edittext_right_padding"
+        android:background="@drawable/gray_red_edittext_bg_selector"
+        android:hint="请输入标签名"
+        android:textSize="@dimen/login_edittext_text"
+        android:textColor="@color/color_black"/>
+
+</LinearLayout>

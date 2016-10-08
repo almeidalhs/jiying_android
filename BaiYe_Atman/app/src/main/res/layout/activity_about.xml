@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="60dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:src="@mipmap/about_ic"/>
+
+        <TextView
+            android:id="@+id/about_version_tx"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/about_agreement_tx"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bottom_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_hollow_selector"
+        android:textSize="13sp"
+        android:textColor="#0095EB"
+        android:text="@string/register_agreement"/>
+
+    <TextView
+        android:id="@+id/bottom_tx"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="@string/company_name"
+        android:textColor="@color/color_black"
+        android:textSize="13sp"/>
+
+</RelativeLayout>

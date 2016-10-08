@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <include layout="@layout/item_storepreview_coupon_gridview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/item_storepreview_fullcut_surplus_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="剩余94张"
+            android:textColor="@color/color_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_storepreview_fullcut_limit_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="每人限领1张"
+            android:textColor="@color/color_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_storepreview_fullcut_start_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开始："
+            android:textColor="@color/color_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_storepreview_fullcut_end_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="结束："
+            android:textColor="@color/color_black"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+package com.atman.baiye.main;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.WindowManager;
+
+import com.android.volley.VolleyError;
+import com.atman.baiye.R;
+import com.atman.baiye.base.BaiYeBaseActivity;
+import com.atman.baiye.utils.PreferenceUtil;
+
+import java.util.List;
+
+/**
+ * Created by loyee on 16-1-5.
+ */
+public class SplashActivity extends BaiYeBaseActivity {
+    private boolean isInit = true;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        disableLoginCheck();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_splash);
+        setSwipeBackEnable(false);
+    }
+
+    private void redirectTo() {
+        if (isInit) {
+            isInit = false;
+            boolean isLearned = PreferenceUtil.getBoolPreferences(this, "isLearned");
+            if (!isLearned) {
+                goGuide();
+            } else {
+                goHome();
+            }
+        }
+    }
+
+    private void goHome() {
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        finish();
+    }
+
+    private void goGuide() {
+//        startActivity(new Intent(this, GuideActivity.class));
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        finish();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                finish();
+            }
+        }, 2500);
+    }
+
+    @Override
+    public synchronized void onResponse(Object response) {
+        super.onResponse(response);
+
+    }
+}

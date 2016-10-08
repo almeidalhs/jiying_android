@@ -1,0 +1,243 @@
+package com.corelib.net.request;
+
+import android.text.TextUtils;
+import android.util.Base64;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
+import com.corelib.base.BaseApplication;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.corelib.net.IVolleyListener;
+import com.corelib.util.DeviceUtils;
+import com.corelib.util.LogUtils;
+import com.corelib.util.PackageInfoUtil;
+import com.corelib.common.SubmitHelper;
+
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+
+public class YLBGsonRequest<T> extends Request<T> {
+    private final Gson mGson = new Gson();
+    private final Class<T> mClazz;
+    private final IVolleyListener<T> mListener;
+    private Map<String, String> mPostParams = new HashMap<>();
+    private String mParamJson = "";
+
+    private YLBGsonRequest(int method, String url, String json, Class<T> clazz, IVolleyListener listeners) {
+        super(method, url, listeners);
+        this.mClazz = clazz;
+        this.mListener = listeners;
+        this.mPostParams.put("i", json);
+        mParamJson = json;
+        setTag(url);
+    }
+
+    public static YLBGsonRequest createPostRequest(String url, Map<String, Object> postParams, Class clazz, IVolleyListener listeners) {
+        String encrytedjson = addExtraParams(postParams, url);
+        YLBGsonRequest newRequest = new YLBGsonRequest(Method.POST, url, encrytedjson, clazz, listeners);
+        return newRequest;
+    }
+
+    public static YLBGsonRequest createPostRequest(String url, String postParams, Class clazz, IVolleyListener listeners) {
+        YLBGsonRequest newRequest = new YLBGsonRequest(Method.POST, url, postParams, clazz, listeners);
+        return newRequest;
+    }
+
+    public static YLBGsonRequest createGetRequest(String url, Class clazz, IVolleyListener listeners) {
+        YLBGsonRequest newRequest = new YLBGsonRequest(Method.GET, url, "", clazz, listeners);
+        return newRequest;
+    }
+
+    public static YLBGsonRequest createDeleteRequest(String url, Class clazz, IVolleyListener listeners) {
+        YLBGsonRequest newRequest = new YLBGsonRequest(Method.DELETE, url, "", clazz, listeners);
+        return newRequest;
+    }
+
+    public static YLBGsonRequest createPutRequest(String url, Class clazz, IVolleyListener listeners) {
+        YLBGsonRequest newRequest = new YLBGsonRequest(Method.PUT, url, "", clazz, listeners);
+        return newRequest;
+    }
+
+    private static String addExtraParams(Map<String, Object> params, String url) {
+        if (params == null) {
+            params = new HashMap<>();
+        }
+
+        Gson gson = new Gson();
+        String json = gson.toJson(params);
+        LogUtils.e(">>>>params:"+json);
+        return json;
+    }
+
+    @Override
+    public String getCacheKey() {
+        return super.getCacheKey()+mParamJson;
+    }
+
+    @Override
+    protected void deliverResponse(T response) {
+//        try {
+//            //如果服务器返回数据了，但是请求code不对，默认1000是ok
+//            //得到类对象
+//            Class result = (Class) response.getClass();
+//            Field filed = result.getDeclaredField("code");
+//            filed.setAccessible(true);
+//            int code = (int) filed.get(response);//得到此属性的值
+//            if(code != 1000) {
+//                mListener.onResponseNotCorrect(response);
+//                return;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        mListener.onResponse(response);
+    }
+
+    @Override
+    public void deliverError(VolleyError error) {
+        super.deliverError(error);
+    }
+
+//    @Override
+//    protected Map<String, String> getParams() throws AuthFailureError {
+//        return mPostParams;
+//    }
+
+    @Override
+    public byte[] getBody() throws AuthFailureError {
+        byte[] srtbyte = null;
+        try {
+            srtbyte = mParamJson.getBytes("UTF-8");
+        } catch (Exception e) {
+
+        }
+        return srtbyte;
+    }
+
+    public static String createGetUrl(String baseUrl, Map<String, String> params) {
+        if (baseUrl == null) {
+            return "";
+        }
+        if (params == null || params.size() == 0) {
+            return baseUrl;
+        }
+        Set<String> keys = params.keySet();
+        String str = "";
+        for (String key : keys) {
+            if (str.length() > 0) {
+                str += "&&";
+            }
+            str = str + key + "=" + params.get(key);
+        }
+        baseUrl = baseUrl + "?" + str;
+        LogUtils.v("===>createUrl=" + baseUrl);
+        return baseUrl;
+    }
+
+    @Override
+    public Map<String, String> getHeaders() throws AuthFailureError {
+        LogUtils.e("getCookie():" + getCookie());
+        HashMap<String, String> headerMap = new HashMap<String, String>();
+        headerMap.put("Accept", "application/json");
+        headerMap.put("Content-Type", "application/json");
+        headerMap.put("Cookie", getCookie());
+        return headerMap;
+    }
+
+    /**
+     * 获取Cookie形式的通用参数
+     *
+     * @return
+     */
+    private static String getCookie() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(BaseApplication.mCookie);
+        stringBuilder.append(";USER_TOKEN=");
+        if (BaseApplication.mCookie == null) {
+            stringBuilder.append(BaseApplication.mToken);
+        } else {
+            stringBuilder.append(BaseApplication.mSessionId);
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 构造通用参数列表
+     */
+    private static Map<String, String> buildCommonParams() {
+        Map<String, String> params = new HashMap<String, String>();
+        String bduss = "";
+        String deviceId;
+        try {
+            deviceId = URLEncoder.encode(DeviceUtils.getDeviceId(), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
+        params.put("TERMINAL", "android_" + deviceId);
+        params.put("APP_VERSION", "android_" + PackageInfoUtil.getVersionName());
+        params.put("CHANNEL", PackageInfoUtil.getChannel());
+        params.put("BDUSS", bduss);
+        params.put("APP_TIME", System.currentTimeMillis() + "");
+        return params;
+    }
+
+    @Override
+    protected Response<T> parseNetworkResponse(NetworkResponse response) {
+        try {
+//            String data = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
+            String data = new String(response.data, "utf-8");
+
+            LogUtils.e(this.getUrl()+"==data==>" + data);
+//            LogUtils.e("==response.headers.toString()==>" + response.headers.toString());
+//            LogUtils.e("==response.headers.get(\"USER_TOKEN\")==>" + response.headers.get("USER_TOKEN"));
+            if (response.headers.containsKey("Set-Cookie")) {
+                BaseApplication.mCookie = response.headers.get("Set-Cookie").split(";")[0];
+            }
+            // 服务器返回errNo=0
+            if (!TextUtils.isEmpty(data)) {
+                String json = data;
+//                json = URLDecoder.decode(json, "UTF-8");
+                LogUtils.e("==url==>" + this.getUrl()+"  class="+mClazz.getName());
+                LogUtils.e("==response:" + json);
+                return Response.success(mGson.fromJson(json, mClazz),
+                        HttpHeaderParser.parseCacheHeaders(response));
+            }
+            // 服务器返回errNo != 0
+            else {
+                return Response.error(new ParseError());
+            }
+        } catch (UnsupportedEncodingException e) {
+            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            e.printStackTrace();
+            return Response.error(new ParseError(e));
+        } catch (JsonSyntaxException e) {
+            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            e.printStackTrace();
+            return Response.error(new ParseError(e));
+        } catch (OutOfMemoryError e) {
+            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            e.printStackTrace();
+            return Response.error(new ParseError(e));
+        }
+    }
+
+    private void resovleClazzInfo() {
+        Type genType = getClass().getGenericSuperclass();
+        Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
+//        entityClazz = (Class) params[0];
+    }
+}

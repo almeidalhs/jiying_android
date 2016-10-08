@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/logout_pressed" android:state_pressed="true" />
+    <item android:drawable="@color/logout_normal" />
+</selector><!-- From: file:/D:/myworkspace/renwohua/corelib/src/main/res/drawable/logout_btn_selector.xml --><!-- From: file:/D:/myworkspace/renwohua/corelib/build/intermediates/bundles/debug/res/drawable/logout_btn_selector.xml -->

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCE0E3"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:id="@+id/addfullcut_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <RelativeLayout
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullcut_add_name"
+                        android:textColor="@color/personal_item_tx"
+                        android:textSize="@dimen/personal_item_size" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle" />
+                </RelativeLayout>
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addfullcut_ex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:hint="@string/fullcut_add_name"
+                    android:textColor="@color/personal_item_hint_tx"
+                    android:textSize="@dimen/personal_item_edit_size" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:id="@+id/addfullcut_starttime_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:background="@drawable/white_hollow_selector"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullcut_add_starttime"
+                        android:textSize="@dimen/personal_item_size"
+                        android:textColor="@color/personal_item_tx"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/addfullcut_starttime_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="@dimen/personal_item_edit_size"
+                    android:textColor="@color/personal_item_hint_tx"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/right_arrow"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:background="@color/color_line"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addfullcut_endtime_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/personal_item_hight"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:background="@drawable/white_hollow_selector"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_marginRight="5dp"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fullcut_add_endtime"
+                        android:textSize="@dimen/personal_item_size"
+                        android:textColor="@color/personal_item_tx"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/red_circle"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/addfullcut_endtime_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right|center_vertical"
+                    android:textSize="@dimen/personal_item_edit_size"
+                    android:textColor="@color/personal_item_hint_tx"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/right_arrow"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_padding"
+                android:background="@color/color_line"/>
+
+            <com.corelib.widget.MyListView
+                android:id="@+id/fullcut_next_lv"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/default_padding"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColor="@color/color_black"
+                android:text="@string/fullcut_add_remark"/>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <com.corelib.widget.MyCleanEditText
+                    android:id="@+id/addfullcut_describe_et"
+                    android:background="@drawable/gray_red_edittext_bg_selector"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:textSize="15sp"
+                    android:padding="5dp"
+                    android:minLines="5"
+                    android:maxLines="5"
+                    android:textColor="@color/color_black"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/default_padding"
+                android:background="@color/color_line"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/fullcut_add_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_hollow_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/finish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/fullcut_add_ok"
+                android:textColor="#EC5D44"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

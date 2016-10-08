@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/craete_shop_title_bg"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/pop_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/gray_hollow_selector"
+            android:textColor="@color/color_black"
+            android:text="@string/cancel"/>
+
+        <Button
+            android:id="@+id/pop_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/gray_hollow_selector"
+            android:textColor="@color/color_main_red"
+            android:text="@string/ok"/>
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line"/>
+
+    <com.atman.jishang.widget.WheelView.WheelView
+        android:id="@+id/popwin_select_wv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/craete_shop_title_bg"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/personal_item_hight"
+            android:text="行业类型"
+            android:textColor="@color/color_black"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/default_padding"
+            android:textSize="@dimen/personal_item_size"
+            android:background="@color/craete_shop_title_bg"/>
+    </RelativeLayout>
+
+</LinearLayout>

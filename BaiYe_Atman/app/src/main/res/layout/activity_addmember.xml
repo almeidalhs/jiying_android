@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#EDEDED"
+        android:gravity="center">
+
+        <RadioGroup
+            android:id="@+id/addmenber_tabs_rg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <RadioButton
+                android:id="@+id/addmenber_tab_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/top_left_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/add_member_top_left"
+                android:textColor="@drawable/add_member_tab_text_selector"
+                android:textSize="@dimen/main_bottom_text_size" />
+
+            <RadioButton
+                android:id="@+id/addmenber_tab_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/top_right_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/add_member_top_right"
+                android:textColor="@drawable/add_member_tab_text_selector"
+                android:textSize="@dimen/main_bottom_text_size" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.corelib.widget.NoSwipeViewPager
+        android:id="@+id/addmenber_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

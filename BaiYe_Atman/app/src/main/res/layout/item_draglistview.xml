@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:id="@+id/click_remove_ll"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/click_remove"
+            android:layout_marginRight="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/item_delete_ic"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/item_draglistview_ic"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/click_remove_ll"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/item_draglistview_ic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item_draglistview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:text="商品管理"/>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/item_draglistview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:text="商品管理"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drag_handle_ll"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/drag_handle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/item_drag_ic"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/splash_iv_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/splash_iv_two"
+        android:layout_above="@+id/splash_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/splash_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="60dp"
+        android:background="@mipmap/wel_img_bottom_back">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/wel_img_bottom_logo"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/jump_tx"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过 5 s"
+        android:textColor="@color/color_black"
+        android:padding="5dp"
+        android:background="@color/color_white"/>
+
+</RelativeLayout>

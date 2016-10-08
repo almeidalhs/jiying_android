@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="@dimen/default_padding"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/item_memberlist_head_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/member_item_ic" />
+
+            <ImageView
+                android:id="@+id/item_memberlist_sex_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/member_boy_ic" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/item_memberlist_name_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="#61B9CF" />
+
+            <TextView
+                android:id="@+id/item_memberlist_phone_tx"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_memberlist_name_tx"
+                android:text="18578909061"
+                android:textColor="#61B9CF" />
+
+            <TextView
+                android:id="@+id/item_memberlist_integral_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/item_memberlist_phone_tx"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:layout_toRightOf="@+id/item_memberlist_phone_tx"
+                android:gravity="right"
+                android:text="积分：1000"
+                android:textColor="#61B9CF" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/item_memberlist_select_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/member_item_unselect" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_memberlist_line_iv"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="@dimen/default_padding"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_line" />
+
+</LinearLayout>
