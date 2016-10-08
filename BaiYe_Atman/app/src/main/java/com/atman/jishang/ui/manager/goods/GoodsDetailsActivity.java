@@ -228,8 +228,8 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GoodsDetailInfoModel) {
             mGoodsDetailInfoModel = (GoodsDetailInfoModel) response;
             if (mGoodsDetailInfoModel.getResult().equals("1")) {

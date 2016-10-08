@@ -89,7 +89,7 @@ public class YLBGsonRequest<T> extends Request<T> {
     }
 
     @Override
-    protected void deliverResponse(T response) {
+    protected void deliverResponse(T response, String data) {
 //        try {
 //            //如果服务器返回数据了，但是请求code不对，默认1000是ok
 //            //得到类对象
@@ -104,7 +104,7 @@ public class YLBGsonRequest<T> extends Request<T> {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        mListener.onResponse(response);
+        mListener.onResponse(response, data);
     }
 
     @Override
@@ -198,38 +198,32 @@ public class YLBGsonRequest<T> extends Request<T> {
     @Override
     protected Response<T> parseNetworkResponse(NetworkResponse response) {
         try {
-//            String data = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
             String data = new String(response.data, "utf-8");
 
             LogUtils.e(this.getUrl()+"==data==>" + data);
-//            LogUtils.e("==response.headers.toString()==>" + response.headers.toString());
-//            LogUtils.e("==response.headers.get(\"USER_TOKEN\")==>" + response.headers.get("USER_TOKEN"));
             if (response.headers.containsKey("Set-Cookie")) {
                 BaseApplication.mCookie = response.headers.get("Set-Cookie").split(";")[0];
             }
             // 服务器返回errNo=0
             if (!TextUtils.isEmpty(data)) {
                 String json = data;
-//                json = URLDecoder.decode(json, "UTF-8");
                 LogUtils.e("==url==>" + this.getUrl()+"  class="+mClazz.getName());
                 LogUtils.e("==response:" + json);
                 return Response.success(mGson.fromJson(json, mClazz),
-                        HttpHeaderParser.parseCacheHeaders(response));
-            }
-            // 服务器返回errNo != 0
-            else {
+                        HttpHeaderParser.parseCacheHeaders(response),json);
+            } else {// 服务器返回errNo != 0
                 return Response.error(new ParseError());
             }
         } catch (UnsupportedEncodingException e) {
-            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            LogUtils.e("UnsupportedEncodingException=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
             e.printStackTrace();
             return Response.error(new ParseError(e));
         } catch (JsonSyntaxException e) {
-            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            LogUtils.e("JsonSyntaxException=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
             e.printStackTrace();
             return Response.error(new ParseError(e));
         } catch (OutOfMemoryError e) {
-            LogUtils.e("=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
+            LogUtils.e("OutOfMemoryError=error:=url==>" + this.getUrl()+"  class="+mClazz.getName());
             e.printStackTrace();
             return Response.error(new ParseError(e));
         }

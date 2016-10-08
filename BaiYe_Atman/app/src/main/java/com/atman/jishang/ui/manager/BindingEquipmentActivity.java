@@ -96,8 +96,8 @@ public class BindingEquipmentActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof BindingEquipmentModel) {
             BindingEquipmentModel mBindingEquipmentModel = (BindingEquipmentModel) response;
             if (mBindingEquipmentModel.getBody().equals("1")) {

@@ -63,8 +63,8 @@ public class ResetPassWordActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof ResetPassWordResultModel) {
             ResetPassWordResultModel mResetPassWordResultModel = (ResetPassWordResultModel) response;
             if (mResetPassWordResultModel.getResult().equals("1")) {

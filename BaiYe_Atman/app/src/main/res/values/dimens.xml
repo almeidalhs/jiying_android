@@ -15,11 +15,11 @@
 
     <!--login-->
     <dimen name="login_button_hight">40dp</dimen>
-    <dimen name="login_edittext_hight">43dp</dimen>
+    <dimen name="login_edittext_hight">38dp</dimen>
     <dimen name="login_edittext_spacing">15dp</dimen>
     <dimen name="login_button_top_spacing">25dp</dimen>
     <dimen name="login_padding_spacing">40dp</dimen>
-    <dimen name="login_button_text">20sp</dimen>
+    <dimen name="login_button_text">17sp</dimen>
     <dimen name="login_forgetPW_text">14sp</dimen>
     <dimen name="login_edittext_padding">15dp</dimen>
     <dimen name="login_edittext_right_padding">5dp</dimen>
@@ -30,7 +30,7 @@
     <dimen name="register_top_one">20sp</dimen>
     <dimen name="register_top_two">15sp</dimen>
     <dimen name="register_finish_top">55sp</dimen>
-    <dimen name="register_tx">17sp</dimen>
+    <dimen name="register_tx">14sp</dimen>
     <dimen name="register_finish_tx">25sp</dimen>
     <dimen name="register_finish_two_tx">15sp</dimen>
     <dimen name="register_finish_two_top">10dp</dimen>
@@ -52,8 +52,9 @@
     <dimen name="dimen_dp_5">5dp</dimen>
     <dimen name="dimen_dp_10">10dp</dimen>
     <dimen name="dimen_dp_15">15dp</dimen>
-    <dimen name="dimen_dp_45">45dp</dimen>
     <dimen name="dimen_dp_44">44dp</dimen>
+    <dimen name="dimen_dp_45">45dp</dimen>
+    <dimen name="dimen_dp_100">100dp</dimen>
 
     <!--new_sp-->
     <dimen name="dimen_sp_15">15sp</dimen>

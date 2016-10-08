@@ -84,8 +84,8 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetMemberFilterModel) {
             mGetMemberFilterModel = (GetMemberFilterModel) response;
             if (mGetMemberFilterModel.getResult().equals("1")) {

@@ -190,8 +190,8 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof UpdateHeadImgModel) {
             UpdateHeadImgModel mUpdateHeadImgModel = (UpdateHeadImgModel) response;
             if (mUpdateHeadImgModel.getResult().equals("1")) {

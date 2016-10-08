@@ -245,7 +245,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
     }
 
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         if (response instanceof StoreGoodsClassesModel) {
             mStoreGoodsClassesModel = (StoreGoodsClassesModel) response;
             if (mStoreGoodsClassesModel.getResult().equals("1")) {
@@ -271,7 +271,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
                 showToast("商品分类获取失败");
             }
         } else if (response instanceof GetGoodsByClassIdModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             mGetGoodsByClassIdModel = (GetGoodsByClassIdModel) response;
             if (mGetGoodsByClassIdModel.getResult().equals("1")) {
                 mBodyEntityList = mGetGoodsByClassIdModel.getBody();

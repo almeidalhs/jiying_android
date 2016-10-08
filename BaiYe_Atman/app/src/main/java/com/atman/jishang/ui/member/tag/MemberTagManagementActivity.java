@@ -86,8 +86,8 @@ public class MemberTagManagementActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetMemberDetailsModel) {
             GetMemberDetailsModel mGetMemberDetailsModel = (GetMemberDetailsModel) response;
             if (mGetMemberDetailsModel.getResult().equals("1")) {

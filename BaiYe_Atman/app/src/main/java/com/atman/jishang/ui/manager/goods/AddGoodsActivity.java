@@ -208,8 +208,8 @@ public class AddGoodsActivity extends SimpleTitleBarActivity implements UploadUt
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetStoreClassModel) {
             GetStoreClassModel mGetStoreClassModel = (GetStoreClassModel) response;
             if (mGetStoreClassModel.getResult().equals("1")) {

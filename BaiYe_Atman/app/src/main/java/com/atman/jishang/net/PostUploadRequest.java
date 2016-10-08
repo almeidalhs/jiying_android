@@ -95,8 +95,8 @@ public class PostUploadRequest<T> extends Request<T> {
      * @param response The parsed response returned by
      */
     @Override
-    protected void deliverResponse(T response) {
-        mListener.onResponse(response);
+    protected void deliverResponse(T response, String data) {
+        mListener.onResponse(response, data);
     }
 
     @Override

@@ -73,8 +73,8 @@ public class AddGoodsClassActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof CreateStoreClassModel) {
             CreateStoreClassModel mCreateStoreClassModel = (CreateStoreClassModel) response;
             if (mCreateStoreClassModel.getResult().equals("1")) {

@@ -13,6 +13,7 @@
     <!--登陆界面-->
     <string name="login_title">登录</string>
     <string name="login_username">账号</string>
+    <string name="login_phone">手机号</string>
     <string name="login_password">密码</string>
     <string name="login_login">登&#160;&#160;&#160;&#160;录</string>
     <string name="login_register">注&#160;&#160;&#160;&#160;册</string>
@@ -26,6 +27,7 @@
     <string name="register_top_two">传统行业的互联网升级</string>
     <string name="register_phone_tx">手机号</string>
     <string name="register_code_tx">验证码</string>
+    <string name="register_getcode_tx">获取短信验证码</string>
     <string name="register_phone_hint">请输入手机号码</string>
     <string name="register_wran">轻触上面的“下一步”按钮，即表示你同意</string>
     <string name="register_agreement">《即商用户协议》</string>

@@ -112,8 +112,8 @@ public class OrderBatchManageActivity extends SimpleTitleBarActivity
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof OrderManageListModel) {
             OrderManageListModel mOrderManageListModel = (OrderManageListModel) response;
             mAllList = mOrderManageListModel.getBody();

@@ -239,8 +239,8 @@ public class AddBatchMemberFragment extends BaiYeBaseFragment implements Adapter
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof CreateMemberListModel) {
             CreateMemberListModel mCreateMemberListModel = (CreateMemberListModel) response;
             if (mCreateMemberListModel.getResult().equals("1")) {

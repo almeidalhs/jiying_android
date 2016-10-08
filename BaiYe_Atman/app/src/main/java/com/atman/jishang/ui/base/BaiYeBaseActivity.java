@@ -151,7 +151,7 @@ public class BaiYeBaseActivity extends BaseAppCompatActivity{
      * @param response
      */
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         cancelLoading();
     }
 

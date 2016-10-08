@@ -118,8 +118,8 @@ public class ManagerFragment extends BaiYeBaseFragment implements
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof HomeGridViewDataModel) {
             mHomeGridViewDataModel = (HomeGridViewDataModel) response;
             if (mHomeGridViewDataModel.getResult().equals("1")) {

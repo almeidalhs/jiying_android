@@ -110,8 +110,8 @@ public class ReceiveCouponRecordsActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof CouponRecordsModel) {
             CouponRecordsModel mCouponRecordsModel = (CouponRecordsModel) response;
             if (mCouponRecordsModel.getResult().equals("1")) {

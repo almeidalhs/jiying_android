@@ -90,8 +90,8 @@ public class ShopInformationActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof ShopInformationModel) {
             ShopInformationModel mShopInformationModel = (ShopInformationModel) response;
             if (!mShopInformationModel.getResult().equals("1")) {

@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
+import com.atman.jishang.net.model.SeedMessageTwoModel;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.net.model.CodeCheckModel;
 import com.atman.jishang.net.model.SeedMessageModel;
 import com.atman.jishang.utils.TimeCount;
 import com.corelib.util.StringUtils;
 import com.corelib.widget.MyCleanEditText;
+import com.google.gson.Gson;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -86,15 +88,16 @@ public class RegisterSeedMessageActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof SeedMessageModel) {
             SeedMessageModel mSeedMessageModel = (SeedMessageModel) response;
             if (mSeedMessageModel.getResult().equals("1")) {
                 showToast("验证码发送成功！");
                 timeCount.start();
             } else {
-                showToast(mSeedMessageModel.getBody().getMessage());
+                SeedMessageTwoModel mSeedMessageTwoModel = new Gson().fromJson(data, SeedMessageTwoModel.class);
+                showToast(mSeedMessageTwoModel.getBody().getMessage());
             }
         } else if (response instanceof CodeCheckModel) {
             CodeCheckModel mCodeCheckModel = (CodeCheckModel) response;

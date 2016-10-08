@@ -62,9 +62,9 @@ public class StringRequest extends Request<String> {
     }
 
     @Override
-    protected void deliverResponse(String response) {
+    protected void deliverResponse(String response, String data) {
         if (mListener != null) {
-            mListener.onResponse(response);
+            mListener.onResponse(response, data);
         }
     }
 

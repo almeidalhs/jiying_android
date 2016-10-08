@@ -177,8 +177,8 @@ public class LoginActivity extends SimpleTitleBarActivity {
 
     //接口调用返回
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof LoginResultModel) {
             LoginResultModel mLoginResultModel = (LoginResultModel) response;
             if (mLoginResultModel.getResult().equals("1")) {

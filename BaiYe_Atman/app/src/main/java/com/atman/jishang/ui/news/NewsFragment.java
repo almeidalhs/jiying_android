@@ -129,8 +129,8 @@ public class NewsFragment extends BaiYeBaseFragment implements AdapterInterface 
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof NewsListModel) {
             mNewsListModel = (NewsListModel) response;
             if (mNewsListModel.getResult().equals("1")) {

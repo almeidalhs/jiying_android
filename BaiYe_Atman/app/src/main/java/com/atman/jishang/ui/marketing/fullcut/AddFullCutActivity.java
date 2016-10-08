@@ -126,8 +126,8 @@ public class AddFullCutActivity extends SimpleTitleBarActivity implements Adapte
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof AddFullCutResuiltModel) {
             AddFullCutResuiltModel mAddFullCutResuiltModel = (AddFullCutResuiltModel) response;
             if (mAddFullCutResuiltModel.getResult().equals("1")) {

@@ -92,8 +92,8 @@ public class RegisterSetPassWordActivity extends SimpleTitleBarActivity implemen
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof RegisterModel) {
             RegisterModel mRegisterModel = (RegisterModel) response;
             if (mRegisterModel.getResult().equals("1")) {

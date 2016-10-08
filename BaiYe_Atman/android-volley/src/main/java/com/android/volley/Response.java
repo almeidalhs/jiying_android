@@ -26,7 +26,7 @@ public class Response<T> {
     /** Callback interface for delivering parsed responses. */
     public interface Listener<T> {
         /** Called when a response is received. */
-        public void onResponse(T response);
+        public void onResponse(T response, String data);
     }
 
     /** Callback interface for delivering error responses. */
@@ -39,8 +39,13 @@ public class Response<T> {
     }
 
     /** Returns a successful response containing the parsed result. */
+
     public static <T> Response<T> success(T result, Cache.Entry cacheEntry) {
-        return new Response<T>(result, cacheEntry);
+        return new Response<T>(result, cacheEntry, "");
+    }
+
+    public static <T> Response<T> success(T result, Cache.Entry cacheEntry, String data) {
+        return new Response<T>(result, cacheEntry, data);
     }
 
     /**
@@ -53,6 +58,8 @@ public class Response<T> {
 
     /** Parsed response, or null in the case of error. */
     public final T result;
+
+    public String data;
 
     /** Cache metadata for this response, or null in the case of error. */
     public final Cache.Entry cacheEntry;
@@ -71,8 +78,9 @@ public class Response<T> {
     }
 
 
-    private Response(T result, Cache.Entry cacheEntry) {
+    private Response(T result, Cache.Entry cacheEntry, String data) {
         this.result = result;
+        this.data = data;
         this.cacheEntry = cacheEntry;
         this.error = null;
     }

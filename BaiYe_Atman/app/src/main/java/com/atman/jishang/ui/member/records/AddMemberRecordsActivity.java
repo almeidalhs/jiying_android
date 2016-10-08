@@ -152,8 +152,8 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof AddRecordFullCutListModel) {
             AddRecordFullCutListModel mAddRecordFullCutListModel = (AddRecordFullCutListModel) response;
             if (mAddRecordFullCutListModel.getResult().equals("1")) {

@@ -585,7 +585,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @param response The parsed response returned by
      * {@link #parseNetworkResponse(NetworkResponse)}
      */
-    abstract protected void deliverResponse(T response);
+    abstract protected void deliverResponse(T response, String data);
 
     /**
      * Delivers error message to the ErrorListener that the Request was

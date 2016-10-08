@@ -71,11 +71,6 @@ public class GoodsGridViewFragment extends BaiYeBaseFragment implements AdapterI
     }
 
     @Override
-    public void onResponse(Object response) {
-
-    }
-
-    @Override
     public void onErrorResponse(VolleyError error) {
         super.onErrorResponse(error);
     }

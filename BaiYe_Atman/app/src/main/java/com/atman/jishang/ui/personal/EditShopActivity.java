@@ -118,7 +118,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     }
 
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         if (response instanceof ShopInformationModel) {
             mShopInformationModel = (ShopInformationModel) response;
             if (mShopInformationModel.getResult().equals("1")) {
@@ -130,10 +130,10 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
                 getDataManager().getIndustryType(IndustryTypeModel.class, true);
             } else {
                 setShopType();
-                super.onResponse(response);
+                super.onResponse(response, data);
             }
         } else if (response instanceof IndustryTypeModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             mIndustryTypeModel = (IndustryTypeModel) response;
             if (!mIndustryTypeModel.getResult().equals("1")) {
                 showToast("行业类别获取失败");
@@ -141,7 +141,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
                 setShopType();
             }
         } else if (response instanceof EditShopInfoModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             EditShopInfoModel mEditShopInfoModel = (EditShopInfoModel) response;
             if (mEditShopInfoModel.getResult().equals("1")) {
                 showToast("店铺信息更新成功");

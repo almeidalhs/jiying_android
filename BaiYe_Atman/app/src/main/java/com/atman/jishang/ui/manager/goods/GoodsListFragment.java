@@ -145,9 +145,9 @@ public class GoodsListFragment extends BaiYeBaseFragment implements AdapterInter
     }
 
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         if (response instanceof GetGoodsByClassIdModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             mGetGoodsByClassIdModel = (GetGoodsByClassIdModel) response;
             if (mGetGoodsByClassIdModel.getResult().equals("1")) {
                 mBodyEntityList = mGetGoodsByClassIdModel.getBody();

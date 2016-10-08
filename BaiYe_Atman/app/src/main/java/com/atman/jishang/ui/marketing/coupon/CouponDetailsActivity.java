@@ -182,8 +182,8 @@ public class CouponDetailsActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetDetailsModel) {
             mGetDetailsModel = (GetDetailsModel) response;
             if (mGetDetailsModel.getResult().equals("1")) {

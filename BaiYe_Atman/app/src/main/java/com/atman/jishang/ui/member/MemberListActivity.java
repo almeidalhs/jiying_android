@@ -173,8 +173,8 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetMemberListModel) {
             mGetMemberListModel = (GetMemberListModel) response;
             if (mGetMemberListModel.getResult().equals("1")) {

@@ -179,8 +179,8 @@ public class GoodsListManagementActivity extends SimpleTitleBarActivity implemen
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetGoodsByClassIdModel) {
             GetGoodsByClassIdModel mGetGoodsByClassIdModel = (GetGoodsByClassIdModel) response;
             if (mGetGoodsByClassIdModel.getResult().equals("1")) {

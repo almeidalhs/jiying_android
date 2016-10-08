@@ -67,8 +67,8 @@ public class FeedbackSuggestionActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof FeedBackResultModel) {
             FeedBackResultModel mFeedBackResultModel = (FeedBackResultModel) response;
             if (mFeedBackResultModel.getResult().equals("1")) {

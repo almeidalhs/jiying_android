@@ -215,7 +215,7 @@ public class EditGoodsActivity extends SimpleTitleBarActivity implements UploadU
     }
 
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         if (response instanceof GetStoreClassModel) {
             mGetStoreClassModel = (GetStoreClassModel) response;
             if (mGetStoreClassModel.getResult().equals("1")) {
@@ -226,7 +226,7 @@ public class EditGoodsActivity extends SimpleTitleBarActivity implements UploadU
                 showToast("分类获取失败");
             }
         } else if (response instanceof EditGoodsModel) {
-            super.onResponse(response);
+            super.onResponse(response,data);
             EditGoodsModel mCreateGoodsModel = (EditGoodsModel) response;
             if (mCreateGoodsModel.getResult().equals("1")) {
                 showToast("商品修改成功");
@@ -238,7 +238,7 @@ public class EditGoodsActivity extends SimpleTitleBarActivity implements UploadU
                 showToast(mCreateGoodsModel.getBody().getMessage());
             }
         } else if (response instanceof GoodsDetailInfoModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             mGoodsDetailInfoModel = (GoodsDetailInfoModel) response;
             if (mGoodsDetailInfoModel.getResult().equals("1")) {
                 updateUI();

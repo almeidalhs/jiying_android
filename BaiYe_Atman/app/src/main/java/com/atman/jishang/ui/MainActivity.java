@@ -63,8 +63,8 @@ public class MainActivity extends BaiYeBaseActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetUpdateVersionModel) {
             GetUpdateVersionModel mGetUpdateVersionModel = (GetUpdateVersionModel) response;
             if (mGetUpdateVersionModel.getResult().equals("1")) {

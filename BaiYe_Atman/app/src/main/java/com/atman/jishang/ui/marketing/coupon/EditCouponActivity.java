@@ -145,8 +145,8 @@ public class EditCouponActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof AddCouponModel) {
             AddCouponModel mAddCouponModel = (AddCouponModel) response;
             if (mAddCouponModel.getResult().equals("1")) {

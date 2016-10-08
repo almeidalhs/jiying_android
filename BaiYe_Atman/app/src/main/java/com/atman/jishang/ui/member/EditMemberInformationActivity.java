@@ -210,8 +210,8 @@ public class EditMemberInformationActivity extends SimpleTitleBarActivity
     }
 
     @Override
-    public void onResponse(Object response) {
-        super.onResponse(response);
+    public void onResponse(Object response, String data) {
+        super.onResponse(response, data);
         if (response instanceof GetMemberDetailsModel) {
             mGetMemberDetailsModel = (GetMemberDetailsModel) response;
             if (mGetMemberDetailsModel.getResult().equals("1")) {

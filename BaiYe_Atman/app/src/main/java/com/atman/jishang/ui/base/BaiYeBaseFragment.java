@@ -87,7 +87,7 @@ public class BaiYeBaseFragment extends BaseFragment implements IInit {
     }
 
     @Override
-    public void onResponse(Object response) {
+    public void onResponse(Object response, String data) {
         cancelLoading();
     }
 

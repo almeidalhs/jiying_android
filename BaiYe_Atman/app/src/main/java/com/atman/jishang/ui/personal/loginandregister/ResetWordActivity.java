@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.LimitSizeTextWatcher;
+import com.atman.jishang.net.model.SeedMessageTwoModel;
 import com.atman.jishang.ui.base.BaiYeBaseActivity;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
@@ -18,8 +19,10 @@ import com.atman.jishang.net.model.ResetPassWordResultModel;
 import com.atman.jishang.net.model.SeedMessageModel;
 import com.atman.jishang.utils.TimeCount;
 import com.corelib.common.SubmitHelper;
+import com.corelib.util.LogUtils;
 import com.corelib.util.StringUtils;
 import com.corelib.widget.MyCleanEditText;
+import com.google.gson.Gson;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -92,27 +95,28 @@ public class ResetWordActivity extends SimpleTitleBarActivity {
     }
 
     @Override
-    public void onResponse(Object response) {
-
+    public void onResponse(Object response, String data) {
+        LogUtils.e(">>>>>>>>>>>>>>>>:"+data);
         if (response instanceof SeedMessageModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             SeedMessageModel mSeedMessageModel = (SeedMessageModel) response;
             if (mSeedMessageModel.getResult().equals("1")) {
                 showToast("验证码发送成功！");
                 timeCount.start();
             } else {
-                showToast(mSeedMessageModel.getBody().getMessage());
+                SeedMessageTwoModel mSeedMessageTwoModel = new Gson().fromJson(data, SeedMessageTwoModel.class);
+                showToast(mSeedMessageTwoModel.getBody().getMessage());
             }
         } else if (response instanceof CodeCheckModel) {
             CodeCheckModel mCodeCheckModel = (CodeCheckModel) response;
             if (mCodeCheckModel.getResult().equals("1")) {
                 getDataManager().seedMessageForgotPwd(mPhoneNumber, SubmitHelper.getMD5(mPassWord), ResetPassWordResultModel.class, false);
             } else {
-                super.onResponse(response);
+                super.onResponse(response, data);
                 showToast(mCodeCheckModel.getBody());
             }
         } else if (response instanceof ResetPassWordResultModel) {
-            super.onResponse(response);
+            super.onResponse(response, data);
             ResetPassWordResultModel mResetPassWordResultModel = (ResetPassWordResultModel) response;
             if (mResetPassWordResultModel.getResult().equals("1")) {
                 showToast("密码修改成功，请重新登录");

@@ -77,7 +77,7 @@ public class FormRequest extends Request<byte[]> {
     }
 
     @Override
-    protected void deliverResponse(byte[] response) {
-        mListener.onResponse(response);
+    protected void deliverResponse(byte[] response, String data) {
+        mListener.onResponse(response, data);
     }
 }
