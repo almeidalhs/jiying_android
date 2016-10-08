@@ -17,12 +17,12 @@ import com.atman.jishang.net.model.MarketListModel;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.net.model.HomeAdModel;
 import com.atman.jishang.net.model.HomeGridViewDataModel;
-import com.atman.jishang.ui.home.ChannelEditorActivity;
-import com.atman.jishang.ui.home.goods.AddGoodsActivity;
-import com.atman.jishang.ui.home.goods.GoodsListActivity;
-import com.atman.jishang.ui.home.StorePreviewActivity;
-import com.atman.jishang.ui.home.WebPageActivity;
-import com.atman.jishang.ui.home.orders.OrderManageActivity;
+import com.atman.jishang.ui.manager.ChannelEditorActivity;
+import com.atman.jishang.ui.manager.goods.AddGoodsActivity;
+import com.atman.jishang.ui.manager.goods.GoodsListActivity;
+import com.atman.jishang.ui.manager.StorePreviewActivity;
+import com.atman.jishang.ui.manager.WebPageActivity;
+import com.atman.jishang.ui.manager.orders.OrderManageActivity;
 import com.atman.jishang.ui.marketing.MarketingManagementActivity;
 import com.atman.jishang.ui.marketing.coupon.CouponActivity;
 import com.atman.jishang.ui.marketing.fullcut.FullCutActivity;
@@ -32,7 +32,6 @@ import com.atman.jishang.ui.personal.CreateShopActivity;
 import com.atman.jishang.widget.YLBDialog;
 import com.choicepicture_library.tools.FileUtils;
 import com.corelib.util.LogUtils;
-import com.nostra13.universalimageloader.utils.L;
 
 import java.io.File;
 

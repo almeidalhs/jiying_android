@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.AdapterInterface;
-import com.atman.jishang.ui.home.goods.GoodsDetailsActivity;
+import com.atman.jishang.ui.manager.goods.GoodsDetailsActivity;
 import com.atman.jishang.net.model.GetMemberRecordModel;
 import com.atman.jishang.utils.MyTools;
 import com.atman.jishang.widget.XCFlowLayout;

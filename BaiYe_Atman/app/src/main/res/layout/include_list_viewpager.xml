@@ -40,27 +40,51 @@
             android:showDividers="middle">
 
             <RadioButton
-                android:id="@+id/tab_home"
+                android:id="@+id/tab_message"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
                 android:checked="true"
-                android:drawableTop="@drawable/tab_home_selector"
+                android:drawableTop="@drawable/tab_message_selector"
                 android:gravity="center"
-                android:text="@string/tab_home"
+                android:text="@string/tab_message"
                 android:textColor="@drawable/tab_text_selector"
                 android:textSize="@dimen/main_bottom_text_size" />
 
             <RadioButton
-                android:id="@+id/tab_news"
+                android:id="@+id/tab_service"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/tab_message_selector"
+                android:drawableTop="@drawable/tab_service_selector"
                 android:gravity="center"
-                android:text="@string/tab_message"
+                android:text="@string/tab_service"
+                android:textColor="@drawable/tab_text_selector"
+                android:textSize="@dimen/main_bottom_text_size" />
+
+            <RadioButton
+                android:id="@+id/tab_manager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_manager_selector"
+                android:gravity="center"
+                android:text="@string/tab_manager"
+                android:textColor="@drawable/tab_text_selector"
+                android:textSize="@dimen/main_bottom_text_size" />
+
+            <RadioButton
+                android:id="@+id/tab_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_data_selector"
+                android:gravity="center"
+                android:text="@string/tab_data"
                 android:textColor="@drawable/tab_text_selector"
                 android:textSize="@dimen/main_bottom_text_size" />
 

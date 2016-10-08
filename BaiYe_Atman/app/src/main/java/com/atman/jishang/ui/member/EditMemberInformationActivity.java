@@ -41,7 +41,7 @@ import com.atman.jishang.net.model.UpdateHeadImgModel;
 import com.atman.jishang.net.upload.UpLoadPicture;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
-import com.atman.jishang.ui.home.goods.PhotoEditActivity;
+import com.atman.jishang.ui.manager.goods.PhotoEditActivity;
 import com.atman.jishang.utils.MyTools;
 import com.atman.jishang.utils.UiHelper;
 import com.atman.jishang.widget.BottomDialog;

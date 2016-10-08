@@ -26,7 +26,7 @@ import com.atman.jishang.net.model.AddRecordCouponListModel;
 import com.atman.jishang.net.model.AddRecordFullCutListModel;
 import com.atman.jishang.net.model.AddRecordParamsModel;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
-import com.atman.jishang.ui.home.classification.GoodsClasesActivity;
+import com.atman.jishang.ui.manager.classification.GoodsClasesActivity;
 import com.atman.jishang.widget.RecycleViewDivider;
 import com.corelib.util.LogUtils;
 import com.corelib.widget.MyListView;

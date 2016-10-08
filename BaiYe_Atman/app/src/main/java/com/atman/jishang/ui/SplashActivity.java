@@ -15,7 +15,7 @@ import com.atman.jishang.net.model.LoginResultModel;
 import com.atman.jishang.net.model.RegisterModel;
 import com.atman.jishang.ui.base.BaiYeBaseActivity;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
-import com.atman.jishang.ui.home.WebPageActivity;
+import com.atman.jishang.ui.manager.WebPageActivity;
 import com.atman.jishang.utils.PreferenceUtil;
 import com.atman.jishang.utils.TimeCount;
 import com.corelib.base.BaseApplication;

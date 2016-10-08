@@ -77,7 +77,7 @@ public class DragAdapter extends BaseAdapter {
             holder.itemHomeGvLl.setBackgroundColor(Color.parseColor("#" + mConsoleBean.getConsoleBgImage().trim()));
         }
 
-        holder.itemHomeGvLl.setBackgroundColor(context.getResources().getColor(R.color.color_ededed));
+        holder.itemHomeGvLl.setBackgroundColor(context.getResources().getColor(R.color.color_ffffff));
 
         return convertView;
     }

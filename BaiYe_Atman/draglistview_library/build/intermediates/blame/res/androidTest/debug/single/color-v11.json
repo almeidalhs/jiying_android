@@ -1,13 +1,5 @@
 [
     {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     },

@@ -75,41 +75,41 @@
 
         <activity android:name="com.atman.jishang.ui.personal.ResetPassWordActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.ChannelEditorActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.ChannelEditorActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.WebPageActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.WebPageActivity"/>
 
         <activity android:name="com.atman.jishang.ui.personal.ShopInformationActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.StorePreviewActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.StorePreviewActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.StorePreviewCouponListViewActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.StorePreviewCouponListViewActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.GoodsDetailsActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.GoodsDetailsActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.EditGoodsActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.EditGoodsActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.BindingEquipmentActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.BindingEquipmentActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.PhotoEditActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.PhotoEditActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.GoodsListActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.classification.GoodsClasesActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.classification.GoodsClasesActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.classification.AddGoodsClassActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.classification.AddGoodsClassActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.classification.EditGoodsClassActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.classification.EditGoodsClassActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.classification.EditGoodsClassNameActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.classification.EditGoodsClassNameActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListByClassActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.GoodsListByClassActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.AddGoodsActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.AddGoodsActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.GoodsListManagementActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.GoodsListManagementActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.goods.ScanCodeActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.goods.ScanCodeActivity"/>
 
         <activity android:name="com.atman.jishang.ui.marketing.MarketingManagementActivity"/>
 
@@ -151,11 +151,11 @@
 
         <activity android:name=".ui.circle.PublishActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.orders.OrderDetailActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.orders.OrderDetailActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.orders.OrderManageActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.orders.OrderManageActivity"/>
 
-        <activity android:name="com.atman.jishang.ui.home.orders.OrderBatchManageActivity"/>
+        <activity android:name="com.atman.jishang.ui.manager.orders.OrderBatchManageActivity"/>
 
         <!--友盟相关-->
         <meta-data android:value="5729baca67e58e3594001276" android:name="UMENG_APPKEY"/>

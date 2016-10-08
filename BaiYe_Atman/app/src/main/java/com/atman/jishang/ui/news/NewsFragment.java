@@ -14,7 +14,7 @@ import com.atman.jishang.adapter.NewsListAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
 import com.atman.jishang.net.model.NewsListModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
-import com.atman.jishang.ui.home.WebPageActivity;
+import com.atman.jishang.ui.manager.WebPageActivity;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 

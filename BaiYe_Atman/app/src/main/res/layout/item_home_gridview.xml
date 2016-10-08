@@ -4,9 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/default_padding"
-    android:paddingBottom="@dimen/default_padding"
-    android:background="@color/color_main_red"
+    android:paddingTop="@dimen/dimen_dp_15"
+    android:paddingBottom="@dimen/dimen_dp_15"
     android:gravity="center">
 
     <ImageView
@@ -21,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="商品"
-        android:textSize="20sp"
+        android:textSize="@dimen/dimen_sp_15"
         android:textColor="@color/color_black"/>
 
 </LinearLayout>

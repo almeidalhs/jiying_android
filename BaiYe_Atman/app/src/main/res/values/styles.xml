@@ -33,9 +33,9 @@
     <style name="BaiYeAppStyle" parent="BaseStyle"></style>
 
     <style name="BaseStyle" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/main_title_orange_color</item>
-        <item name="colorAccent">@color/main_title_orange_color</item>
-        <item name="colorPrimaryDark">@color/main_title_orange_color</item>
+        <item name="colorPrimary">@color/color_f5f5f6</item>
+        <item name="colorAccent">@color/color_f5f5f6</item>
+        <item name="colorPrimaryDark">@color/color_black</item>
         <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
         <item name="android:windowBackground">@color/activity_default_bg</item>
         <item name="android:windowIsTranslucent">true</item>

@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -15,6 +17,9 @@ import butterknife.ButterKnife;
  */
 
 public class ServiceFragment extends BaiYeBaseFragment {
+
+    @Bind(R.id.tv_title)
+    TextView tvTitle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -39,6 +44,12 @@ public class ServiceFragment extends BaiYeBaseFragment {
     }
 
     @Override
+    public void initWidget(View... v) {
+        super.initWidget(v);
+        tvTitle.setText(R.string.tab_service);
+    }
+
+    @Override
     public void initIntentAndMemData() {
         super.initIntentAndMemData();
     }
@@ -46,6 +57,7 @@ public class ServiceFragment extends BaiYeBaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 
     @Override

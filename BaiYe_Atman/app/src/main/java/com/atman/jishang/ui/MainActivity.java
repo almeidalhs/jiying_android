@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
@@ -17,12 +15,13 @@ import com.atman.jishang.adapter.MyFragmentAdapter;
 import com.atman.jishang.net.model.GetUpdateVersionModel;
 import com.atman.jishang.ui.base.BaiYeBaseActivity;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
-import com.atman.jishang.ui.home.HomeFragment;
-import com.atman.jishang.ui.home.WebPageActivity;
-import com.atman.jishang.ui.news.NewsFragment;
+import com.atman.jishang.ui.data.DataFragment;
+import com.atman.jishang.ui.manager.ManagerFragment;
+import com.atman.jishang.ui.manager.WebPageActivity;
+import com.atman.jishang.ui.message.MessageFragment;
 import com.atman.jishang.ui.personal.PersonalFragment;
+import com.atman.jishang.ui.service.ServiceFragment;
 import com.atman.jishang.widget.updateversion.UpdateVersionHelp;
-import com.corelib.util.LogUtils;
 import com.corelib.widget.NoSwipeViewPager;
 
 import java.util.ArrayList;
@@ -33,8 +32,10 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaiYeBaseActivity {
 
-    private final String HOME_TAG = "home";
     private final String MESSAGE_TAG = "message";
+    private final String SERVICE_TAG = "service";
+    private final String MANAGER_TAG = "manager";
+    private final String DATA_TAG = "data";
     private final String PERSONAL_TAG = "personal";
     private Fragment fg;
     private MyFragmentAdapter adapter;
@@ -97,10 +98,12 @@ public class MainActivity extends BaiYeBaseActivity {
     private void initViewpager() {
         mViewPager.setPagingEnabled(false);//是否支持手势滑动
         adapter = new MyFragmentAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HomeFragment(), HOME_TAG);
-        adapter.addFragment(new NewsFragment(), MESSAGE_TAG);
+        adapter.addFragment(new MessageFragment(), MESSAGE_TAG);
+        adapter.addFragment(new ServiceFragment(), SERVICE_TAG);
+        adapter.addFragment(new ManagerFragment(), MANAGER_TAG);
+        adapter.addFragment(new DataFragment(), DATA_TAG);
         adapter.addFragment(new PersonalFragment(), PERSONAL_TAG);
-        mViewPager.setOffscreenPageLimit(2);
+        mViewPager.setOffscreenPageLimit(4);
         mViewPager.setAdapter(adapter);
         fg = adapter.getItem(0);
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -133,17 +136,25 @@ public class MainActivity extends BaiYeBaseActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
-                    case R.id.tab_home:
+                    case R.id.tab_message:
                         mViewPager.setCurrentItem(0,false);
                         fg = adapter.getItem(0);
                         break;
-                    case R.id.tab_news:
+                    case R.id.tab_service:
                         mViewPager.setCurrentItem(1,false);
                         fg = adapter.getItem(1);
                         break;
-                    case R.id.tab_personal:
+                    case R.id.tab_manager:
                         mViewPager.setCurrentItem(2,false);
                         fg = adapter.getItem(2);
+                        break;
+                    case R.id.tab_data:
+                        mViewPager.setCurrentItem(3,false);
+                        fg = adapter.getItem(3);
+                        break;
+                    case R.id.tab_personal:
+                        mViewPager.setCurrentItem(4,false);
+                        fg = adapter.getItem(4);
                         break;
                 }
             }
@@ -168,7 +179,7 @@ public class MainActivity extends BaiYeBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (fg instanceof HomeFragment) {
+        if (fg instanceof ManagerFragment) {
             /*然后在碎片中调用重写的onActivityResult方法*/
             fg.onActivityResult(requestCode, resultCode, data);
         }

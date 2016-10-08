@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_efeff4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_top_height"
+        android:background="@color/color_f5f5f6">
+
+        <LinearLayout
+            android:id="@+id/home_nav_left_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            android:gravity="center"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/home_scan_ic"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/default_padding"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:singleLine="true"
+            android:textColor="@color/color_242424"
+            android:textSize="@dimen/main_top_text_size" />
+
+        <LinearLayout
+            android:id="@+id/home_nav_right_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:layout_marginRight="@dimen/default_padding"
+                android:text="分享\n店铺"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/home_top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:gravity="center_horizontal">
+
+                <com.corelib.widget.AutoScrollViewPager
+                    android:id="@+id/autoScrollViewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_white" />
+
+                <LinearLayout
+                    android:id="@+id/viewgroup_index_dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/point_bg"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <com.atman.jishang.widget.DragGrid
+                android:id="@+id/userGridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:verticalSpacing="@dimen/dimen_dp_1"
+                android:horizontalSpacing="@dimen/dimen_dp_1"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:scrollbars="vertical"
+                android:stretchMode="columnWidth" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

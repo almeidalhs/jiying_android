@@ -44,8 +44,10 @@
     <string name="resetPW_newpw_tx">新密码</string>
 
     <!--地步菜单-->
-    <string name="tab_home">首页</string>
-    <string name="tab_message">资讯</string>
+    <string name="tab_data">数据</string>
+    <string name="tab_service">服务</string>
+    <string name="tab_manager">管理</string>
+    <string name="tab_message">消息</string>
     <string name="tab_personal">个人</string>
     <string name="tab_test">测试</string>
 
