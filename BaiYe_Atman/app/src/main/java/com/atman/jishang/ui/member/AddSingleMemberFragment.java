@@ -53,7 +53,7 @@ import com.choicepicture_library.tools.UploadUtil;
 import com.corelib.util.LogUtils;
 import com.corelib.widget.MyCleanEditText;
 import com.corelib.widget.MyGridView;
-import com.corelib.widget.RoundImageView;
+import com.corelib.widget.ShapeImageView;
 import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -80,7 +80,7 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
 
 
     @Bind(R.id.addsinglemember_head_iv)
-    RoundImageView addsinglememberHeadIv;
+    ShapeImageView addsinglememberHeadIv;
     @Bind(R.id.addsinglemember_name_et)
     MyCleanEditText addsinglememberNameEt;
     @Bind(R.id.addsinglemember_mobile_et)

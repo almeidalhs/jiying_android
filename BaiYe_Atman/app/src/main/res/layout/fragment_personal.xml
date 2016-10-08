@@ -1,119 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@color/personal_main_bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/personal_main_bg"
+    android:orientation="vertical">
 
-    <include layout="@layout/part_top_bar_two"/>
-    
+    <include layout="@layout/part_top_bar_two" />
+
     <RelativeLayout
         android:id="@+id/personal_head_rl"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:clickable="true"
-        android:background="@mipmap/personal_top_bg">
+        android:layout_height="130dp"
+        android:background="@mipmap/personal_top_bg"
+        android:clickable="true">
 
         <ImageView
             android:id="@+id/personal_headbg_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            android:src="@mipmap/personal_top_bg"/>
+            android:src="@mipmap/personal_top_bg" />
 
-        <LinearLayout
-            android:id="@+id/personal_head_ll"
+        <RelativeLayout
+            android:id="@+id/head_rl"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="15dp">
+            android:layout_above="@+id/personal_shopsignature_tx"
+            android:layout_marginBottom="@dimen/dimen_dp_10"
+            android:layout_marginLeft="10dp">
 
-            <ImageView
+            <com.corelib.widget.ShapeImageView
+                xmlns:img="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/personal_head_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/personal_head_default"/>
-        </LinearLayout>
+                android:src="@mipmap/personal_head_default"
+                img:shape="rect"
+                img:shape_border_color="@color/color_white"
+                img:shape_border_size="@dimen/dimen_dp_1"
+                img:shape_round_radius="@dimen/dimen_dp_5" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/personal_shopname"
-            android:layout_toRightOf="@+id/personal_head_ll"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_above="@+id/personal_shopaddre_tx"
-            android:layout_marginRight="@dimen/default_padding"
-            android:singleLine="true"
-            android:textColor="@color/color_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/personal_name"/>
+            android:layout_above="@+id/personal_shopaddre_tx"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/head_rl"
+            android:singleLine="true"
+            android:text="@string/personal_name"
+            android:textColor="@color/color_white" />
 
         <TextView
             android:id="@+id/personal_shopaddre_tx"
-            android:layout_toRightOf="@+id/personal_head_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/personal_shopsignature_tx"
+            android:layout_marginBottom="@dimen/dimen_dp_10"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="@dimen/default_padding"
             android:layout_marginTop="5dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="18dp"
+            android:layout_toRightOf="@+id/head_rl"
             android:singleLine="true"
-            android:textColor="@color/color_white"
-            android:layout_width="wrap_content"
+            android:text="@string/personal_signature"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/personal_shopsignature_tx"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/personal_signature"/>
+            android:layout_alignParentBottom="true"
+            android:background="@color/overdue_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColor="@color/color_white" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/personal_shopsignature_tx"
-        android:layout_below="@+id/personal_head_ll"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:singleLine="true"
-        android:paddingLeft="10dp"
-        android:paddingRight="@dimen/default_padding"
-        android:layout_width="match_parent"
-        android:background="@color/color_white"
-        android:layout_height="wrap_content"
-        android:textColor="@color/color_black" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/color_line"/>
+        android:background="@color/color_line" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginTop="@dimen/default_padding"
-        android:background="@color/color_line"/>
+        android:background="@color/color_line" />
 
     <LinearLayout
         android:id="@+id/personal_shopinfo_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/personal_item_hight"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:clickable="true"
         android:background="@drawable/white_hollow_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/default_padding"
         android:paddingRight="@dimen/default_padding">
+
         <ImageView
             android:layout_width="@dimen/personal_item_ic"
             android:layout_height="@dimen/personal_item_ic"
-            android:src="@mipmap/shop_name_ic"/>
+            android:src="@mipmap/shop_name_ic" />
+
         <TextView
-            android:layout_marginLeft="@dimen/default_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
             android:layout_weight="1"
             android:text="@string/personal_shopInfo"
-            android:textSize="@dimen/personal_item_size"
-            android:textColor="@color/personal_item_tx"/>
+            android:textColor="@color/personal_item_tx"
+            android:textSize="@dimen/personal_item_size" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="15dp"
-            android:src="@mipmap/right_arrow"/>
+            android:src="@mipmap/right_arrow" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,74 +134,80 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_marginLeft="@dimen/default_padding"
-            android:background="@color/color_line"/>
+            android:background="@color/color_line" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/personal_recommend_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/personal_item_hight"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:clickable="true"
         android:background="@drawable/white_hollow_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/default_padding"
         android:paddingRight="@dimen/default_padding">
+
         <ImageView
             android:layout_width="@dimen/personal_item_ic"
             android:layout_height="@dimen/personal_item_ic"
-            android:src="@mipmap/ic_recommend"/>
+            android:src="@mipmap/ic_recommend" />
+
         <TextView
-            android:layout_marginLeft="@dimen/default_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
             android:layout_weight="1"
             android:text="@string/personal_recommend"
-            android:textSize="@dimen/personal_item_size"
-            android:textColor="@color/personal_item_tx"/>
+            android:textColor="@color/personal_item_tx"
+            android:textSize="@dimen/personal_item_size" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="15dp"
-            android:src="@mipmap/right_arrow"/>
+            android:src="@mipmap/right_arrow" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/color_line"/>
+        android:background="@color/color_line" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginTop="@dimen/default_padding"
-        android:background="@color/color_line"/>
+        android:background="@color/color_line" />
 
     <LinearLayout
         android:id="@+id/personal_proposal_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/personal_item_hight"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:clickable="true"
         android:background="@drawable/white_hollow_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/default_padding"
         android:paddingRight="@dimen/default_padding">
+
         <ImageView
             android:layout_width="@dimen/personal_item_ic"
             android:layout_height="@dimen/personal_item_ic"
-            android:src="@mipmap/shop_proposal_ic"/>
+            android:src="@mipmap/shop_proposal_ic" />
+
         <TextView
-            android:layout_marginLeft="@dimen/default_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
             android:layout_weight="1"
             android:text="@string/personal_proposal"
-            android:textSize="@dimen/personal_item_size"
-            android:textColor="@color/personal_item_tx"/>
+            android:textColor="@color/personal_item_tx"
+            android:textSize="@dimen/personal_item_size" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="15dp"
-            android:src="@mipmap/right_arrow"/>
+            android:src="@mipmap/right_arrow" />
     </LinearLayout>
 
     <LinearLayout
@@ -204,44 +219,47 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_marginLeft="@dimen/default_padding"
-            android:background="@color/color_line"/>
+            android:background="@color/color_line" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/personal_cs_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/personal_item_hight"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:clickable="true"
         android:background="@drawable/white_hollow_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/default_padding"
         android:paddingRight="@dimen/default_padding">
+
         <ImageView
             android:layout_width="@dimen/personal_item_ic"
             android:layout_height="@dimen/personal_item_ic"
-            android:src="@mipmap/shop_cs_ic"/>
-        <TextView
-            android:layout_marginLeft="@dimen/default_padding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/personal_cs"
-            android:textSize="@dimen/personal_item_size"
-            android:textColor="@color/personal_item_tx"/>
+            android:src="@mipmap/shop_cs_ic" />
 
         <TextView
-            android:layout_marginLeft="@dimen/default_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_weight="1"
+            android:text="@string/personal_cs"
+            android:textColor="@color/personal_item_tx"
+            android:textSize="@dimen/personal_item_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
             android:layout_marginRight="10dp"
             android:text="@string/service_telephone_tx"
-            android:textSize="14dp"
-            android:textColor="@color/personal_item_tx"/>
+            android:textColor="@color/personal_item_tx"
+            android:textSize="14dp" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="15dp"
-            android:src="@mipmap/right_arrow"/>
+            android:src="@mipmap/right_arrow" />
     </LinearLayout>
 
     <LinearLayout
@@ -253,39 +271,42 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_marginLeft="@dimen/default_padding"
-            android:background="@color/color_line"/>
+            android:background="@color/color_line" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/personal_about_ll"
         android:layout_width="match_parent"
         android:layout_height="@dimen/personal_item_hight"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:clickable="true"
         android:background="@drawable/white_hollow_selector"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/default_padding"
         android:paddingRight="@dimen/default_padding">
+
         <ImageView
             android:layout_width="@dimen/personal_item_ic"
             android:layout_height="@dimen/personal_item_ic"
-            android:src="@mipmap/shop_about_ic"/>
+            android:src="@mipmap/shop_about_ic" />
+
         <TextView
-            android:layout_marginLeft="@dimen/default_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_padding"
             android:layout_weight="1"
             android:text="@string/personal_about"
-            android:textSize="@dimen/personal_item_size"
-            android:textColor="@color/personal_item_tx"/>
+            android:textColor="@color/personal_item_tx"
+            android:textSize="@dimen/personal_item_size" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="15dp"
-            android:src="@mipmap/right_arrow"/>
+            android:src="@mipmap/right_arrow" />
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="@color/color_line"/>
+        android:background="@color/color_line" />
 </LinearLayout>

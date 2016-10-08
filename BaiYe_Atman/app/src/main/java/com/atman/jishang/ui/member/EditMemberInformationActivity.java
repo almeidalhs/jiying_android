@@ -55,7 +55,7 @@ import com.choicepicture_library.tools.UploadUtil;
 import com.corelib.util.LogUtils;
 import com.corelib.widget.MyCleanEditText;
 import com.corelib.widget.MyGridView;
-import com.corelib.widget.RoundImageView;
+import com.corelib.widget.ShapeImageView;
 import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -81,7 +81,7 @@ public class EditMemberInformationActivity extends SimpleTitleBarActivity
         implements UpLoadPicture.uploadListener, UploadUtil.OnUploadProcessListener {
 
     @Bind(R.id.editmember_head_iv)
-    RoundImageView editmemberHeadIv;
+    ShapeImageView editmemberHeadIv;
     @Bind(R.id.editmember_head_tx)
     TextView editmemberHeadTx;
     @Bind(R.id.editemember_name_et)

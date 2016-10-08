@@ -132,12 +132,12 @@
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_action_mode_bar.xml"
-    },
-    {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/layout/select_dialog_item_material.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/layout/abc_action_mode_bar.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/layout/abc_simple_dropdown_hint.xml",

@@ -24,12 +24,17 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp">
 
-                <com.corelib.widget.RoundImageView
+                <com.corelib.widget.ShapeImageView
+                    xmlns:img="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/addsinglemember_head_iv"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_centerInParent="true"
-                    android:src="@mipmap/member_item_ic" />
+                    android:src="@mipmap/member_item_ic"
+                    img:shape="rect"
+                    img:shape_border_color="@color/color_white"
+                    img:shape_border_size="@dimen/dimen_dp_1"
+                    img:shape_round_radius="@dimen/dimen_dp_5"/>
 
                 <TextView
                     android:id="@+id/addsinglemember_head_tx"

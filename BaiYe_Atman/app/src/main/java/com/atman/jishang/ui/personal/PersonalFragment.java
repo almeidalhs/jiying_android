@@ -19,6 +19,8 @@ import com.atman.jishang.ui.MainActivity;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
 import com.atman.jishang.utils.UiHelper;
+import com.corelib.util.DensityUtil;
+import com.corelib.widget.ShapeImageView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -36,7 +38,7 @@ public class PersonalFragment extends BaiYeBaseFragment {
     @Bind(R.id.tv_title)
     TextView tvTitle;
     @Bind(R.id.personal_head_img)
-    ImageView personalHeadImg;
+    ShapeImageView personalHeadImg;
     @Bind(R.id.personal_shopname)
     TextView personalShopName;
     @Bind(R.id.personal_head_rl)
@@ -80,7 +82,7 @@ public class PersonalFragment extends BaiYeBaseFragment {
         tvTitle.setText(getActivity().getResources().getString(R.string.personal_title));
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getmWidth(),
-                getmWidth() * 400 / 1504);
+                (getmWidth() * 400 / 1504) + DensityUtil.dp2px(getActivity(), 80));
         personalHeadRl.setLayoutParams(params);
     }
 
