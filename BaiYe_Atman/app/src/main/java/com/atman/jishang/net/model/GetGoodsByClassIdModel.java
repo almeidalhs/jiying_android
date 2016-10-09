@@ -86,7 +86,7 @@ public class GetGoodsByClassIdModel {
     }
 
     public static class BodyEntity {
-        private int id;
+        private long id;
         private String goodsName;
         private String gcName;
         private int brandId;
@@ -155,11 +155,11 @@ public class GetGoodsByClassIdModel {
 
         private List<GoodsSpecBeanListEntity> goodsSpecBeanList;
 
-        public int getId() {
+        public long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(long id) {
             this.id = id;
         }
 

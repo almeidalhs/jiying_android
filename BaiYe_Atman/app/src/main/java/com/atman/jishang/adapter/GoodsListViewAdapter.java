@@ -98,7 +98,7 @@ public class GoodsListViewAdapter extends BaseAdapter {
         ImageLoader.getInstance().displayImage(mBodyEntity.getFullGoodsImage(),
                 holder.itemGoodslistviewPicture,
                 BaiYeBaseApplication.getApp().getOptions());
-        if(mBodyEntity.getGoodsDescription().isEmpty()){//#B7B7B7
+        if(mBodyEntity.getGoodsDescription() == null || mBodyEntity.getGoodsDescription().isEmpty()){//#B7B7B7
             holder.itemGoodslistviewDescription.setText("暂未添加商品说明");
             holder.itemGoodslistviewDescription.setTextColor(mContext.getResources().getColor(R.color.goodslist_dec_color));
         } else {

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
@@ -13,7 +12,6 @@ import com.atman.jishang.utils.TimeCount;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 描述 注册界面
@@ -26,8 +24,6 @@ public class RegisterFinishActivity extends SimpleTitleBarActivity {
 
     @Bind(R.id.register_time_tx)
     TextView registerTimeTx;
-    @Bind(R.id.CS_telephone)
-    TextView CSTelephone;
 
     private Context mContext = RegisterFinishActivity.this;
     private TimeCount timeCount;
@@ -74,14 +70,5 @@ public class RegisterFinishActivity extends SimpleTitleBarActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-    }
-
-    @OnClick({R.id.CS_telephone})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.CS_telephone:
-                toPhone(mContext,getResources().getString(R.string.service_telephone));
-                break;
-        }
     }
 }

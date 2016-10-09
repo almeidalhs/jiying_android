@@ -89,7 +89,7 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
         ButterKnife.bind(this);
     }
 
-    public static Intent buildIntent(Context context, String title, int id, int goodsShow) {
+    public static Intent buildIntent(Context context, String title, long id, int goodsShow) {
         Intent intent = new Intent(context, GoodsDetailsActivity.class);
         intent.putExtra(mTitle, title);
         intent.putExtra(mGoodsId, id);
@@ -109,7 +109,7 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        getDataManager().getGoodsByClassId(getIntent().getIntExtra(mGoodsId, 0), GoodsDetailInfoModel.class, true);
+        getDataManager().getGoodsByClassId(getIntent().getLongExtra(mGoodsId, 0), GoodsDetailInfoModel.class, true);
     }
 
     @Override
@@ -130,7 +130,7 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
                 , LinearLayout.LayoutParams.WRAP_CONTENT);
         homeTopRl.setLayoutParams(params_top);
         ivRightOk = getIvRightOk();
-        ivRightOk.setLayoutParams(params_top_right);
+//        ivRightOk.setLayoutParams(params_top_right);
         ivRightOk.setImageResource(R.mipmap.share_ic);
         ivRightOk.setOnClickListener(new View.OnClickListener() {
             @Override

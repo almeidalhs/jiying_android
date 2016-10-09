@@ -7,14 +7,12 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="@dimen/main_top_height"
-        android:background="@color/main_title_orange_color">
+        android:background="@color/color_efeff4">
         <ImageView
             android:id="@+id/part_goodsmanagement_top_back_iv"
-            android:layout_width="25dp"
+            android:layout_width="@dimen/dimen_dp_40"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/default_padding"
-            android:layout_marginRight="@dimen/default_padding"
             android:clickable="true"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_gray" />
@@ -27,7 +25,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:singleLine="true"
-            android:textColor="@color/color_white"
+            android:textColor="@color/color_242424"
             android:textSize="14sp" />
 
         <RadioGroup

@@ -96,7 +96,6 @@ public class ResetWordActivity extends SimpleTitleBarActivity {
 
     @Override
     public void onResponse(Object response, String data) {
-        LogUtils.e(">>>>>>>>>>>>>>>>:"+data);
         if (response instanceof SeedMessageModel) {
             super.onResponse(response, data);
             SeedMessageModel mSeedMessageModel = (SeedMessageModel) response;

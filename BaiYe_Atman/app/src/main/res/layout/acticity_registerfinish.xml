@@ -30,7 +30,7 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="2dp"
-                android:src="@drawable/red_dotted_line"/>
+                android:src="@drawable/blue_dotted_line"/>
 
             <ImageView
                 android:layout_width="@dimen/register_ic_wight"
@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="2dp"
-                android:src="@drawable/red_dotted_line"/>
+                android:src="@drawable/blue_dotted_line"/>
 
             <ImageView
                 android:layout_width="@dimen/register_ic_wight"
@@ -68,7 +68,5 @@
             android:textSize="@dimen/register_finish_two_tx"/>
 
     </LinearLayout>
-
-    <include layout="@layout/part_customer_service_view"/>
 
 </LinearLayout>

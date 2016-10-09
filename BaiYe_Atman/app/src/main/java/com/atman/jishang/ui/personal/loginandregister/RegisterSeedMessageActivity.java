@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
-import com.atman.jishang.net.model.SeedMessageTwoModel;
-import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.net.model.CodeCheckModel;
 import com.atman.jishang.net.model.SeedMessageModel;
+import com.atman.jishang.net.model.SeedMessageTwoModel;
+import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.utils.TimeCount;
 import com.corelib.util.StringUtils;
 import com.corelib.widget.MyCleanEditText;
@@ -37,8 +37,6 @@ public class RegisterSeedMessageActivity extends SimpleTitleBarActivity {
     MyCleanEditText registerCodeEt;
     @Bind(R.id.bt_getsms)
     TextView btGetsms;
-    @Bind(R.id.CS_telephone)
-    TextView CSTelephone;
     @Bind(R.id.register_agreement_tx)
     TextView registerAgreementTx;
     @Bind(R.id.register_next_bt)
@@ -119,8 +117,7 @@ public class RegisterSeedMessageActivity extends SimpleTitleBarActivity {
         super.onDestroy();
     }
 
-    @OnClick({R.id.bt_getsms, R.id.CS_telephone
-            , R.id.register_agreement_tx,R.id.register_next_bt})
+    @OnClick({R.id.bt_getsms, R.id.register_agreement_tx,R.id.register_next_bt})
     public void onClick(View view) {
         String us = registerPhoneEt.getText().toString().trim();
         String code = registerCodeEt.getText().toString().trim();
@@ -130,9 +127,6 @@ public class RegisterSeedMessageActivity extends SimpleTitleBarActivity {
                     return;
                 }
                 getDataManager().seedMessage(us, SeedMessageModel.class, true);
-                break;
-            case R.id.CS_telephone:
-                toPhone(mContext,getResources().getString(R.string.service_telephone));
                 break;
             case R.id.register_agreement_tx:
                 startActivity(new Intent(mContext,AgreementActivity.class));

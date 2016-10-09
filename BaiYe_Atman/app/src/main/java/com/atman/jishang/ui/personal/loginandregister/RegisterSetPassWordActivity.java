@@ -13,16 +13,15 @@ import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.LimitSizeTextWatcher;
-import com.atman.jishang.ui.base.BaiYeBaseApplication;
-import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.LoginResultModel;
 import com.atman.jishang.net.model.RegisterModel;
 import com.atman.jishang.net.upload.UpLoadPicture;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
+import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.utils.PreferenceUtil;
 import com.atman.jishang.widget.BottomDialog;
 import com.corelib.base.BaseApplication;
@@ -49,8 +48,6 @@ public class RegisterSetPassWordActivity extends SimpleTitleBarActivity implemen
     MyCleanEditText registerPasswordEt;
     @Bind(R.id.register_next_bt)
     Button registerNextBt;
-    @Bind(R.id.CS_telephone)
-    TextView CSTelephone;
 
     private String mPhoneNumber;
     private static String IntentTag = "phonenumber";
@@ -128,7 +125,7 @@ public class RegisterSetPassWordActivity extends SimpleTitleBarActivity implemen
         super.onDestroy();
     }
 
-    @OnClick({R.id.register_header_iv, R.id.register_next_bt, R.id.CS_telephone})
+    @OnClick({R.id.register_header_iv, R.id.register_next_bt})
     public void onClick(View view) {
         String pw = registerPasswordEt.getText().toString().trim();
         switch (view.getId()) {
@@ -141,9 +138,6 @@ public class RegisterSetPassWordActivity extends SimpleTitleBarActivity implemen
                 }
                 getDataManager().register(mPhoneNumber, SubmitHelper.getMD5(pw)
                         , mAvatarUrl, RegisterModel.class, true);
-                break;
-            case R.id.CS_telephone:
-                toPhone(mContext,getResources().getString(R.string.service_telephone));
                 break;
         }
     }

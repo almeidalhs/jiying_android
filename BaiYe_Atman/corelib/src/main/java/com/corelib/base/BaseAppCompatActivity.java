@@ -74,6 +74,18 @@ public abstract class BaseAppCompatActivity extends SwipeBackActivity implements
         overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
     }
 
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode, Bundle options) {
+        super.startActivityForResult(intent, requestCode, options);
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_right_in, R.anim.slide_right_out);
+    }
+
     /**
      * 初始化
      */

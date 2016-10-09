@@ -14,17 +14,17 @@ public class ModifiedClassificationModel {
      * stcId : 138
      */
 
-    private int id;
+    private long id;
     private int storeId;
     private long stcId;
 
-    public ModifiedClassificationModel(int id, int storeId, long stcId){
+    public ModifiedClassificationModel(long id, int storeId, long stcId){
         this.id = id;
         this.storeId = storeId;
         this.stcId = stcId;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

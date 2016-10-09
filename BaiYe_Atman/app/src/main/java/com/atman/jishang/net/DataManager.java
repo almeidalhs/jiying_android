@@ -342,7 +342,7 @@ public class DataManager {
      * @param clazz       返回Gson对象
      * @param showLoading 是否显示对话框
      **/
-    public void getGoodsByClassId(int GoodsId, Class clazz, boolean showLoading) {
+    public void getGoodsByClassId(long GoodsId, Class clazz, boolean showLoading) {
         request(Urls.GET_GOODS_DETAILS + GoodsId, clazz, showLoading);
     }
 

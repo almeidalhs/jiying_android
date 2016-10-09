@@ -13,15 +13,15 @@ public class UnShelveOrShelveModel {
      * storeId : 4
      */
 
-    private int id;
+    private long id;
     private int storeId;
 
-    public UnShelveOrShelveModel(int id, int storeId){
+    public UnShelveOrShelveModel(long id, int storeId){
         this.id = id;
         this.storeId = storeId;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

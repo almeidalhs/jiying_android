@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.DragAdapter;
-import com.atman.jishang.interfaces.MyUMShareListenner;
 import com.atman.jishang.net.model.HomeAdModel;
 import com.atman.jishang.net.model.HomeGridViewDataModel;
 import com.atman.jishang.net.model.HomeListPostModel;
@@ -26,10 +25,7 @@ import com.atman.jishang.ui.base.BaiYeBaseFragment;
 import com.atman.jishang.ui.manager.goods.ScanCodeActivity;
 import com.atman.jishang.ui.manager.orders.OrderDetailActivity;
 import com.atman.jishang.utils.UiHelper;
-import com.atman.jishang.utils.save.Tools;
 import com.atman.jishang.widget.DragGrid;
-import com.atman.jishang.widget.ShareDialog;
-import com.atman.jishang.widget.YLBDialog;
 import com.corelib.util.LogUtils;
 import com.corelib.util.YLBConversionUtils;
 import com.corelib.widget.AutoScrollViewPager;
@@ -37,9 +33,6 @@ import com.corelib.widget.AutoScrollViewPagerAdapter;
 import com.google.gson.Gson;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.umeng.socialize.ShareAction;
-import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.media.UMImage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -297,78 +290,9 @@ public class ManagerFragment extends BaiYeBaseFragment implements
                 break;
             case R.id.home_nav_right_ll:
 
-                ShareDialog.Builder builder = new ShareDialog.Builder(getActivity());
-                builder.setTitle("分享");
-                builder.setNeutralButton("取消", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                ShareDialog dailog = builder.show();
-                dailog.setShareListener(new ShareDialog.ShareListener() {
-                    @Override
-                    public void onShare(int type) {
-                        doShare(type);
-                    }
-                });
+                new IntentIntegrator(getActivity()).setCaptureActivity(ScanCodeActivity.class).initiateScan();
                 break;
         }
-    }
-
-    public void doShare(int type) {
-        if (BaiYeBaseApplication.mLoginResultModel.getBody().getStoreId() == 0) {
-            showToast("你还没有创建店铺，不能进行分享");
-            return;
-        }
-        if (BaiYeBaseApplication.mShopInformationModel == null) {
-            YLBDialog.Builder builder = new YLBDialog.Builder(getActivity());
-            builder.setMessage("店铺信息获取失败，需要重新获取吗？");
-            builder.setPositiveButton("重新获取", this);
-            builder.setNegativeButton("取消", this);
-            builder.show();
-            return;
-        }
-        switch (type) {
-            case 1://微信
-                if (UiHelper.isAppInstalled(getActivity(), UiHelper.WEIXIN_PACKAGE)) {
-                    shareHelper(SHARE_MEDIA.WEIXIN);
-                }
-                break;
-            case 2://朋友圈
-                if (UiHelper.isAppInstalled(getActivity(), UiHelper.WEIXIN_PACKAGE)) {
-                    shareHelper(SHARE_MEDIA.WEIXIN_CIRCLE);
-                }
-                break;
-            case 3://微博
-                if (UiHelper.isAppInstalled(getActivity(), UiHelper.SINA_PACKAGE)) {
-                    shareHelper(SHARE_MEDIA.SINA);
-                }
-                break;
-            case 4://qq
-                if (UiHelper.isAppInstalled(getActivity(), UiHelper.QQ_PACKAGE)) {
-                    shareHelper(SHARE_MEDIA.QQ);
-                }
-                break;
-            case 5://copy
-                Tools.copy(BaiYeBaseApplication.mShopInformationModel.getBody().getStoreName() + "\n"
-                        + BaiYeBaseApplication.mShopInformationModel.getBody().getStoreWebUrl(), getActivity());
-                break;
-            default:
-                break;
-
-        }
-    }
-
-    private void shareHelper(SHARE_MEDIA Platform) {
-        LogUtils.e("withText:" + BaiYeBaseApplication.mShopInformationModel.getBody().getDescription());
-        UMImage image = new UMImage(getActivity(), BaiYeBaseApplication.mShopInformationModel.getBody().getFullStoreBanner());
-        new ShareAction(getActivity()).setPlatform(Platform).setCallback(new MyUMShareListenner(getActivity()))
-                .withText(BaiYeBaseApplication.mShopInformationModel.getBody().getDescription())
-                .withTitle(BaiYeBaseApplication.mShopInformationModel.getBody().getStoreName())
-                .withMedia(image)
-                .withTargetUrl(BaiYeBaseApplication.mShopInformationModel.getBody().getStoreWebUrl())
-                .share();
     }
 
     @Override

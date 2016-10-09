@@ -77,11 +77,10 @@
 
                 <ImageView
                     android:id="@+id/add_goods_code_bt"
-                    android:layout_width="15dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="@dimen/default_padding"
                     android:src="@mipmap/ic_goods_code_bt"/>
 
                 <ImageView
@@ -523,12 +522,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:src="@mipmap/finish"/>
 
             <TextView
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
