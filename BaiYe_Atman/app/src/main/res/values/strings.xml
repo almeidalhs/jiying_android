@@ -111,7 +111,7 @@
 
     <!--店铺预览-->
     <string name="storepreview_title">店铺预览</string>
-    <string name="storepreview_title_right">分享\n店铺</string>
+    <string name="storepreview_title_right">分享</string>
     <string name="storepreview_title_search">输入商品名称</string>
 
     <!--商品管理-->

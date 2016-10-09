@@ -8,14 +8,12 @@
         android:id="@+id/rl_title"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/main_top_height"
-        android:background="@color/main_title_orange_color">
+        android:background="@color/color_efeff4">
         <ImageView
             android:id="@+id/part_storeptrview_top_back_iv"
-            android:layout_width="25dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/default_padding"
-            android:layout_marginRight="@dimen/default_padding"
             android:clickable="true"
             android:scaleType="centerInside"
             android:src="@mipmap/ic_back_gray" />
@@ -52,7 +50,7 @@
             android:layout_height="match_parent"
             android:text="店铺预览"
             android:gravity="center"
-            android:textColor="@color/color_white"
+            android:textColor="@color/color_242424"
             android:textSize="18sp"
             android:layout_toRightOf="@+id/part_storeptrview_top_back_iv"
             android:layout_toLeftOf="@+id/part_storeptrview_top_right_tv"/>
@@ -66,7 +64,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/default_padding"
             android:text="@string/storepreview_title_right"
-            android:textColor="@color/color_white"
+            android:textColor="@color/color_16c5ee"
             android:textSize="14sp" />
 
     </RelativeLayout>

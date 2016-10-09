@@ -7,7 +7,7 @@
     <RelativeLayout
         android:id="@+id/part_store_preview_head_rl"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:background="@mipmap/personal_top_bg"
         android:clickable="true">
 
@@ -20,21 +20,26 @@
 
         <LinearLayout
             android:id="@+id/part_store_preview_head_ll"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/dimen_dp_40"
+            android:layout_height="@dimen/dimen_dp_40"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="40dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginBottom="@dimen/dimen_dp_40"
+            android:layout_marginLeft="@dimen/dimen_dp_10">
 
-            <ImageView
+            <com.corelib.widget.ShapeImageView xmlns:img="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/part_store_preview_head_img"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@mipmap/personal_head_default" />
+                android:layout_width="@dimen/dimen_dp_40"
+                android:layout_height="@dimen/dimen_dp_40"
+                android:src="@mipmap/personal_head_default"
+                img:shape="rect"
+                img:shape_border_color="@color/color_white"
+                img:shape_border_size="@dimen/dimen_dp_1"
+                img:shape_round_radius="@dimen/dimen_dp_5" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/part_store_preview_shopname"
+            style="@style/AudioFileInfoOverlayText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/part_store_preview_shopaddre_tx"
@@ -51,18 +56,19 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="@dimen/dimen_dp_45"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/part_store_preview_head_ll"
-            android:src="@mipmap/shop_addr_ic"/>
+            android:src="@mipmap/shop_addr_ic" />
 
         <TextView
             android:id="@+id/part_store_preview_shopaddre_tx"
+            style="@style/AudioFileInfoOverlayText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="@dimen/dimen_dp_40"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="@dimen/default_padding"
             android:layout_marginTop="5dp"
@@ -84,6 +90,32 @@
             android:singleLine="true"
             android:text="@string/personal_signature"
             android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/part_store_preview_todaycount"
+            style="@style/AudioFileInfoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/part_store_preview_totalcount"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/default_padding"
+            android:singleLine="true"
+            android:text="日浏览:"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/part_store_preview_totalcount"
+            style="@style/AudioFileInfoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dimen_dp_40"
+            android:layout_marginRight="@dimen/default_padding"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="总浏览:"
+            android:textColor="@color/color_white" />
     </RelativeLayout>
 
     <LinearLayout
@@ -91,13 +123,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#694767"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:visibility="gone"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
+        android:orientation="horizontal"
         android:paddingBottom="5dp"
-        android:paddingRight="5dp">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
@@ -114,20 +146,20 @@
             android:id="@+id/storepreview_fullcut_tx"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="12sp"
             android:layout_marginLeft="5dp"
-            android:maxLines="2"
             android:ellipsize="end"
-            android:textColor="@color/color_white" />
+            android:maxLines="2"
+            android:textColor="@color/color_white"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <com.corelib.widget.MyGridView
         android:id="@+id/storepreview_coupon_gv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:horizontalSpacing="5dp"
         android:background="@color/color_white"
+        android:horizontalSpacing="5dp"
         android:numColumns="3"
-        android:padding="5dp"/>
+        android:padding="5dp" />
 
 </LinearLayout>

@@ -1,5 +1,15 @@
 <resources>
 
+    <style name="AudioFileInfoOverlayText">
+        <item name="android:paddingLeft">4px</item>
+        <item name="android:paddingBottom">4px</item>
+        <item name="android:textColor">#f1f1f1</item>
+        <item name="android:shadowColor">#4d4d4d</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
     <style name="Transparent" parent="android:style/Theme.Dialog">
         <item name="android:windowFullscreen">true</item>
         <item name="android:layout_gravity">bottom</item>

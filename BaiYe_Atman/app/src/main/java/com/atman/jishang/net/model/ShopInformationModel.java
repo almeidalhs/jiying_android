@@ -109,6 +109,8 @@ public class ShopInformationModel {
         private String storeCode;
         private int storeCollect;
         private int storeSales;
+        private int todayStoreViewCount;
+        private int storeViewCount;
         private String scName;
         private String storeWebUrl;
         /**
@@ -126,6 +128,22 @@ public class ShopInformationModel {
         private List<?> mansongRuleBeanList;
 
         private String message;
+
+        public int getTodayStoreViewCount() {
+            return todayStoreViewCount;
+        }
+
+        public void setTodayStoreViewCount(int todayStoreViewCount) {
+            this.todayStoreViewCount = todayStoreViewCount;
+        }
+
+        public int getStoreViewCount() {
+            return storeViewCount;
+        }
+
+        public void setStoreViewCount(int storeViewCount) {
+            this.storeViewCount = storeViewCount;
+        }
 
         public String getMessage() {
             return message;

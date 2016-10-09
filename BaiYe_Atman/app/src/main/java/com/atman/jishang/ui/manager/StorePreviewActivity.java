@@ -41,6 +41,7 @@ import com.atman.jishang.utils.UiHelper;
 import com.atman.jishang.utils.save.Tools;
 import com.atman.jishang.widget.ShareDialog;
 import com.atman.jishang.widget.YLBDialog;
+import com.corelib.util.DensityUtil;
 import com.corelib.util.LogUtils;
 import com.corelib.widget.MyGridView;
 import com.corelib.widget.NoSwipeViewPager;
@@ -84,6 +85,10 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
     LinearLayout partStorePreviewHeadLl;
     @Bind(R.id.part_store_preview_shopname)
     TextView partStorePreviewShopname;
+    @Bind(R.id.part_store_preview_todaycount)
+    TextView partStorePreviewTodaycount;
+    @Bind(R.id.part_store_preview_totalcount)
+    TextView partStorePreviewTotalcount;
     @Bind(R.id.part_store_preview_shopaddre_tx)
     TextView partStorePreviewShopaddreTx;
     @Bind(R.id.part_store_preview_head_rl)
@@ -169,7 +174,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
         initRefreshView(PullToRefreshBase.Mode.BOTH, pullToRefreshScrollView);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getmWidth(),
-                getmWidth() * 500 / 1504);
+                (getmWidth() * 500 / 1504)  + DensityUtil.dp2px(mContext, 80));
         partStorePreviewHeadRl.setLayoutParams(params);
 
         imageLoader = ImageLoader.getInstance();
@@ -217,6 +222,8 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
         setBitmapToImageView(partStorePreviewHeadImg,
                 Urls.HEADIMG_BEFOR + BaiYeBaseApplication.mLoginResultModel.getBody().getMemberAvatar(),
                 R.mipmap.personal_head_default);
+        partStorePreviewTodaycount.setText("日浏览:"+mShopInformationModel.getBody().getTodayStoreViewCount());
+        partStorePreviewTotalcount.setText("总浏览:"+mShopInformationModel.getBody().getStoreViewCount());
     }
 
     @Override
