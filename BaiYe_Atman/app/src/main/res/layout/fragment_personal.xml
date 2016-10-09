@@ -64,6 +64,7 @@
             android:layout_marginRight="@dimen/default_padding"
             android:layout_marginTop="5dp"
             android:layout_toRightOf="@+id/head_rl"
+            android:drawableLeft="@mipmap/shop_addr_ic"
             android:singleLine="true"
             android:text="@string/personal_signature"
             android:textColor="@color/color_white" />

@@ -11,16 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#EDEDED"
-        android:paddingBottom="5dp"
-        android:paddingLeft="@dimen/default_padding"
-        android:paddingRight="@dimen/default_padding"
-        android:paddingTop="5dp">
+        android:paddingBottom="@dimen/dimen_dp_10"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15"
+        android:paddingTop="@dimen/dimen_dp_10">
 
         <com.corelib.widget.MyCleanEditText
             android:id="@+id/memberlist_search_et"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/red_edittext_bg_selector"
+            android:background="@drawable/white_edittext_bg_selector"
             android:hint="@string/memberlist_search_hint"
             android:singleLine="true"
             android:padding="5dp"
@@ -31,7 +31,7 @@
             android:id="@+id/memberlist_condition_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#EDEDED"
+            android:background="@color/color_white"
             android:orientation="horizontal">
 
             <TextView
@@ -121,29 +121,29 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/color_white"
-        android:paddingBottom="6dp"
-        android:paddingLeft="45dp"
-        android:paddingRight="45dp"
-        android:paddingTop="6dp"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/memberlist_message_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/member_red_selector_5"
+            android:background="@drawable/white_hollow_selector"
             android:clickable="true"
+            android:orientation="horizontal"
             android:gravity="center">
 
+            <ImageView
+                android:layout_width="@dimen/dimen_dp_30"
+                android:layout_height="@dimen/dimen_dp_30"
+                android:src="@mipmap/member_bottom_ic"/>
+
             <TextView
+                android:layout_marginLeft="@dimen/dimen_dp_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"
-                android:drawableLeft="@mipmap/member_bottom_ic"
                 android:gravity="center"
-                android:text="   发短信"
-                android:textColor="@color/color_white"
+                android:text="发消息"
+                android:textColor="@color/color_16c5ee"
                 android:textSize="16sp" />
         </LinearLayout>
 

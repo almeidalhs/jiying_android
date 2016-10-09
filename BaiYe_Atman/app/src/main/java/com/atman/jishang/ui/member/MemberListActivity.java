@@ -66,7 +66,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     public static List<MemberFilterModel> listFilter = new ArrayList<>();
     private GetMemberListModel mGetMemberListModel;
     private List<GetMemberListModel.BodyEntity.DataListEntity> mListData = new ArrayList<>();
-    private int page = 0;
+    private int page = 1;
     private int pageSize = 10;
 
     @Override
@@ -131,7 +131,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
                 } else {
                     queryParam = s.toString().trim();
                 }
-                page = 0;
+                page = 1;
                 mAdapter.clearData();
                 dohttp(false);
             }
@@ -205,7 +205,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     @Override
     public void onErrorResponse(VolleyError error) {
         super.onErrorResponse(error);
-        if (page > 0) {
+        if (page > 1) {
             page -= 1;
         }
         onLoad(PullToRefreshBase.Mode.BOTH, pullToRefreshListView);
@@ -221,7 +221,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
         super.onPullDownToRefresh(refreshView);
-        page = 0;
+        page = 1;
         mAdapter.clearData();
         dohttp(false);
     }
@@ -238,7 +238,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
             case R.id.memberlist_condition_delete_tx:
                 listFilter.clear();
                 displayTopCondition();
-                page = 0;
+                page = 1;
                 mAdapter.clearData();
                 dohttp(false);
                 break;
@@ -329,13 +329,13 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
         }
         if (requestCode == 999) {//筛选
             String result = data.getStringExtra("params");
-            page = 0;
+            page = 1;
             if (mAdapter != null) {
                 mAdapter.clearData();
             }
             dohttp(true);
         } else if (requestCode == 1000 || requestCode == 100) {//添加和编辑
-            page = 0;
+            page = 1;
             if (mAdapter != null) {
                 mAdapter.clearData();
             }

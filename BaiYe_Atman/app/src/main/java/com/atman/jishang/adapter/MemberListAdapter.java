@@ -14,6 +14,7 @@ import com.atman.jishang.net.GetMemberListModel;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.utils.MyTools;
+import com.corelib.widget.ShapeImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.text.DecimalFormat;
@@ -121,9 +122,9 @@ public class MemberListAdapter extends BaseAdapter {
         holder.itemMemberlistPhoneTx.setText(mBodyEntity.getMobile());
         holder.itemMemberlistIntegralTx.setText("消费："+df.format(mBodyEntity.getTotalConsume()));
         if (mBodyEntity.isSelect()) {
-            holder.itemMemberlistSelectIv.setImageResource(R.mipmap.member_item_select);
+            holder.itemMemberlistSelectIv.setImageResource(R.mipmap.member_one_item_select);
         } else {
-            holder.itemMemberlistSelectIv.setImageResource(R.mipmap.member_item_unselect);
+            holder.itemMemberlistSelectIv.setImageResource(R.mipmap.member_one_item_unselect);
         }
 
         holder.itemMemberlistSelectIv.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +166,7 @@ public class MemberListAdapter extends BaseAdapter {
 
     static class ViewHolder {
         @Bind(R.id.item_memberlist_head_iv)
-        ImageView itemMemberlistHeadIv;
+        ShapeImageView itemMemberlistHeadIv;
         @Bind(R.id.item_memberlist_sex_iv)
         ImageView itemMemberlistSexIv;
         @Bind(R.id.item_memberlist_name_tx)
@@ -174,6 +175,8 @@ public class MemberListAdapter extends BaseAdapter {
         TextView itemMemberlistPhoneTx;
         @Bind(R.id.item_memberlist_integral_tx)
         TextView itemMemberlistIntegralTx;
+        @Bind(R.id.item_memberlist_tag_tx)
+        TextView itemMemberlistTagTx;
         @Bind(R.id.item_memberlist_select_iv)
         ImageView itemMemberlistSelectIv;
         @Bind(R.id.item_memberlist_line_iv)

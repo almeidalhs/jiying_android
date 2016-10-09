@@ -128,7 +128,7 @@ public class PersonalFragment extends BaiYeBaseFragment {
             } else {
                 BaiYeBaseApplication.mShopInformationModel = mShopInformationModel;
                 personalShopName.setText(mShopInformationModel.getBody().getStoreName());
-                personalShopaddreTx.setText(mShopInformationModel.getBody().getStoreAddress());
+                personalShopaddreTx.setText("  "+mShopInformationModel.getBody().getStoreAddress());
                 personalShopsignatureTx.setText(mShopInformationModel.getBody().getDescription());
                 setBitmapToImageView(personalHeadbgImg,
                         Urls.HEADIMG_BEFOR + mShopInformationModel.getBody().getStoreBanner(),

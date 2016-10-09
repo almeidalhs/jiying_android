@@ -4,9 +4,8 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:paddingBottom="5dp"
     android:paddingLeft="@dimen/default_padding"
-    android:paddingTop="5dp">
+    android:paddingTop="@dimen/dimen_dp_5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,14 +14,19 @@
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:layout_width="40dp"
-            android:layout_height="40dp">
+            android:layout_width="@dimen/dimen_dp_50"
+            android:layout_height="@dimen/dimen_dp_50">
 
-            <ImageView
+            <com.corelib.widget.ShapeImageView
+                xmlns:img="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/item_memberlist_head_iv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/member_item_ic" />
+                android:src="@mipmap/member_item_ic"
+                img:shape="rect"
+                img:shape_border_color="@color/color_white"
+                img:shape_border_size="@dimen/dimen_dp_1"
+                img:shape_round_radius="@dimen/dimen_dp_5"/>
 
             <ImageView
                 android:id="@+id/item_memberlist_sex_iv"
@@ -47,7 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="姓名"
-                android:textColor="#61B9CF" />
+                android:textSize="@dimen/dimen_sp_15"
+                android:textColor="@color/color_242424" />
 
             <TextView
                 android:id="@+id/item_memberlist_phone_tx"
@@ -55,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/item_memberlist_name_tx"
                 android:text="18578909061"
-                android:textColor="#61B9CF" />
+                android:textSize="@dimen/dimen_sp_12"
+                android:textColor="@color/color_727272" />
 
             <TextView
                 android:id="@+id/item_memberlist_integral_tx"
@@ -66,7 +72,18 @@
                 android:layout_toRightOf="@+id/item_memberlist_phone_tx"
                 android:gravity="right"
                 android:text="积分：1000"
-                android:textColor="#61B9CF" />
+                android:textSize="@dimen/dimen_sp_12"
+                android:textColor="@color/color_727272" />
+
+            <TextView
+                android:id="@+id/item_memberlist_tag_tx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_memberlist_phone_tx"
+                android:text="暂无标签"
+                android:singleLine="true"
+                android:textSize="@dimen/dimen_sp_12"
+                android:textColor="@color/color_727272" />
         </RelativeLayout>
 
         <ImageView
@@ -81,8 +98,7 @@
         android:id="@+id/item_memberlist_line_iv"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginRight="@dimen/default_padding"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dimen_dp_5"
         android:background="@color/color_line" />
 
 </LinearLayout>
