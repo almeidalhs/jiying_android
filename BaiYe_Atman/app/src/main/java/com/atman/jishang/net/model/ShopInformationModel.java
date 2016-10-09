@@ -87,6 +87,7 @@ public class ShopInformationModel {
         private int scId;
         private int areaId;
         private String areaInfo;
+        private String openTime;
         private String storeAddress;
         private String storeZip;
         private String storeTel;
@@ -159,6 +160,14 @@ public class ShopInformationModel {
 
         public void setId(int id) {
             this.id = id;
+        }
+
+        public String getOpenTime() {
+            return openTime;
+        }
+
+        public void setOpenTime(String openTime) {
+            this.openTime = openTime;
         }
 
         public String getStoreName() {

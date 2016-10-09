@@ -85,8 +85,14 @@ public class TimePicker extends LinearLayout {
         Calendar ca = Calendar.getInstance();
         for (int i=0;i<hourList.size();i++) {
             if (!time.isEmpty()) {
-                if (Integer.parseInt(time.substring(11, 13))==hourList.get(i).getHour()) {
-                    hours.setCurrentItem(i);
+                if (time.length()==5) {
+                    if (Integer.parseInt(time.substring(0, 2))==hourList.get(i).getHour()) {
+                        hours.setCurrentItem(i);
+                    }
+                } else {
+                    if (Integer.parseInt(time.substring(11, 13))==hourList.get(i).getHour()) {
+                        hours.setCurrentItem(i);
+                    }
                 }
             } else {
                 if (ca.get(Calendar.HOUR_OF_DAY)==hourList.get(i).getHour()) {
@@ -100,8 +106,14 @@ public class TimePicker extends LinearLayout {
         }
         for (int i=0;i<minuteList.size();i++) {
             if (!time.isEmpty()) {
-                if (Integer.parseInt(time.substring(14, 16))==minuteList.get(i).getMinute()) {
-                    mins.setCurrentItem(i);
+                if (time.length()==5) {
+                    if (Integer.parseInt(time.substring(3, 5))==minuteList.get(i).getMinute()) {
+                        mins.setCurrentItem(i);
+                    }
+                } else {
+                    if (Integer.parseInt(time.substring(14, 16))==minuteList.get(i).getMinute()) {
+                        mins.setCurrentItem(i);
+                    }
                 }
             } else {
                 if (ca.get(Calendar.MINUTE)==minuteList.get(i).getMinute()) {

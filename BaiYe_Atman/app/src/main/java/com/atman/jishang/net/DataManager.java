@@ -232,7 +232,7 @@ public class DataManager {
      * @param showLoading 是否显示对话框
      **/
     public void updateShop(int id, String storeName, int scId, String storeBanner
-            ,String storeAddress,String storeTel, String description,Class clazz, boolean showLoading) {
+            ,String storeAddress,String storeTel, String description, String time,Class clazz, boolean showLoading) {
         Map<String, Object> p = new HashMap<>();
         p.put("id", id);
         p.put("storeName", storeName);
@@ -241,6 +241,7 @@ public class DataManager {
         p.put("storeAddress", storeAddress);
         p.put("storeTel", storeTel);
         p.put("description", description);
+        p.put("openTime", time);
         requestnot(Urls.UPDATE_SHOP, p, clazz, showLoading);
     }
 

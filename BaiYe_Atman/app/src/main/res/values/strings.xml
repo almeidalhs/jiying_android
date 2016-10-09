@@ -72,6 +72,7 @@
     <string name="shop_phone_wran">请输入正确的联系电话</string>
     <string name="shop_address">店铺地址</string>
     <string name="shop_type">行业类型</string>
+    <string name="shop_time">营业时间</string>
     <string name="shop_description">店铺描述</string>
     <string name="shop_commit_tx">提&#160;交</string>
 

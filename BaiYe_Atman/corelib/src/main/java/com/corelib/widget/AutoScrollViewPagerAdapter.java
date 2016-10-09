@@ -64,7 +64,7 @@ public class AutoScrollViewPagerAdapter extends PagerAdapter {
         networkImageView.setDefaultImageResId(0);
         networkImageView.setErrorImageResId(0);
         networkImageView.setImageUrl(mUrlsList.get(position), mContext.getImageLoader());
-        networkImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+        networkImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         networkImageView.setTag(position);
         view.addView(networkImageView);
         networkImageView.setOnClickListener(new View.OnClickListener() {

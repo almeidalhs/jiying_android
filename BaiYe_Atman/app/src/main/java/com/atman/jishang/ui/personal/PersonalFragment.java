@@ -156,7 +156,7 @@ public class PersonalFragment extends BaiYeBaseFragment {
                 if (BaiYeBaseApplication.mShopInformationModel == null) {
                     startActivityForResult(new Intent(getActivity(), CreateShopActivity.class), toShopInfo);
                 } else {
-                    startActivityForResult(new Intent(getActivity(), ShopInformationActivity.class), toCreateShop);
+                    startActivityForResult(new Intent(getActivity(), EditShopActivity.class), toCreateShop);
                 }
                 break;
             case R.id.personal_recommend_ll:

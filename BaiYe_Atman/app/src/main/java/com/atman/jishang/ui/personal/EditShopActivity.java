@@ -27,17 +27,21 @@ import android.widget.TextView;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.ShopTypeAdapter;
 import com.atman.jishang.interfaces.LimitSizeTextWatcher;
-import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.EditShopInfoModel;
 import com.atman.jishang.net.model.IndustryTypeModel;
 import com.atman.jishang.net.model.ShopInformationModel;
 import com.atman.jishang.net.upload.UpLoadPicture;
+import com.atman.jishang.ui.base.SimpleTitleBarActivity;
+import com.atman.jishang.utils.MyTools;
 import com.atman.jishang.utils.UiHelper;
 import com.atman.jishang.widget.BottomDialog;
 import com.atman.jishang.widget.WheelView.OnWheelChangedListener;
 import com.atman.jishang.widget.WheelView.OnWheelScrollListener;
 import com.atman.jishang.widget.WheelView.WheelView;
+import com.atman.jishang.widget.dateselect.DateSelectDialogUtil;
+import com.atman.jishang.widget.dateselect.TimePicker;
+import com.atman.jishang.widget.dateselect.TimeSelectDialogUtil;
 import com.corelib.util.LogUtils;
 import com.corelib.util.StringUtils;
 
@@ -66,6 +70,8 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     EditText shopAddressTx;
     @Bind(R.id.shop_type_tx)
     TextView shopTypeTx;
+    @Bind(R.id.shop_time_tx)
+    TextView shopTimeTx;
     @Bind(R.id.shop_type_ll)
     LinearLayout shopTypeLl;
     @Bind(R.id.shop_description_tx)
@@ -82,7 +88,14 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     private String mShopAddress;
     private String mShopTel;
     private String mDescription;
+    private String mTime;
     private int mId;
+
+    private int numDataOne = -1;
+    private String hOne = "00";
+    private String mOne = "00";
+    private String hTwo = "00";
+    private String mTwo = "00";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,6 +182,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     }
 
     private void UpDateUI() {
+        shopTimeTx.setText(changeStr(mShopInformationModel.getBody().getOpenTime()));
         shopNameTx.setText(mShopInformationModel.getBody().getStoreName());
         shopPhoneTx.setText(mShopInformationModel.getBody().getStoreTel());
         shopAddressTx.setText(mShopInformationModel.getBody().getStoreAddress());
@@ -177,12 +191,20 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
         setBitmapToImageView(shopTopIv, Urls.HEADIMG_BEFOR + mShopBanner, R.mipmap.personal_top_bg);
     }
 
+    private StringBuilder changeStr(String str) {
+        StringBuilder sb=new StringBuilder(str);
+        sb.insert(2,":");
+        sb.insert(5,"-");
+        sb.insert(8,":");
+        return sb;
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
 
-    @OnClick({R.id.shop_head_rl,R.id.shop_top_tx, R.id.shop_type_ll, R.id.shop_commit_bt})
+    @OnClick({R.id.shop_head_rl,R.id.shop_top_tx, R.id.shop_type_ll, R.id.shop_commit_bt, R.id.shop_time_ll})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.shop_head_rl:
@@ -197,14 +219,64 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
                 mShopAddress = shopAddressTx.getText().toString().trim();
                 mShopTel = shopPhoneTx.getText().toString().trim();
                 mDescription = shopDescriptionTx.getText().toString().trim();
+                mTime = shopTimeTx.getText().toString().replace(":","").replace("-","");
                 if (!checkData()) {
                     return;
                 }
                 getDataManager().updateShop(mId, mShopName, mScId, mShopBanner, mShopAddress, mShopTel
-                        , mDescription, EditShopInfoModel.class, true);
+                        , mDescription, mTime, EditShopInfoModel.class, true);
+                break;
+            case R.id.shop_time_ll:
+                TimeSelectDialogUtil mStart = new TimeSelectDialogUtil(mContext, view
+                        , timeListenerOne, timeListenerTwo);
+                mStart.ShowDialog(shopTimeTx.getText().toString().split("-")[0]
+                        , shopTimeTx.getText().toString().split("-")[1]);
+                hOne = (shopTimeTx.getText().toString().split("-")[0]).split(":")[0];
+                mOne = (shopTimeTx.getText().toString().split("-")[0]).split(":")[1];
+                hTwo = (shopTimeTx.getText().toString().split("-")[1]).split(":")[0];
+                mTwo = (shopTimeTx.getText().toString().split("-")[1]).split(":")[1];
                 break;
         }
     }
+
+    TimePicker.OnChangeListener timeListenerOne = new TimePicker.OnChangeListener() {
+        @Override
+        public void onChange(int hour, int minute) {
+            if (hour<10) {
+                hOne = "0" + hour;
+            } else {
+                hOne = "" + hour;
+            }
+            if (minute<10) {
+                mOne = "0" + minute;
+            } else {
+                mOne = "" + minute;
+            }
+            setTime();
+        }
+    };
+
+    private void setTime() {
+        String str = hOne + mOne + hTwo + mTwo;
+        shopTimeTx.setText(changeStr(str));
+    }
+
+    TimePicker.OnChangeListener timeListenerTwo = new TimePicker.OnChangeListener() {
+        @Override
+        public void onChange(int hour, int minute) {
+            if (hour<10) {
+                hTwo = "0" + hour;
+            } else {
+                hTwo = "" + hour;
+            }
+            if (minute<10) {
+                mTwo = "0" + minute;
+            } else {
+                mTwo = "" + minute;
+            }
+            setTime();
+        }
+    };
 
     private boolean checkData() {
         if (mShopBanner == null || mShopBanner.isEmpty()) {

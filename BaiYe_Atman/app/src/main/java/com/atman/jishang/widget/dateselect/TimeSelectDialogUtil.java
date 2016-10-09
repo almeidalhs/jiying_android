@@ -8,9 +8,9 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.atman.jishang.R;
+import com.corelib.util.LogUtils;
 
 import java.util.Calendar;
 
@@ -21,12 +21,12 @@ import java.util.Calendar;
  * 邮箱 bltang@atman.com
  * 电话 18578909061
  */
-public class DateSelectDialogUtil {
+public class TimeSelectDialogUtil {
 
     private Calendar calendar;
-    private DatePicker dp_test;
+    private TimePicker dp_test;
     private TimePicker tp_test;
-    private TextView tv_ok,tv_cancel,tv_now;	//确定、取消button
+    private TextView tv_ok,tv_cancel;	//确定、取消button
     private PopupWindow pw;
     private String selectDate,selectTime;
     //选择时间与当前时间，用于判断用户选择的是否是以前的时间
@@ -34,22 +34,22 @@ public class DateSelectDialogUtil {
     //整体布局
     private View view;
     private Context mContext;
-    private DatePicker.OnChangeListener dp_onchanghelistener;
-    private TimePicker.OnChangeListener tp_onchanghelistener;
-    private OnNowListener onNow;
+    private TimePicker.OnChangeListener tp_onchanghelistenerOne, tp_onchanghelistenerTwo;
 
-    public DateSelectDialogUtil (Context mContext,View view,DatePicker.OnChangeListener dp_onchanghelistener
-            ,TimePicker.OnChangeListener tp_onchanghelistener, OnNowListener onNow){
+    public TimeSelectDialogUtil(Context mContext, View view,TimePicker.OnChangeListener tp_onchanghelistenerOne,
+                                TimePicker.OnChangeListener tp_onchanghelistenerTwo){
         this.mContext = mContext;
-        this.dp_onchanghelistener = dp_onchanghelistener;
-        this.tp_onchanghelistener = tp_onchanghelistener;
-        this.onNow = onNow;
+        this.tp_onchanghelistenerOne = tp_onchanghelistenerOne;
+        this.tp_onchanghelistenerTwo = tp_onchanghelistenerTwo;
         this.view = view;
         calendar = Calendar.getInstance();
     }
 
-    public void ShowDialog (int dataNum, String time) {
-        View view = View.inflate(mContext, R.layout.dialog_select_date, null);
+    public void ShowDialog (String dataNum, String time) {
+        LogUtils.e("dataNum:"+dataNum);
+        LogUtils.e("time:"+time);
+        View view = View.inflate(mContext, R.layout.dialog_select_time, null);
+        LogUtils.e("view:"+view);
         selectDate = calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH) + "-"
                 + calendar.get(Calendar.DAY_OF_MONTH)
                 + DatePicker.getDayOfWeekCN(calendar.get(Calendar.DAY_OF_WEEK));
@@ -59,33 +59,29 @@ public class DateSelectDialogUtil {
         selectHour = currentHour = calendar.get(Calendar.HOUR_OF_DAY);
 
         selectTime = currentHour + ":" + ((currentMinute < 10)?("0"+currentMinute):currentMinute);
-        dp_test = (DatePicker)view.findViewById(R.id.dp_test);
+        LogUtils.e("selectTime:"+selectTime);
+        dp_test = (TimePicker)view.findViewById(R.id.dp_test);
         dp_test.init(dataNum);
         tp_test = (TimePicker)view.findViewById(R.id.tp_test);
         tp_test.init(time);
         tv_ok = (TextView) view.findViewById(R.id.tv_ok);
         tv_cancel = (TextView) view.findViewById(R.id.tv_cancel);
-        tv_now = (TextView) view.findViewById(R.id.tv_now);
+
         //设置滑动改变监听器
-        dp_test.setOnChangeListener(dp_onchanghelistener);
-        tp_test.setOnChangeListener(tp_onchanghelistener);
-        pw = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, true);
+        dp_test.setOnChangeListener(tp_onchanghelistenerOne);
+        tp_test.setOnChangeListener(tp_onchanghelistenerTwo);
+
+        pw = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT
+                , LinearLayout.LayoutParams.WRAP_CONTENT, true);
         //设置这2个使得点击pop以外区域可以去除pop
         pw.setOutsideTouchable(true);
         pw.setBackgroundDrawable(new BitmapDrawable());
         pw.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_MODE_CHANGED);
 
+        LogUtils.e(">>>>>>11111");
         //出现在布局底端
         pw.showAtLocation(view, 0, 0,  Gravity.END);
-        tv_now.performClick();
-
-        tv_now.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toNow();
-                onNow.onNow();
-            }
-        });
+        LogUtils.e(">>>>>>22222");
         //点击确定
         tv_ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,14 +97,5 @@ public class DateSelectDialogUtil {
                 pw.dismiss();
             }
         });
-    }
-
-    public void toNow(){
-        dp_test.toNow(false, -1);
-        tp_test.toNow(false, "");
-    }
-
-    public interface OnNowListener {
-        void onNow();
     }
 }

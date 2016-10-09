@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginRight="10dp"
-            android:text="现在"
-            android:textColor="#666666"
-            android:textSize="13sp" />
+            android:text="营业时间"
+            android:textColor="#242424"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_ok"
@@ -44,7 +44,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
             android:text="确定"
-            android:textColor="#EC5D44"
+            android:textColor="#16c5ee"
             android:textSize="15sp" />
 
     </RelativeLayout>
@@ -58,22 +58,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="10dp">
 
-        <com.atman.jishang.widget.dateselect.DatePicker
+        <com.atman.jishang.widget.dateselect.TimePicker
             android:id="@+id/dp_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="3"
+            android:layout_weight="1"
             android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_dp_5"
+            android:layout_marginRight="@dimen/dimen_dp_5"
+            android:textColor="#242424"
+            android:textSize="15sp"
+            android:text="至"/>
 
         <com.atman.jishang.widget.dateselect.TimePicker
             android:id="@+id/tp_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:gravity="center" />
     </LinearLayout>
 

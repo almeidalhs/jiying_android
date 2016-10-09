@@ -24,6 +24,7 @@ import com.atman.jishang.utils.UiHelper;
 import com.atman.jishang.utils.save.Tools;
 import com.atman.jishang.widget.ShareDialog;
 import com.atman.jishang.widget.YLBDialog;
+import com.corelib.util.DensityUtil;
 import com.corelib.util.YLBConversionUtils;
 import com.corelib.widget.AutoScrollViewPager;
 import com.corelib.widget.AutoScrollViewPagerAdapter;
@@ -125,7 +126,7 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
         setToolbarTitle(getResources().getString(R.string.goodsdetail_title));
 //        setToolbarTitle(getIntent().getStringExtra(mTitle));
         LinearLayout.LayoutParams params_top = new LinearLayout.LayoutParams(getmWidth()
-                , getmWidth() * 300 / 568);
+                , (getmWidth() * 300 / 568) + DensityUtil.dp2px(mContext, 100));
         LinearLayout.LayoutParams params_top_right = new LinearLayout.LayoutParams(BaiYeBaseApplication.getApp().dp2px(20)
                 , LinearLayout.LayoutParams.WRAP_CONTENT);
         homeTopRl.setLayoutParams(params_top);
