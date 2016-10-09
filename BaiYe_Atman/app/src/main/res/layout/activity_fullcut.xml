@@ -118,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="#EC5D44"
+                android:textColor="@color/color_16c5ee"
                 android:textSize="16sp"
                 android:text="@string/fullcut_add"/>
         </LinearLayout>

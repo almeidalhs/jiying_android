@@ -24,7 +24,7 @@
             android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="@string/fullcut_add_add"
-            android:textColor="#EC5D44"
+            android:textColor="@color/color_16c5ee"
             android:textSize="16sp" />
     </LinearLayout>
 

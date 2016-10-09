@@ -108,23 +108,27 @@ public class CouponDetailsActivity extends SimpleTitleBarActivity {
     }
 
     String str = "";
+    String[] strMore;
     private void showAddrPopupWindow(View view) {
         String str2 = "编辑";
         if (mState.equals("1")) {
             str = "您确定要删除该未开始的优惠券吗？";
+            strMore = new String[]{"分享", str2, "删除"};
         } else if (mState.equals("2")) {
             str = "您确定要删除该进行中的优惠券吗？";
             str2 = "结束";
+            strMore = new String[]{"分享", str2, "删除"};
         } else if (mState.equals("3")) {
             str = "您确定要删除该已结束的优惠券吗？";
+            strMore = new String[]{str2, "删除"};
         }
         BottomDialog.Builder builder = new BottomDialog.Builder(mContext);
         builder.setTitle(Html.fromHtml("<font color=\"#8F8F8F\">操作</font>"));
-        builder.setItems(new String[]{"分享", str2, "删除"}, new DialogInterface.OnClickListener() {
+        builder.setItems(strMore, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                if (which == 0) {//编辑
+                if (strMore[which].equals("分享")) {//分享
                     ShareDialog.Builder builder_share = new ShareDialog.Builder(mContext);
                     builder_share.setTitle("分享");
                     builder_share.setNeutralButton("取消", new DialogInterface.OnClickListener() {
@@ -140,14 +144,14 @@ public class CouponDetailsActivity extends SimpleTitleBarActivity {
                             doShare(type);
                         }
                     });
-                } else if (which == 1) {//编辑
+                } else if (strMore[which].equals("编辑") || strMore[which].equals("结束")) {//编辑
                     if (mState.equals("2")) {
                         getDataManager().finishCouponById(id, FinishCouponModel.class, true);
                     } else {
                         isEdit = false;
                         startActivityForResult(EditCouponActivity.buildIntent(mContext, id, mState), toEdit);
                     }
-                } else {//删除
+                } else if (strMore[which].equals("删除")){//删除
                     YLBDialog.Builder builder = new YLBDialog.Builder(mContext);
                     builder.setMessage(str);
                     builder.setPositiveButton("删除", new DialogInterface.OnClickListener(){

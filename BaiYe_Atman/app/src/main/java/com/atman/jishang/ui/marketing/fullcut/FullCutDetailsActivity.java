@@ -104,7 +104,7 @@ public class FullCutDetailsActivity extends SimpleTitleBarActivity implements Ad
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle("满减活动详情");
+        setToolbarTitle("编辑满减活动详情");
         mDeleteIV = getIvRightOk();
         mDeleteIV.setImageResource(R.mipmap.fullcut_delete);
         mDeleteLL = showRightLl();
