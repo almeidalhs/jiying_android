@@ -1089,5 +1089,15 @@ public class DataManager {
         requestnot(Urls.WEIXIN_PREPAY, p, clazz, showLoading);
     }
 
+    /**
+     *  获取服务配置
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void getServiceCommonConf(Class clazz, boolean showLoading) {
+        request(Urls.SERVICE_COMMONCOF, clazz, showLoading);
+    }
+
 
 }

@@ -58,10 +58,15 @@
     <dimen name="dimen_dp_44">44dp</dimen>
     <dimen name="dimen_dp_45">45dp</dimen>
     <dimen name="dimen_dp_50">50dp</dimen>
+    <dimen name="dimen_dp_60">60dp</dimen>
     <dimen name="dimen_dp_100">100dp</dimen>
 
     <!--new_sp-->
+    <dimen name="dimen_sp_10">10sp</dimen>
+    <dimen name="dimen_sp_11">11sp</dimen>
     <dimen name="dimen_sp_12">12sp</dimen>
+    <dimen name="dimen_sp_13">13sp</dimen>
+    <dimen name="dimen_sp_14">14sp</dimen>
     <dimen name="dimen_sp_15">15sp</dimen>
 
 </resources>

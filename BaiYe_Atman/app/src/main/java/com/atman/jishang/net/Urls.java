@@ -366,4 +366,9 @@ public class Urls {
      * 微信预支付
      */
     public static final String WEIXIN_PREPAY = "/rest/pay/weixin/prepay";
+
+    /**
+     * 获取服务配置
+     */
+    public static final String SERVICE_COMMONCOF = "/rest/commconf/main";
 }
