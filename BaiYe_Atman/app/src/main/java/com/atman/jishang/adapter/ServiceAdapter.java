@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
@@ -52,7 +53,7 @@ public class ServiceAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public CommconfModel.BodyBean getItem(int position) {
         return mBody.get(position);
     }
 
@@ -62,7 +63,7 @@ public class ServiceAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.item_service_listview, null);
             holder = new ViewHolder(convertView);
@@ -84,23 +85,30 @@ public class ServiceAdapter extends BaseAdapter {
         ImageLoader.getInstance().displayImage(url, holder.itemServiceIv
                 , BaiYeBaseApplication.getApp().getOptionsHead());
 
-        if (mBody.get(position).getModuleSetup()==1) {
+        if (mBody.get(position).getModuleSetup() == 1) {
             holder.itemServiceSettingTv.setText("已设置");
         } else {
             holder.itemServiceSettingTv.setText("未设置");
         }
 
-        if (mBody.get(position).getModuleStatus()==1) {
+        if (mBody.get(position).getModuleStatus() == 1) {
             holder.settingOpenSb.setCheckedImmediately(true);
         } else {
             holder.settingOpenSb.setCheckedImmediately(false);
         }
 
-        if (position == getCount()-1) {
+        if (position == getCount() - 1) {
             holder.itemServiceLineIv.setVisibility(View.GONE);
         } else {
             holder.itemServiceLineIv.setVisibility(View.VISIBLE);
         }
+
+        holder.itemServiceRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClick.onItemClick(v, position);
+            }
+        });
         return convertView;
     }
 
@@ -117,6 +125,8 @@ public class ServiceAdapter extends BaseAdapter {
         TextView itemServiceSettingTv;
         @Bind(R.id.item_service_line_iv)
         ImageView itemServiceLineIv;
+        @Bind(R.id.item_service_root)
+        LinearLayout itemServiceRoot;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

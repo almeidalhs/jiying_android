@@ -11,8 +11,10 @@ import android.widget.TextView;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.ServiceAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.ServiceTypeInterface;
 import com.atman.jishang.net.model.CommconfModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
+import com.atman.jishang.ui.service.wifi.WifiActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -60,12 +62,6 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
 
         mAdapter = new ServiceAdapter(getActivity(), this);
         serviceModelListview.setAdapter(mAdapter);
-        serviceModelListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-            }
-        });
     }
 
     @Override
@@ -99,6 +95,18 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
 
     @Override
     public void onItemClick(View view, int position) {
+        switch (view.getId()) {
+            case R.id.item_service_root:
+                serviceUIHelp(mAdapter.getItem(position).getModuleId(), mAdapter.getItem(position).getModuleName());
+                break;
+        }
+    }
 
+    private void serviceUIHelp(int id, String title) {
+        switch (id) {
+            case ServiceTypeInterface.moduleTypeWifi:
+                startActivity(WifiActivity.bulidIntent(getActivity(), title));
+                break;
+        }
     }
 }
