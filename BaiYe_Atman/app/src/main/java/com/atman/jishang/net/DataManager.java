@@ -824,8 +824,8 @@ public class DataManager {
      * @param clazz       返回Gson对象
      * @param showLoading 是否显示对话框
      **/
-    public void getMenberFilterData(Class clazz, boolean showLoading) {
-        request(Urls.GET_MEMBER_FILTER, clazz, showLoading);
+    public void getMenberFilterData(int from,int row, Class clazz, boolean showLoading) {
+        request(Urls.GET_MEMBER_FILTER+"/"+from+"/"+row, clazz, showLoading);
     }
 
     /**

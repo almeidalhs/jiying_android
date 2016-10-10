@@ -42,6 +42,9 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     private GetMemberFilterModel mGetMemberFilterModel;
     private List<MemberFilterModel> listFilter = new ArrayList<>();
 
+    private int from = 1;
+    private int num = 20;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +83,7 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     @Override
     public void doInitBaseHttp() {
         super.doInitBaseHttp();
-        getDataManager().getMenberFilterData(GetMemberFilterModel.class, true);
+        getDataManager().getMenberFilterData(from, num, GetMemberFilterModel.class, true);
     }
 
     @Override
@@ -132,10 +135,6 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
                         listFilter.add(new MemberFilterModel(mSList.get(i).getId(),mSList.get(i).getChildSelectStr()));
                     }
                 }
-                if (listFilter.size()==0) {
-                    showToast("请选择筛选条件");
-                    return;
-                }
                 MemberListActivity.listFilter = listFilter;
                 Intent intent=new Intent();
                 intent.putExtra("params", new Gson().toJson(listFilter));
@@ -148,7 +147,10 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     @Override
     public void onItemClick(View view, int position) {
         switch (view.getId()) {
-
+            case R.id.item_group_refresh_tx:
+                from += 1;
+                doInitBaseHttp();
+                break;
         }
     }
 

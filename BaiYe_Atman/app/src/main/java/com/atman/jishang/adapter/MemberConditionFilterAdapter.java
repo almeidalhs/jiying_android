@@ -33,15 +33,17 @@ public class MemberConditionFilterAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<GetMemberFilterModel.BodyEntity> list;
-    private LayoutInflater layoutInflater;
+    private LayoutInflater layoutInflater,layoutInflaterGroup;
     private AdapterInterface onItemClick;
     private List<MemberConditionFilterChildAdpter> adptersList = new ArrayList<>();
 
-    public MemberConditionFilterAdapter(Context context, List<GetMemberFilterModel.BodyEntity> body, AdapterInterface onItemClick) {
+    public MemberConditionFilterAdapter(Context context, List<GetMemberFilterModel.BodyEntity> body
+            , AdapterInterface onItemClick) {
         this.context = context;
         this.list = body;
         this.onItemClick = onItemClick;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        layoutInflaterGroup = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         for (int i=0;i<list.size();i++) {
             list.get(i).setChildSelectId(-1);
             list.get(i).setChildSelectStr("-1");
@@ -97,11 +99,35 @@ public class MemberConditionFilterAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-        TextView textView = getTextView(context);
-        textView.setText(getGroup(groupPosition).getParamkey());
-        textView.setPadding(YLBDialog.dip2px(context, 10), 0, 0, 0);
-        return textView;
+    public View getGroupView(final int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+//        TextView textView = getTextView(context);
+//        textView.setText(getGroup(groupPosition).getParamkey());
+//        textView.setPadding(YLBDialog.dip2px(context, 10), 0, 0, 0);
+//        return textView;
+
+        if (convertView == null) {
+            convertView = layoutInflaterGroup.inflate(R.layout.item_group_memberfilter_view, null);
+            TextView itemGroupTx = (TextView) convertView.findViewById(R.id.item_group_tx);
+            TextView itemGroupRefreshTx = (TextView) convertView.findViewById(R.id.item_group_refresh_tx);
+
+            itemGroupTx.setText(getGroup(groupPosition).getParamkey());
+            itemGroupRefreshTx.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClick.onItemClick(v, groupPosition);
+                }
+            });
+
+            if (getGroup(groupPosition).getId()==3) {
+                itemGroupRefreshTx.setVisibility(View.VISIBLE);
+            } else {
+                itemGroupRefreshTx.setVisibility(View.GONE);
+            }
+        } else {
+
+        }
+
+        return convertView;
     }
 
     @Override
@@ -115,9 +141,16 @@ public class MemberConditionFilterAdapter extends BaseExpandableListAdapter {
             toolbarGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    adpter.setSelectId(position);
-                    list.get(groupPosition).setChildSelectId(position);
-                    list.get(groupPosition).setChildSelectStr(list.get(groupPosition).getParamValue().get(position));
+                    if (position==adpter.getSelectId()) {
+                        adpter.setSelectId(-1);
+                        list.get(groupPosition).setChildSelectId(-1);
+                        list.get(groupPosition).setChildSelectStr("-1");
+                    } else {
+                        adpter.setSelectId(position);
+                        list.get(groupPosition).setChildSelectId(position);
+                        list.get(groupPosition).setChildSelectStr(list.get(groupPosition)
+                                .getParamValue().get(position));
+                    }
                 }
             });
             for (int i=0;i<list.get(groupPosition).getParamValue().size();i++) {
