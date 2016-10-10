@@ -226,6 +226,10 @@ public class ManagerFragment extends BaiYeBaseFragment implements
         dataAlreadyList.clear();
         dataOtherList.clear();
 
+        if (mHomeGridViewDataModel.getBody().size()==0) {
+            return;
+        }
+
         for (int i = 0; i < mHomeGridViewDataModel.getBody().size(); i++) {
             HomeGridViewDataModel.BodyEntity temp = mHomeGridViewDataModel.getBody().get(i);
             if (temp.getUcState() == 1) {

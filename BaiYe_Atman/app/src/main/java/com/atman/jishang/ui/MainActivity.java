@@ -105,7 +105,8 @@ public class MainActivity extends BaiYeBaseActivity {
         adapter.addFragment(new PersonalFragment(), PERSONAL_TAG);
         mViewPager.setOffscreenPageLimit(4);
         mViewPager.setAdapter(adapter);
-        fg = adapter.getItem(0);
+        fg = adapter.getItem(2);
+        mViewPager.setCurrentItem(2,false);
         mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

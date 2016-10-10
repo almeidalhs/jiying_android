@@ -216,16 +216,24 @@
         android:layout_height="1px"
         android:background="@color/color_line"/>
 
-    <Button
-        android:id="@+id/personalinfo_exit_bt"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="@dimen/register_padding"
-        android:layout_marginLeft="@dimen/register_padding"
-        android:textSize="@dimen/login_button_text"
-        android:background="@drawable/red_full_selector"
-        android:textColor="@color/color_white"
-        android:text="@string/personalinfo_exit"/>
+        android:layout_height="@dimen/login_button_hight"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_dp_50"
+        android:paddingRight="@dimen/dimen_dp_50"
+        android:layout_marginTop="@dimen/dimen_dp_20"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/personalinfo_exit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/login_button_text"
+            android:background="@drawable/blue_full_selector"
+            android:textColor="@color/color_white"
+            android:text="@string/personalinfo_exit"/>
+    </LinearLayout>
+
 
 </LinearLayout>
