@@ -124,8 +124,8 @@ public class AddMemberRecordsFullCutAdapter extends BaseAdapter {
         AddRecordFullCutListModel.BodyEntity mBodyEntity = body.get(position);
 
         holder.itemAddrecordNameTv.setText("全场满"+mBodyEntity.getPrice()+"减"+mBodyEntity.getDiscount()+"元");
-        holder.itemAddrecordTimeTv.setText("("+MyTools.convertTime(mBodyEntity.getStartTime(), "yyyy-MM-dd hh:mm")
-                +"-"+MyTools.convertTime(mBodyEntity.getEndTime(), "yyyy-MM-dd hh:mm")+")");
+        holder.itemAddrecordTimeTv.setText("("+MyTools.convertTime(mBodyEntity.getStartTime(), "yyyy-MM-dd HH:mm")
+                +"-"+MyTools.convertTime(mBodyEntity.getEndTime(), "yyyy-MM-dd HH:mm")+")");
 
         if (mBodyEntity.isSelect()) {
             holder.itemAddrecordSelectIv.setBackgroundResource(R.mipmap.addrecord_active_select);
@@ -140,11 +140,11 @@ public class AddMemberRecordsFullCutAdapter extends BaseAdapter {
             }
         });
 
-        if (mBodyEntity.getState()==3) {
-            holder.itemAddrecordRootLl.setBackgroundColor(mContext.getResources().getColor(R.color.overdue_bg));
-        } else {
-            holder.itemAddrecordRootLl.setBackgroundColor(mContext.getResources().getColor(R.color.color_white));
-        }
+//        if (mBodyEntity.getState()==3) {
+//            holder.itemAddrecordRootLl.setBackgroundColor(mContext.getResources().getColor(R.color.overdue_bg));
+//        } else {
+//            holder.itemAddrecordRootLl.setBackgroundColor(mContext.getResources().getColor(R.color.color_white));
+//        }
 
         return convertView;
     }

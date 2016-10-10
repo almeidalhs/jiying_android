@@ -75,15 +75,29 @@
                 android:textSize="@dimen/dimen_sp_12"
                 android:textColor="@color/color_727272" />
 
-            <TextView
-                android:id="@+id/item_memberlist_tag_tx"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/item_memberlist_phone_tx"
-                android:text="暂无标签"
-                android:singleLine="true"
-                android:textSize="@dimen/dimen_sp_12"
-                android:textColor="@color/color_727272" />
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_below="@+id/item_memberlist_phone_tx">
+
+                <com.atman.jishang.widget.XCFlowLayout
+                    android:id="@+id/item_memberlist_flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/item_memberlist_tag_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="暂无标签"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dimen_sp_12"
+                    android:textColor="@color/color_727272" />
+            </RelativeLayout>
         </RelativeLayout>
 
         <ImageView

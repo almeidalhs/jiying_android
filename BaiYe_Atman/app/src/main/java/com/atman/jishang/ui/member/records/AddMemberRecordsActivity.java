@@ -27,8 +27,8 @@ import com.atman.jishang.net.model.AddRecordFullCutListModel;
 import com.atman.jishang.net.model.AddRecordParamsModel;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.ui.manager.classification.GoodsClasesActivity;
+import com.atman.jishang.ui.manager.goods.GoodsDetailsActivity;
 import com.atman.jishang.widget.RecycleViewDivider;
-import com.corelib.util.LogUtils;
 import com.corelib.widget.MyListView;
 
 import java.text.DecimalFormat;
@@ -303,7 +303,6 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
                 mFullCut = fullCutAdapter.getSelect();
                 if (couponAdapter != null) {
                     mCoupon = couponAdapter.getSelect();
-                    LogUtils.e("couponAdapter.getSelect():" + couponAdapter.getSelect());
                 }
                 displayMoney();
                 break;
@@ -351,7 +350,7 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
             int num = mGoodsList.size();
             AddRecordParamsModel.GoodsBeanListEntity temp =
                     new AddRecordParamsModel.GoodsBeanListEntity(
-                            data.getIntExtra("goodsId", -1),
+                            data.getLongExtra("goodsId", -1),
                             data.getDoubleExtra("goodsPrice", 0), 1,
                             data.getStringExtra("goodsName"),
                             data.getStringExtra("goodsInfo"),
@@ -360,8 +359,7 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
                 mGoodsList.add(temp);
             } else {
                 for (int i = 0; i < num; i++) {
-                    LogUtils.e("mGoodsList.get(i).getGoodsId():" + mGoodsList.get(i).getGoodsId());
-                    if (mGoodsList.get(i).getGoodsId() == data.getIntExtra("goodsId", -1)) {
+                    if (mGoodsList.get(i).getGoodsId() == data.getLongExtra("goodsId", -1)) {
                         mGoodsList.get(i).setGoodsCount(mGoodsList.get(i).getGoodsCount() + 1);
                     } else {
                         if (i == (mGoodsList.size() - 1)) {
@@ -400,7 +398,6 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
             addrecordFullcutTx.setText("");
         }
         if (mCoupon != null) {
-            LogUtils.e(">>>>>mCoupon.size():" + mCoupon.size());
             for (int i = 0; i < mCoupon.size(); i++) {
                 if (mCoupon.get(i) != null && mCoupon.get(i).isSelect()) {
 //                if ((goodsAdapter.getTotalMoney()-discount) < mCoupon.get(i).getCouponLimit()) {
@@ -437,6 +434,11 @@ public class AddMemberRecordsActivity extends SimpleTitleBarActivity implements
     @Override
     public void onItemClick(View view, int position) {
         switch (view.getId()) {
+            case R.id.item_fullcut_root_rl:
+                startActivity(GoodsDetailsActivity.buildIntent(mContext,
+                        goodsAdapter.getItemById(position).getGoodsName(),
+                        goodsAdapter.getItemById(position).getGoodsId(),1,true));
+                break;
             case R.id.item_addrecord_down_tx:
                 goodsAdapter.down(position);
                 displayMoney();

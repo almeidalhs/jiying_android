@@ -109,6 +109,15 @@ public class GetMemberListModel {
             private String img5;
             private int type;
             private List<String> imgList;
+            private List<MemberTagListBean> memberTagList;
+
+            public List<MemberTagListBean> getMemberTagList() {
+                return memberTagList;
+            }
+
+            public void setMemberTagList(List<MemberTagListBean> memberTagList) {
+                this.memberTagList = memberTagList;
+            }
 
             public String getAvatar() {
                 return avatar;
@@ -292,6 +301,81 @@ public class GetMemberListModel {
 
             public void setImgList(List<String> imgList) {
                 this.imgList = imgList;
+            }
+
+            public static class MemberTagListBean {
+                private long updateTime;
+                private long createTime;
+                private int id;
+                private int storeId;
+                private int memberId;
+                private int sstId;
+                private String tagName;
+                private int state;
+
+                public long getUpdateTime() {
+                    return updateTime;
+                }
+
+                public void setUpdateTime(long updateTime) {
+                    this.updateTime = updateTime;
+                }
+
+                public long getCreateTime() {
+                    return createTime;
+                }
+
+                public void setCreateTime(long createTime) {
+                    this.createTime = createTime;
+                }
+
+                public int getId() {
+                    return id;
+                }
+
+                public void setId(int id) {
+                    this.id = id;
+                }
+
+                public int getStoreId() {
+                    return storeId;
+                }
+
+                public void setStoreId(int storeId) {
+                    this.storeId = storeId;
+                }
+
+                public int getMemberId() {
+                    return memberId;
+                }
+
+                public void setMemberId(int memberId) {
+                    this.memberId = memberId;
+                }
+
+                public int getSstId() {
+                    return sstId;
+                }
+
+                public void setSstId(int sstId) {
+                    this.sstId = sstId;
+                }
+
+                public String getTagName() {
+                    return tagName;
+                }
+
+                public void setTagName(String tagName) {
+                    this.tagName = tagName;
+                }
+
+                public int getState() {
+                    return state;
+                }
+
+                public void setState(int state) {
+                    this.state = state;
+                }
             }
         }
     }

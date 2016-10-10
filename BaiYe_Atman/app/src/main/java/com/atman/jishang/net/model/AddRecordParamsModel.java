@@ -126,7 +126,7 @@ public class AddRecordParamsModel {
     }
 
     public static class GoodsBeanListEntity {
-        private int goodsId;
+        private long goodsId;
         private double goodsPrice;
         private int goodsCount;
         private String goodsName;
@@ -134,7 +134,7 @@ public class AddRecordParamsModel {
         private String goodsImage;
 
         public GoodsBeanListEntity(){}
-        public GoodsBeanListEntity(int goodsId, double goodsPrice, int goodsCount
+        public GoodsBeanListEntity(long goodsId, double goodsPrice, int goodsCount
                 , String goodsName, String goodsInfo, String goodsImage){
             this.goodsId = goodsId;
             this.goodsPrice = goodsPrice;
@@ -144,11 +144,11 @@ public class AddRecordParamsModel {
             this.goodsImage = goodsImage;
         }
 
-        public int getGoodsId() {
+        public long getGoodsId() {
             return goodsId;
         }
 
-        public void setGoodsId(int goodsId) {
+        public void setGoodsId(long goodsId) {
             this.goodsId = goodsId;
         }
 

@@ -16,7 +16,7 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="@dimen/main_top_height"
-            android:background="@color/main_title_orange_color">
+            android:background="@color/color_f5f5f6">
 
             <TextView
                 android:id="@+id/addrecord_title_tv"
@@ -27,12 +27,12 @@
                 android:layout_marginRight="60dp"
                 android:singleLine="true"
                 android:text="mmmm"
-                android:textColor="@color/color_white"
+                android:textColor="@color/color_242424"
                 android:textSize="@dimen/main_top_text_size" />
 
             <LinearLayout
                 android:id="@+id/addrecord_back_ll"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_centerVertical="true"
                 android:clickable="true"
@@ -40,7 +40,7 @@
 
                 <ImageView
                     android:id="@+id/addrecord_back_iv"
-                    android:layout_width="25dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:scaleType="centerInside"
@@ -232,7 +232,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="总价：0.00 元"
-                android:textColor="@color/main_title_orange_color" />
+                android:textColor="@color/color_16c5ee" />
 
             <EditText
                 android:id="@+id/addrecord_price_et"
@@ -297,14 +297,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@mipmap/finish" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="@string/add_goods_finish"
                     android:textColor="@color/color_black"
@@ -329,7 +328,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/dimen_dp_10"
                     android:gravity="center"
                     android:text="@string/add_goods_goon"
                     android:textColor="@color/color_black"
@@ -441,14 +440,13 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@mipmap/finish" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
                     android:gravity="center"
                     android:text="@string/add_goods_finish"
                     android:textColor="@color/color_black"

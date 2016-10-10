@@ -18,7 +18,6 @@ import com.atman.jishang.net.model.GetMemberRecordModel;
 import com.atman.jishang.utils.MyTools;
 import com.atman.jishang.widget.XCFlowLayout;
 import com.atman.jishang.widget.YLBDialog;
-import com.corelib.util.LogUtils;
 import com.corelib.widget.MyListView;
 
 import java.text.DecimalFormat;
@@ -134,7 +133,7 @@ public class MemberRecordsAdapter extends BaseExpandableListAdapter {
         } else {
             holderChild = (ViewHolderChild) convertView.getTag();
         }
-        holderChild.itemMemberrecordTimeTx.setText(MyTools.convertTime(mBodyList.get(groupPosition).getAddTime(),"yyyy-MM-dd"));
+        holderChild.itemMemberrecordTimeTx.setText(MyTools.convertTime(mBodyList.get(groupPosition).getAddTime(),"yyyy-MM-dd HH:mm"));
 
         if (mBodyList.get(groupPosition).getGoodsBeanList()!=null && mBodyList.get(groupPosition).getGoodsBeanList().size()>0) {
             int num = 0;
@@ -147,7 +146,6 @@ public class MemberRecordsAdapter extends BaseExpandableListAdapter {
             holderChild.itemMemberrecordLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    LogUtils.e("groupPosition:"+groupPosition+",position:"+position);
                     context.startActivity(GoodsDetailsActivity.buildIntent(context,
                             mBodyList.get(groupPosition).getGoodsBeanList().get(position).getGoodsName(),
                             mBodyList.get(groupPosition).getGoodsBeanList().get(position).getGoodsId(),1,true));

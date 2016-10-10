@@ -24,7 +24,7 @@
                 android:paddingBottom="20dp"
                 android:paddingTop="20dp">
 
-                <com.corelib.widget.RShapeImageView
+                <com.corelib.widget.ShapeImageView
                     xmlns:img="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/editmember_head_iv"
                     android:layout_width="80dp"
@@ -93,9 +93,8 @@
 
                 <ImageView
                     android:id="@+id/editmember_telephone_iv"
-                    android:layout_width="15dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="10dp"
                     android:src="@mipmap/addmember_telephone_ic"/>
             </LinearLayout>
 
@@ -533,7 +532,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:paddingRight="30dp"
-                    android:textColor="#2570F6"
+                    android:textColor="@color/color_16c5ee"
                     android:text="更多信息"/>
 
                 <ImageView
@@ -561,12 +560,11 @@
         android:layout_height="40dp">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@mipmap/finish"/>
 
         <TextView
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"

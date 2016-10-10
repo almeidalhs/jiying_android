@@ -1,6 +1,8 @@
 package com.atman.jishang.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,8 @@ import com.atman.jishang.net.GetMemberListModel;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.utils.MyTools;
+import com.atman.jishang.widget.XCFlowLayout;
+import com.atman.jishang.widget.YLBDialog;
 import com.corelib.widget.ShapeImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -140,6 +144,34 @@ public class MemberListAdapter extends BaseAdapter {
             holder.itemMemberlistSexIv.setImageResource(R.mipmap.member_girl_ic);
         }
 
+        if (mBodyEntity.getMemberTagList()==null) {
+            holder.itemMemberlistTagTx.setVisibility(View.VISIBLE);
+            holder.itemMemberlistFlowlayout.setVisibility(View.GONE);
+        } else {
+            holder.itemMemberlistTagTx.setVisibility(View.GONE);
+            holder.itemMemberlistFlowlayout.setVisibility(View.VISIBLE);
+            ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            lp.leftMargin = YLBDialog.dip2px(mContext, 2);
+            lp.rightMargin = YLBDialog.dip2px(mContext, 2);
+            lp.topMargin = YLBDialog.dip2px(mContext, 2);
+            lp.bottomMargin = YLBDialog.dip2px(mContext, 2);
+            holder.itemMemberlistFlowlayout.removeAllViews();
+            for (int i = 0; i < mBodyEntity.getMemberTagList().size(); i++) {
+                TextView view = new TextView(mContext);
+                view.setText(mBodyEntity.getMemberTagList().get(i).getTagName());
+                view.setTextColor(Color.WHITE);
+                view.setPadding(YLBDialog.dip2px(mContext, 5), YLBDialog.dip2px(mContext, 2),
+                        YLBDialog.dip2px(mContext, 5), YLBDialog.dip2px(mContext, 2));
+                view.setTag(i);
+                view.setTextSize(8);
+                view.setBackgroundDrawable(mContext.getResources().getDrawable(R.drawable.item_tag_bg));
+                GradientDrawable mGradientDrawable = (GradientDrawable) view.getBackground();
+                mGradientDrawable.setColor(Color.parseColor(MyTools.RandomColor()));
+                holder.itemMemberlistFlowlayout.addView(view, lp);
+            }
+        }
+
         return convertView;
     }
 
@@ -181,6 +213,8 @@ public class MemberListAdapter extends BaseAdapter {
         ImageView itemMemberlistSelectIv;
         @Bind(R.id.item_memberlist_line_iv)
         ImageView itemMemberlistLineIv;
+        @Bind(R.id.item_memberlist_flowlayout)
+        XCFlowLayout itemMemberlistFlowlayout;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

@@ -98,7 +98,7 @@ public class GoodsDetailsActivity extends SimpleTitleBarActivity implements
         return intent;
     }
 
-    public static Intent buildIntent(Context context, String title, int id, int goodsShow, boolean isEdit) {
+    public static Intent buildIntent(Context context, String title, long id, int goodsShow, boolean isEdit) {
         Intent intent = new Intent(context, GoodsDetailsActivity.class);
         intent.putExtra(mTitle, title);
         intent.putExtra(mGoodsId, id);

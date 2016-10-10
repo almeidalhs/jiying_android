@@ -69,7 +69,6 @@ public class AddMemberRecordsGoodsAdapter extends RecyclerView.Adapter<AddMember
                 BaiYeBaseApplication.getApp().getOptions());
         holder.itemAddrecordNameTx.setText(mList.get(position).getGoodsName());
         holder.itemAddrecordNumTx.setText(mList.get(position).getGoodsCount()+"");
-        LogUtils.e("mList.get(position).getGoodsPrice():"+mList.get(position).getGoodsPrice());
         holder.itemAddrecordPriceTx.setText("¥ " + df.format(mList.get(position).getGoodsPrice()));
         holder.itemAddrecordDownTx.setOnClickListener(new View.OnClickListener() {
             @Override

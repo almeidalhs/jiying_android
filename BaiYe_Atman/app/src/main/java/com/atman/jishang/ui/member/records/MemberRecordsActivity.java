@@ -96,6 +96,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
         mAdapter = new MemberRecordsAdapter(mContext, this);
         memberrecordListview.setEmptyView(mEmpty);
         mListView = memberrecordListview.getRefreshableView();
+        mListView.setGroupIndicator(null);
         mListView.setAdapter(mAdapter);
         mListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override

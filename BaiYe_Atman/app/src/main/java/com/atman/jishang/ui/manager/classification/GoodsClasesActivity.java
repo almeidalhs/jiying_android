@@ -149,7 +149,7 @@ public class GoodsClasesActivity extends SimpleTitleBarActivity {
         } else if (requestCode == toGoodsList) {
             if (isRecord) {
                 Intent mIntent = new Intent();
-                mIntent.putExtra("goodsId",data.getIntExtra("goodsId", -1));
+                mIntent.putExtra("goodsId",data.getLongExtra("goodsId", -1));
                 mIntent.putExtra("goodsPrice",data.getDoubleExtra("goodsPrice", 0));
                 mIntent.putExtra("goodsName",data.getStringExtra("goodsName"));
                 mIntent.putExtra("goodsInfo",data.getStringExtra("goodsInfo"));
