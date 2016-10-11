@@ -14,6 +14,7 @@ public class SlidingButtonView extends HorizontalScrollView   {
 
     private TextView mTextView_Delete;
     private TextView mTextView_Edit;
+    private TextView mTextView_Code;
 
     private int mScrollWidth;
 
@@ -45,6 +46,7 @@ public class SlidingButtonView extends HorizontalScrollView   {
         if(!once){
             mTextView_Delete = (TextView) findViewById(R.id.tv_delete);
             mTextView_Edit = (TextView) findViewById(R.id.tv_edit);
+            mTextView_Code = (TextView) findViewById(R.id.tv_code);
             once = true;
         }
 
@@ -56,19 +58,26 @@ public class SlidingButtonView extends HorizontalScrollView   {
         if(changed){
             this.scrollTo(0,0);
             //获取水平滚动条可以滑动的范围，即右侧按钮的宽度
-            mScrollWidth = mTextView_Delete.getWidth() + mTextView_Edit.getWidth();
+            if (mTextView_Code!=null) {
+                mScrollWidth = mTextView_Delete.getWidth() + mTextView_Edit.getWidth() + mTextView_Code.getWidth();
+            } else {
+                mScrollWidth = mTextView_Delete.getWidth() + mTextView_Edit.getWidth();
+            }
         }
 
     }
 
-    public void changeWidth(int num){
-        if (num==1) {
-            mScrollWidth = dip2px(80);
-        } else if (num==2) {
-            mScrollWidth = dip2px(160);
-        } else {
-            mScrollWidth = dip2px(0);
-        }
+    public void changeWidth(int num, int width){
+        mScrollWidth = dip2px(width * num);
+//        if (num==1) {
+//            mScrollWidth = dip2px(80);
+//        } else if (num==2) {
+//            mScrollWidth = dip2px(160);
+//        } else if (num==3) {
+//            mScrollWidth = dip2px(240);
+//        } else {
+//            mScrollWidth = dip2px(0);
+//        }
         invalidate();
     }
 

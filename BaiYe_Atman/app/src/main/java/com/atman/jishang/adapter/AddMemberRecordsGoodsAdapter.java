@@ -127,7 +127,7 @@ public class AddMemberRecordsGoodsAdapter extends RecyclerView.Adapter<AddMember
             }
         });
 
-        holder.mSlidingButtonView.changeWidth(1);
+        holder.mSlidingButtonView.changeWidth(1, 80);
         holder.mSlidingButtonView.closeMenu();
     }
 

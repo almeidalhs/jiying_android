@@ -1114,5 +1114,57 @@ public class DataManager {
         request(Urls.SET_SERVICE_COMMONCOF, p, clazz, showLoading);
     }
 
+    /**
+     *  获取已经设置的wifi
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void getWifiList(Class clazz, boolean showLoading) {
+        request(Urls.GET_WIFI_LIST, clazz, showLoading);
+    }
+
+    /**
+     *  删除已有的wifi
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void deleteWifiById(int id, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        request(Urls.DELETE_WIFI + "/" +id, p, clazz, showLoading);
+    }
+
+    /**
+     *  添加wifi
+     *
+     * @param wifiName    wifi名称
+     * @param wifiPassword       wifi密码
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void addWifi(String wifiName, String wifiPassword, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        p.put("wifiName", wifiName);
+        p.put("wifiPassword", wifiPassword);
+        request(Urls.ADD_WIFI, p, clazz, showLoading);
+    }
+
+    /**
+     *  编辑wifi
+     *
+     * @param id    wifi的id
+     * @param wifiName    wifi名称
+     * @param wifiPassword       wifi密码
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void editWifi(int id, String wifiName, String wifiPassword, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        p.put("id", id);
+        p.put("wifiName", wifiName);
+        p.put("wifiPassword", wifiPassword);
+        request(Urls.ADD_WIFI, p, clazz, showLoading);
+    }
 
 }

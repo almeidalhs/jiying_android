@@ -1,6 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_dp_10"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingTop="@dimen/dimen_dp_10"
+        android:text="WIFI设置"
+        android:textColor="@color/color_242424"
+        android:textSize="@dimen/dimen_sp_12" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_dp_40"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIFI名称:"
+            android:textColor="@color/color_242424"
+            android:textSize="@dimen/dimen_sp_14" />
+
+        <EditText
+            android:id="@+id/wifi_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="输入WIFI名称"
+            android:imeOptions="actionNext"
+            android:maxLength="15"
+            android:nextFocusForward="@+id/login_password_et"
+            android:paddingLeft="@dimen/login_edittext_padding"
+            android:paddingRight="@dimen/login_edittext_right_padding"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textCursorDrawable="@color/color_16c5ee"
+            android:textSize="@dimen/dimen_sp_13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_dp_15">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_dp_40"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIFI密码:"
+            android:textColor="@color/color_242424"
+            android:textSize="@dimen/dimen_sp_14" />
+
+        <EditText
+            android:id="@+id/wifi_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFJHIJKLMNOPQRSTUVWXYZ_ "
+            android:hint="输入WIFI密码(字母,数字,下划线,空格)"
+            android:inputType="textVisiblePassword"
+            android:imeOptions="actionNext"
+            android:maxLength="15"
+            android:nextFocusForward="@+id/login_password_et"
+            android:paddingLeft="@dimen/login_edittext_padding"
+            android:paddingRight="@dimen/login_edittext_right_padding"
+            android:singleLine="true"
+            android:textColor="@color/color_black"
+            android:textCursorDrawable="@color/color_16c5ee"
+            android:textSize="@dimen/dimen_sp_13" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_dp_40"
+        android:layout_marginTop="@dimen/dimen_dp_20"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15">
+
+        <Button
+            android:id="@+id/wifi_save_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_full_selector"
+            android:text="保       存"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dimen_sp_15" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wifi_empty_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15"
+        android:layout_marginTop="@dimen/dimen_dp_40"
+        android:textSize="@dimen/dimen_sp_15"
+        android:text="备注:\n填写可连接的wifi名称及密码,方便顾客一键链接wifi"/>
+
+    <LinearLayout
+        android:id="@+id/wifi_notempty_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_dp_30"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_dp_5"
+            android:paddingTop="@dimen/dimen_dp_10"
+            android:paddingLeft="@dimen/dimen_dp_15"
+            android:text="已有WIFI"
+            android:textColor="@color/color_242424"
+            android:textSize="@dimen/dimen_sp_12" />
+
+        <com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrMode="both" />
+    </LinearLayout>
+
 
 </LinearLayout>

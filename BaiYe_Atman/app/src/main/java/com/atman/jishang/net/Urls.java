@@ -376,4 +376,24 @@ public class Urls {
      * 设置服务开关
      */
     public static final String SET_SERVICE_COMMONCOF = "/rest/commconf/updateModuleStatus";
+
+    /**
+     * 获取已经设置的wifi
+     */
+    public static final String GET_WIFI_LIST = "/rest/store/getwifilist";
+
+    /**
+     * 删除已有的wifi
+     */
+    public static final String DELETE_WIFI = "/rest/store/delwifi";
+
+    /**
+     * 添加wifi
+     */
+    public static final String ADD_WIFI = "/rest/store/settingwifi";
+
+    /**
+     * 编辑wifi
+     */
+    public static final String EDIT_WIFI = "/rest/store/settingwifi";
 }

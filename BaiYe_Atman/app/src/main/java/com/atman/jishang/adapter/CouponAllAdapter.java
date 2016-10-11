@@ -117,7 +117,7 @@ public class CouponAllAdapter extends RecyclerView.Adapter<CouponAllAdapter.MyVi
             }
         });
 
-        holder.mSlidingButtonView.changeWidth(2);
+        holder.mSlidingButtonView.changeWidth(2, 80);
         if (state.equals("2")) {
             holder.btn_Edit.setText("结 束");
         } else {

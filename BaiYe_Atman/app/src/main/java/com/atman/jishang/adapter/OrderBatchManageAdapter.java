@@ -148,7 +148,7 @@ public class OrderBatchManageAdapter extends RecyclerView.Adapter<OrderBatchMana
             }
         });
 
-        holder.mSlidingButtonView.changeWidth(0);
+        holder.mSlidingButtonView.changeWidth(0, 80);
         holder.mSlidingButtonView.closeMenu();
     }
 

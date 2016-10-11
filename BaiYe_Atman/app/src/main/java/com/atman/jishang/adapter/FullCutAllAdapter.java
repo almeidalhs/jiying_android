@@ -136,11 +136,11 @@ public class FullCutAllAdapter extends RecyclerView.Adapter<FullCutAllAdapter.My
         if (state.equals("2")) {
             holder.btn_Edit.setText("结 束");
             holder.btn_Edit.setVisibility(View.VISIBLE);
-            holder.mSlidingButtonView.changeWidth(2);
+            holder.mSlidingButtonView.changeWidth(2, 80);
         } else {
             holder.btn_Edit.setText("编 辑");
             holder.btn_Edit.setVisibility(View.GONE);
-            holder.mSlidingButtonView.changeWidth(1);
+            holder.mSlidingButtonView.changeWidth(1, 80);
         }
         holder.mSlidingButtonView.closeMenu();
     }
