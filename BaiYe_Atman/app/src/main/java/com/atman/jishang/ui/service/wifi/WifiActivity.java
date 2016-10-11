@@ -19,6 +19,7 @@ import com.atman.jishang.net.model.CommonStringModel;
 import com.atman.jishang.net.model.EditWifiModel;
 import com.atman.jishang.net.model.GetWifiListModel;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
+import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
 import com.atman.jishang.widget.YLBDialog;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView;
@@ -74,7 +75,7 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
         showRightTV("制码").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("制码");
+                startActivity(CreateQRCodeActivity.buildIntent(mContext));
             }
         });
 
@@ -171,7 +172,7 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
         mPosition = position;
         switch (view.getId()) {
             case R.id.tv_code:
-                showToast("tv_code:" + position);
+                startActivity(CreateQRCodeActivity.buildIntent(mContext));
                 break;
             case R.id.tv_edit:
                 mEditWifiId = mAdapter.getItem(mPosition).getId();

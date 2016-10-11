@@ -17,11 +17,13 @@ import com.atman.jishang.interfaces.ServiceTypeInterface;
 import com.atman.jishang.net.model.CommconfModel;
 import com.atman.jishang.net.model.SetServiceStatusModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
+import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
 import com.atman.jishang.ui.service.wifi.WifiActivity;
 import com.atman.jishang.widget.YLBDialog;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by tangbingliang on 16/10/8.
@@ -112,17 +114,17 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
                 break;
             case R.id.setting_open_sb:
                 mPosition = position;
-                if (mAdapter.getItem(position).getModuleSetup()==0) {
+                if (mAdapter.getItem(position).getModuleSetup() == 0) {
                     mAdapter.updataView(mPosition, serviceModelListview, 0);
                     YLBDialog.Builder builder = new YLBDialog.Builder(getActivity());
-                    builder.setMessage("你尚未设置"+mAdapter.getItem(position).getModuleName()+"服务");
-                    builder.setPositiveButton("暂不设置", new DialogInterface.OnClickListener(){
+                    builder.setMessage("你尚未设置" + mAdapter.getItem(position).getModuleName() + "服务");
+                    builder.setPositiveButton("暂不设置", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
                         }
                     });
-                    builder.setNegativeButton("立即设置", new DialogInterface.OnClickListener(){
+                    builder.setNegativeButton("立即设置", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -132,7 +134,7 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
                     builder.show();
                     return;
                 }
-                if (mAdapter.getItem(position).getModuleStatus()==1) {
+                if (mAdapter.getItem(position).getModuleStatus() == 1) {
                     status = 0;
                 } else {
                     status = 1;
@@ -154,12 +156,21 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
     @Override
     public void onCheckedChanged(int position, CompoundButton buttonView, boolean isChecked) {
         mPosition = position;
-        if (mAdapter.getItem(position).getModuleStatus()==1) {
+        if (mAdapter.getItem(position).getModuleStatus() == 1) {
             status = 0;
         } else {
             status = 1;
         }
         getDataManager().setServiceStatusByModelId(mAdapter.getItem(position).getId(), status,
                 SetServiceStatusModel.class, true);
+    }
+
+    @OnClick({R.id.service_nav_right_ll})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.service_nav_right_ll:
+                startActivity(CreateQRCodeActivity.buildIntent(getActivity()));
+                break;
+        }
     }
 }

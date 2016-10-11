@@ -7,6 +7,7 @@ import com.atman.jishang.net.model.AddRecordCouponListModel;
 import com.atman.jishang.net.model.AddRecordFullCutListModel;
 import com.atman.jishang.net.model.AddRecordParamsModel;
 import com.atman.jishang.net.model.MemberFilterModel;
+import com.atman.jishang.net.model.ModuleListModel;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.corelib.net.IHttpInterface;
 import com.corelib.net.IVolleyListener;
@@ -1165,6 +1166,25 @@ public class DataManager {
         p.put("wifiName", wifiName);
         p.put("wifiPassword", wifiPassword);
         request(Urls.ADD_WIFI, p, clazz, showLoading);
+    }
+
+    /**
+     *  制码
+     *
+     * @param qrcodeType    二维码类型 0 是模块   1 是store  2 是店铺企业文化  3 wifi  4 点餐（菜单）
+     * @param singleType    0 整体功能制码  1 单一制码
+     * @param id            模块id
+     * @param moduleStatus  模块状态
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void createCode(int qrcodeType, int singleType, int id, int moduleStatus, Class clazz, boolean showLoading) {
+        ModuleListModel mModuleListModel = new ModuleListModel(id, moduleStatus);
+        Map<String, Object> p = new HashMap<>();
+        p.put("qrcodeType", qrcodeType);
+        p.put("singleType", singleType);
+        p.put("moduleList", mModuleListModel);
+        request(Urls.CRESCRESTE_CODE, p, clazz, showLoading);
     }
 
 }

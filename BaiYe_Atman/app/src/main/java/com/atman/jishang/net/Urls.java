@@ -396,4 +396,9 @@ public class Urls {
      * 编辑wifi
      */
     public static final String EDIT_WIFI = "/rest/store/settingwifi";
+
+    /**
+     * 制码
+     */
+    public static final String CRESCRESTE_CODE = "/rest/commconf/createQRCode";
 }
