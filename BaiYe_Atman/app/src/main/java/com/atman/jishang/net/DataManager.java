@@ -1099,5 +1099,20 @@ public class DataManager {
         request(Urls.SERVICE_COMMONCOF, clazz, showLoading);
     }
 
+    /**
+     *  设置服务开关
+     *
+     * @param mudelId     模块id
+     * @param status      设置状态
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void setServiceStatusByModelId(int mudelId, int status, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        p.put("id", mudelId);
+        p.put("moduleStatus", status);
+        request(Urls.SET_SERVICE_COMMONCOF, p, clazz, showLoading);
+    }
+
 
 }

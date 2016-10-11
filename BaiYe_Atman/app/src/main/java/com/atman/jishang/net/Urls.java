@@ -371,4 +371,9 @@ public class Urls {
      * 获取服务配置
      */
     public static final String SERVICE_COMMONCOF = "/rest/commconf/main";
+
+    /**
+     * 设置服务开关
+     */
+    public static final String SET_SERVICE_COMMONCOF = "/rest/commconf/updateModuleStatus";
 }

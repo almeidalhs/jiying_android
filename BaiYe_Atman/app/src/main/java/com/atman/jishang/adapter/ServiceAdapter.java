@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.CompoundButtonInterface;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.CommconfModel;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
@@ -33,11 +35,13 @@ public class ServiceAdapter extends BaseAdapter {
     private ViewHolder holder;
     protected LayoutInflater layoutInflater;
     protected AdapterInterface onClick;
+    protected CompoundButtonInterface mCompoundButtonInterface;
     private List<CommconfModel.BodyBean> mBody;
 
-    public ServiceAdapter(Context context, AdapterInterface onClick) {
+    public ServiceAdapter(Context context, AdapterInterface onClick, CompoundButtonInterface mCompoundButtonInterface) {
         this.context = context;
         this.onClick = onClick;
+        this.mCompoundButtonInterface = mCompoundButtonInterface;
         mBody = new ArrayList<>();
         layoutInflater = LayoutInflater.from(context);
     }
@@ -57,6 +61,34 @@ public class ServiceAdapter extends BaseAdapter {
         return mBody.get(position);
     }
 
+    public void changStatusById(int num, int status) {
+        mBody.get(num).setModuleStatus(status);
+    }
+
+    public void updataView(int posi, ListView listView, int headNum) {
+        int num = headNum;
+        int visibleFirstPosi = listView.getFirstVisiblePosition();
+        int visibleLastPosi = listView.getLastVisiblePosition();
+        if (visibleFirstPosi != 0) {
+            visibleFirstPosi -= headNum;
+            visibleLastPosi -= headNum;
+            num = 0;
+        }
+        if (posi >= visibleFirstPosi && posi <= visibleLastPosi) {
+            View view = listView.getChildAt(posi - visibleFirstPosi+num);
+            ViewHolder holder = (ViewHolder) view.getTag();
+
+            if (holder==null) {
+                return;
+            }
+            if (mBody.get(posi).getModuleStatus() == 1) {
+                holder.settingOpenSb.setCheckedImmediately(true);
+            } else {
+                holder.settingOpenSb.setCheckedImmediately(false);
+            }
+        }
+    }
+
     @Override
     public long getItemId(int position) {
         return position;
@@ -72,6 +104,7 @@ public class ServiceAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        holder.settingOpenSb.setCanMoveChang(false);
         holder.itemServiceNameTv.setText(mBody.get(position).getModuleName());
         holder.itemServiceDescriptionTv.setText(mBody.get(position).getModuleDesc());
         String url = "";
@@ -109,6 +142,14 @@ public class ServiceAdapter extends BaseAdapter {
                 onClick.onItemClick(v, position);
             }
         });
+
+        holder.settingOpenSb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClick.onItemClick(v, position);
+            }
+        });
+
         return convertView;
     }
 
