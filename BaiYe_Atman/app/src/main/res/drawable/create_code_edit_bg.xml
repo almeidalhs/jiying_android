@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="line" >
+    android:shape="rectangle" >
     <stroke
         android:dashGap="1dp"
-        android:dashWidth="1dp"
+        android:dashWidth="2dp"
         android:width="1dp"
-        android:color="@color/dotted_line_gray" />
-    <!-- 虚线的高度 -->
+        android:color="@color/color_616162" />
     <size android:height="1dp" />
+    <corners android:radius="@dimen/dimen_dp_5"/>
 </shape>

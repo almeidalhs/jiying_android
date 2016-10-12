@@ -171,7 +171,7 @@
             android:id="@+id/register_agreement_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/white_hollow_selector"
+            android:background="@drawable/gray_hollow_selector"
             android:textSize="13sp"
             android:textColor="@color/color_main_red"
             android:text="@string/register_agreement"/>

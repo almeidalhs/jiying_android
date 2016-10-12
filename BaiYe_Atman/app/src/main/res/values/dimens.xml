@@ -49,6 +49,7 @@
 
     <!--new_dp-->
     <dimen name="dimen_dp_1">1dp</dimen>
+    <dimen name="dimen_dp_3">3dp</dimen>
     <dimen name="dimen_dp_5">5dp</dimen>
     <dimen name="dimen_dp_10">10dp</dimen>
     <dimen name="dimen_dp_15">15dp</dimen>

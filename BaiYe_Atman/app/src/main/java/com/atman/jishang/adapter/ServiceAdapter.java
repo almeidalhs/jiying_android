@@ -51,6 +51,10 @@ public class ServiceAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public List<CommconfModel.BodyBean> getmBody() {
+        return mBody;
+    }
+
     @Override
     public int getCount() {
         return mBody.size();
@@ -120,13 +124,13 @@ public class ServiceAdapter extends BaseAdapter {
 
         if (mBody.get(position).getModuleSetup() == 1) {
             holder.itemServiceSettingTv.setText("已设置");
+            if (mBody.get(position).getModuleStatus() == 1) {
+                holder.settingOpenSb.setCheckedImmediately(true);
+            } else {
+                holder.settingOpenSb.setCheckedImmediately(false);
+            }
         } else {
             holder.itemServiceSettingTv.setText("未设置");
-        }
-
-        if (mBody.get(position).getModuleStatus() == 1) {
-            holder.settingOpenSb.setCheckedImmediately(true);
-        } else {
             holder.settingOpenSb.setCheckedImmediately(false);
         }
 

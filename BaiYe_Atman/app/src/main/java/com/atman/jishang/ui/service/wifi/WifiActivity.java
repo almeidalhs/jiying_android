@@ -18,11 +18,15 @@ import com.atman.jishang.net.model.AddWifiModel;
 import com.atman.jishang.net.model.CommonStringModel;
 import com.atman.jishang.net.model.EditWifiModel;
 import com.atman.jishang.net.model.GetWifiListModel;
+import com.atman.jishang.net.model.ModuleListModel;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
 import com.atman.jishang.widget.YLBDialog;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -61,9 +65,11 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
         ButterKnife.bind(this);
     }
 
-    public static Intent bulidIntent(Context context, String title) {
+    public static Intent bulidIntent(Context context, String title, int moduleId, int moduleStatus) {
         Intent intent = new Intent(context, WifiActivity.class);
         intent.putExtra("title", title);
+        intent.putExtra("moduleId", moduleId);
+        intent.putExtra("moduleStatus", moduleStatus);
         return intent;
     }
 
@@ -75,7 +81,15 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
         showRightTV("制码").setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(CreateQRCodeActivity.buildIntent(mContext));
+                if (mGetWifiListModel.getBody().size() == 0) {
+                    showToast("尚无可用的wifi哟");
+                    return;
+                }
+                List<ModuleListModel> listModel = new ArrayList<>();
+                ModuleListModel temp = new ModuleListModel(getIntent().getStringExtra("title")
+                        , getIntent().getIntExtra("moduleId",-1), getIntent().getIntExtra("moduleStatus",-1));
+                listModel.add(temp);
+                startActivity(CreateQRCodeActivity.buildIntent(mContext, 3, 0, listModel));
             }
         });
 
@@ -144,6 +158,8 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
                 temp.setWifiName(mAddWifiModel.getBody().getWifiName());
                 temp.setWifiPassword(mAddWifiModel.getBody().getWifiPassword());
                 mAdapter.addItem(temp);
+                wifiEmptyTx.setVisibility(View.GONE);
+                wifiNotemptyLl.setVisibility(View.VISIBLE);
             }
         } else if (response instanceof EditWifiModel) {
             EditWifiModel mEditWifiModel = (EditWifiModel) response;
@@ -172,7 +188,11 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
         mPosition = position;
         switch (view.getId()) {
             case R.id.tv_code:
-                startActivity(CreateQRCodeActivity.buildIntent(mContext));
+                List<ModuleListModel> listModel = new ArrayList<>();
+                ModuleListModel temp = new ModuleListModel("wifi名称:"+mAdapter.getItem(mPosition).getWifiName()
+                        , mAdapter.getItem(mPosition).getId(), getIntent().getIntExtra("moduleStatus",-1));
+                listModel.add(temp);
+                startActivity(CreateQRCodeActivity.buildIntent(mContext, 3, 1, listModel));
                 break;
             case R.id.tv_edit:
                 mEditWifiId = mAdapter.getItem(mPosition).getId();

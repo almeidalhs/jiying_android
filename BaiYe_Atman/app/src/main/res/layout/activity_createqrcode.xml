@@ -1,6 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_dp_10"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15"
+        android:paddingTop="@dimen/dimen_dp_10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_dp_3"
+            android:layout_weight="1"
+            android:background="@drawable/qrcode_top_line_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_dp_15"
+            android:layout_marginRight="@dimen/dimen_dp_15"
+            android:text="已选择功能"
+            android:textColor="@color/color_767678"
+            android:textSize="@dimen/dimen_sp_15" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_dp_3"
+            android:layout_weight="1"
+            android:background="@drawable/qrcode_top_line_bg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_dp_5"
+        android:paddingLeft="@dimen/dimen_dp_10"
+        android:paddingRight="@dimen/dimen_dp_10">
+
+        <com.atman.jishang.widget.XCFlowLayout
+            android:id="@+id/flowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/color_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_dp_15"
+        android:paddingLeft="@dimen/dimen_dp_30"
+        android:paddingRight="@dimen/dimen_dp_30"
+        android:paddingTop="@dimen/dimen_dp_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/create_code_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_dp_15">
+
+            <ImageView
+                android:id="@+id/createcode_qrcode_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_dp_10"
+                android:layout_marginRight="@dimen/dimen_dp_10" />
+
+            <EditText
+                android:id="@+id/createcode_content_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_dp_15"
+                android:background="@drawable/create_code_edit_bg"
+                android:gravity="top|left"
+                android:hint="请在此输入二维码描述,告知顾客该二维码的功能,不要超过50个字"
+                android:maxLength="50"
+                android:padding="@dimen/dimen_dp_5"
+                android:textColor="@color/color_black"
+                android:textCursorDrawable="@color/color_16c5ee"
+                android:textSize="@dimen/dimen_sp_13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_dp_60"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen_dp_10"
+        android:paddingLeft="@dimen/dimen_dp_15"
+        android:paddingRight="@dimen/dimen_dp_15"
+        android:paddingTop="@dimen/dimen_dp_10">
+
+        <LinearLayout
+            android:id="@+id/createcode_buttom_left_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dimen_dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/qrcode_buttom_left_bt_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/service_qrcode_share"
+                android:gravity="center_vertical"
+                android:text="  分享到媒体"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/createcode_buttom_right_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/blue_full_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/service_qrcode_save"
+                android:gravity="center_vertical"
+                android:text="  保存到相册"
+                android:textColor="@color/color_white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

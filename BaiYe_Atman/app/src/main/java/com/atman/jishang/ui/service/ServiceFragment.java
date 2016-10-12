@@ -15,11 +15,16 @@ import com.atman.jishang.interfaces.AdapterInterface;
 import com.atman.jishang.interfaces.CompoundButtonInterface;
 import com.atman.jishang.interfaces.ServiceTypeInterface;
 import com.atman.jishang.net.model.CommconfModel;
+import com.atman.jishang.net.model.CommonStringModel;
+import com.atman.jishang.net.model.ModuleListModel;
 import com.atman.jishang.net.model.SetServiceStatusModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
 import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
 import com.atman.jishang.ui.service.wifi.WifiActivity;
 import com.atman.jishang.widget.YLBDialog;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -56,6 +61,7 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
     @Override
     public void onResume() {
         super.onResume();
+        getDataManager().getServiceCommonConf(CommconfModel.class, false);
     }
 
     @Override
@@ -110,7 +116,10 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
     public void onItemClick(View view, int position) {
         switch (view.getId()) {
             case R.id.item_service_root:
-                serviceUIHelp(mAdapter.getItem(position).getModuleId(), mAdapter.getItem(position).getModuleName());
+                serviceUIHelp(mAdapter.getItem(position).getModuleId()
+                        , mAdapter.getItem(position).getId()
+                        , mAdapter.getItem(position).getModuleName()
+                        , mAdapter.getItem(position).getModuleStatus());
                 break;
             case R.id.setting_open_sb:
                 mPosition = position;
@@ -128,7 +137,10 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            serviceUIHelp(mAdapter.getItem(mPosition).getModuleId(), mAdapter.getItem(mPosition).getModuleName());
+                            serviceUIHelp(mAdapter.getItem(mPosition).getModuleId()
+                                    , mAdapter.getItem(mPosition).getId()
+                                    , mAdapter.getItem(mPosition).getModuleName()
+                                    , mAdapter.getItem(mPosition).getModuleStatus());
                         }
                     });
                     builder.show();
@@ -145,10 +157,10 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
         }
     }
 
-    private void serviceUIHelp(int id, String title) {
-        switch (id) {
+    private void serviceUIHelp(int moduleId, int id, String title, int moduleStatus) {
+        switch (moduleId) {
             case ServiceTypeInterface.moduleTypeWifi:
-                startActivity(WifiActivity.bulidIntent(getActivity(), title));
+                startActivity(WifiActivity.bulidIntent(getActivity(), title, id, moduleStatus));
                 break;
         }
     }
@@ -169,7 +181,28 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.service_nav_right_ll:
-                startActivity(CreateQRCodeActivity.buildIntent(getActivity()));
+                List<CommconfModel.BodyBean> data = mAdapter.getmBody();
+                List<ModuleListModel> listModel = new ArrayList<>();
+                for (int i=0;i<data.size();i++) {
+                    if (data.get(i).getModuleSetup()==1 && data.get(i).getModuleStatus()==1) {
+                        ModuleListModel temp = new ModuleListModel(data.get(i).getModuleName()
+                                , data.get(i).getModuleId(), data.get(i).getModuleStatus());
+                        listModel.add(temp);
+                    }
+                }
+                if (listModel.size()==0) {
+                    YLBDialog.Builder builder = new YLBDialog.Builder(getActivity());
+                    builder.setMessage("请选择开启的功能");
+                    builder.setNegativeButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.show();
+                    return;
+                }
+                startActivity(CreateQRCodeActivity.buildIntent(getActivity(), 1, 0, listModel));
                 break;
         }
     }
