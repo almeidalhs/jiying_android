@@ -47,6 +47,11 @@ public class Urls {
     public static final String HEADIMG_BEFOR = RWH_HOST_IMG +"by/";
 
     /**
+     * 上传二维码分享图片
+     */
+    public static final String UP_CODE = "upload?uploadType=introduction";
+
+    /**
      * 上传商品图片
      */
     public static final String UP_GOODSIMG = "upload?uploadType=goods";

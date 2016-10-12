@@ -68,6 +68,7 @@
         android:paddingTop="@dimen/dimen_dp_15">
 
         <LinearLayout
+            android:id="@+id/create_share_ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/create_code_bg"
