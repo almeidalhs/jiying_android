@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.GetGoodsByClassIdModel;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.widget.YLBDialog;
@@ -95,7 +96,11 @@ public class GoodsGridViewAdapter extends BaseAdapter {
 
         GetGoodsByClassIdModel.BodyEntity mBodyEntity = body.get(position);
 
-        ImageLoader.getInstance().displayImage(mBodyEntity.getFullGoodsImage(),
+        String url = mBodyEntity.getGoodsImage();
+        if (!url.startsWith("http")) {
+            url =  Urls.RWH_HOST_IMG + "by/" + mBodyEntity.getGoodsImage();
+        }
+        ImageLoader.getInstance().displayImage(url,
                 holder.itemGoodspreviewIv, BaiYeBaseApplication.getApp().getOptions());
         holder.itemGoodspreviewIv.setLayoutParams(params);
         holder.itemGoodspreviewNameTx.setText(mBodyEntity.getGoodsName());

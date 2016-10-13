@@ -9,7 +9,6 @@ public interface ServiceTypeInterface {
     int moduleTypeMeal = 2;
     int moduleTypeWifi = 77;
     int moduleTypeCallSerivce = 78;
-    int moduleTypeCompanyIntroduction = 5;
-    int moduleTypeVideoDisplay = 79;
+    int moduleTypeCompanyIntroduction = 79;
     int moduleTypeFoodPreview = 80;
 }

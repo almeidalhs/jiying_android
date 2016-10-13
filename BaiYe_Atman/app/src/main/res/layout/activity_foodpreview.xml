@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/storepreview_tab_ll"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <!--顶部tab标签容器-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_white"
+            app:tabIndicatorColor="@color/color_16c5ee"
+            app:tabSelectedTextColor="@color/color_16c5ee"
+            app:tabTextColor="@color/color_black">
+
+        </android.support.design.widget.TabLayout>
+
+        <ImageView
+            android:id="@+id/storepreview_more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/goods_class_more" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_line" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pullToRefreshScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/storepreview_top_bar_ll"
+        android:background="#D9D9D9"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both"
+        ptr:ptrScrollingWhileRefreshingEnabled="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/store_empty_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="140dp"
+                    android:gravity="center"
+                    android:text="您的店铺暂无上架的商品"
+                    android:textColor="@color/color_black"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <com.corelib.widget.MyGridView
+                    android:id="@+id/storepreview_grid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#D9D9D9"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="2"
+                    android:padding="2dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="4dp" />
+            </RelativeLayout>
+
+
+            <com.corelib.widget.NoSwipeViewPager
+                android:id="@+id/info_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

@@ -163,6 +163,8 @@
 
         <activity android:name="com.atman.jishang.ui.service.callservice.CallServiceActivity"/>
 
+        <activity android:name="com.atman.jishang.ui.service.foodpreview.FoodPreviewActivity"/>
+
         <!--友盟相关-->
         <meta-data android:value="5729baca67e58e3594001276" android:name="UMENG_APPKEY"/>
         <meta-data android:value="b497399e2469db28e7f2c238c6713e1c" android:name="UMENG_MESSAGE_SECRET" />

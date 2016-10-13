@@ -133,7 +133,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
 
     private String categoryId = "0";//商品分类id 0：全部
     private int GoodsType = 1;//商品状态 1：出售中，0:已下架
-    private int page = 0;//商品页码
+    private int page = 1;//商品页码
     private int mPageSize = 20;//每页个数
     private GoodsGridViewAdapter mAdapter;
     protected ImageLoader imageLoader;
@@ -240,7 +240,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        page = 0;
+        page = 1;
         mAdapter.clearBody();
         doHttp();
     }
@@ -414,7 +414,7 @@ public class StorePreviewActivity extends SimpleTitleBarActivity
     private void getListByPosition(int selectedTabPosition) {
         LogUtils.e("tabLayout>>Position:" + selectedTabPosition);
         categoryId = String.valueOf(list.get(selectedTabPosition).getId());
-        page = 0;
+        page = 1;
         mAdapter.clearBody();
         getDataManager().getGoodsByClassId(categoryId, GoodsType, page, mPageSize, GetGoodsByClassIdModel.class, true);
     }

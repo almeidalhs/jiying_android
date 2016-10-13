@@ -21,6 +21,7 @@ import com.atman.jishang.net.model.SetServiceStatusModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
 import com.atman.jishang.ui.service.callservice.CallServiceActivity;
 import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
+import com.atman.jishang.ui.service.foodpreview.FoodPreviewActivity;
 import com.atman.jishang.ui.service.wifi.WifiActivity;
 import com.atman.jishang.widget.YLBDialog;
 
@@ -160,6 +161,9 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
 
     private void serviceUIHelp(int moduleId, int id, String title, int moduleStatus) {
         switch (moduleId) {
+            case ServiceTypeInterface.moduleTypeFoodPreview:
+                startActivity(FoodPreviewActivity.bulidIntent(getActivity(), title, id, moduleId, moduleStatus));
+                break;
             case ServiceTypeInterface.moduleTypeWifi:
                 startActivity(WifiActivity.bulidIntent(getActivity(), title, id, moduleStatus));
                 break;
