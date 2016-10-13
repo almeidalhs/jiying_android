@@ -1237,4 +1237,14 @@ public class DataManager {
         requestDelete(Urls.DELETE_CALLSERVICE + "/" +id, clazz, showLoading);
     }
 
+    /**
+     *  获取行业title配置
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void getIndustryTitleConfig(Class clazz, boolean showLoading) {
+        request(Urls.GET_INDUSTRY_TITLE_CONFIG, clazz, showLoading);
+    }
+
 }

@@ -107,6 +107,8 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
     LinearLayout addmenberMoreLl;
     @Bind(R.id.addmenber_display_tx)
     TextView addmenberDisplayTx;
+    @Bind(R.id.add_member_pic_tx)
+    TextView addMemberPicTx;
 
 
     private String path = "";
@@ -114,6 +116,7 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
     private List<String> listImg = new ArrayList<>();
     private GridAdapter adapter;
     private String memberImage;
+    private String baseStr = "会员";
 
     private String name;
     private String mobile;
@@ -129,6 +132,8 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_addsinglemember, null);
         ButterKnife.bind(this, view);
+        Bundle b = getArguments();
+        baseStr = b.getString("baseStr");
         Bimp.drr.clear();
         Bimp.drr_or.clear();
         Bimp.bmp.clear();
@@ -143,6 +148,8 @@ public class AddSingleMemberFragment extends BaiYeBaseFragment
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
+
+        addMemberPicTx.setText(baseStr+"照片");
 
         addsinglememberNameEt.addTextChangedListener(new MyTextWatcher(getActivity(), addsinglememberNameEt,true,9,"您输入内容的长度不能超过10个字"));
         addsinglememberMobileEt.addTextChangedListener(new MyTextWatcher(getActivity(), addsinglememberMobileEt,true,19,"您输入内容的长度不能超过20个字"));

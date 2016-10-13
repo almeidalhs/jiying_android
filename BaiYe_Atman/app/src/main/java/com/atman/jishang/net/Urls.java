@@ -421,4 +421,9 @@ public class Urls {
      * 删除呼叫服务列表
      */
     public static final String DELETE_CALLSERVICE = "/rest/commconf/delete";
+
+    /**
+     * 获取行业title配置
+     */
+    public static final String GET_INDUSTRY_TITLE_CONFIG = "/rest/confpage/init";
 }

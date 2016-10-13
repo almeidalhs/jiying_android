@@ -9,6 +9,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.atman.jishang.R;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.LoginResultModel;
 import com.atman.jishang.net.model.ShopInformationModel;
 import com.atman.jishang.widget.dateselect.DateObject;
@@ -47,6 +48,7 @@ public class BaiYeBaseApplication extends BaseApplication{
     public static String mToken = "0";
     public static LoginResultModel mLoginResultModel = null;
     public static ShopInformationModel mShopInformationModel = null;
+    public static GetIndustryTitleConfigModel mGetIndustryTitleConfigModel = null;
     public static String mDeviceToken = "";
     public static String mVersionName = "";
     public static String mChannel = "";

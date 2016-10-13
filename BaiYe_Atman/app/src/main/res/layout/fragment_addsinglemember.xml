@@ -472,6 +472,7 @@
                     android:background="@color/color_line" />
 
                 <TextView
+                    android:id="@+id/add_member_pic_tx"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center_vertical"

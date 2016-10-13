@@ -12,9 +12,14 @@ import android.widget.RadioGroup;
 
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.MyFragmentAdapter;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.corelib.util.LogUtils;
 import com.corelib.widget.NoSwipeViewPager;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -48,6 +53,8 @@ public class AddMemberActivity extends SimpleTitleBarActivity {
 
     public static boolean isSuccess = false;
 
+    private String baseStr = "会员";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +70,20 @@ public class AddMemberActivity extends SimpleTitleBarActivity {
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle(R.string.add_member_title);
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        addmenberTabLeft.setText("增加"+baseStr);
+
+        setToolbarTitle("新增"+baseStr);
         getLlBack().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,12 +101,14 @@ public class AddMemberActivity extends SimpleTitleBarActivity {
         oneFragment = new AddSingleMemberFragment();
         Bundle bundle = new Bundle();
         bundle.putString("TITLES", getResources().getString(R.string.goodsmanagement_onsale_tx));
+        bundle.putString("baseStr", baseStr);
         oneFragment.setArguments(bundle);
         adapter.addFragment(oneFragment, LEFT_TAG);
 
         twoFragment = new AddBatchMemberFragment();
         Bundle bundle_two = new Bundle();
         bundle_two.putString("TITLES", getResources().getString(R.string.goodsmanagement_undershelf_tx));
+        bundle.putString("baseStr", baseStr);
         twoFragment.setArguments(bundle_two);
         adapter.addFragment(twoFragment, RIGHT_TAG);
 

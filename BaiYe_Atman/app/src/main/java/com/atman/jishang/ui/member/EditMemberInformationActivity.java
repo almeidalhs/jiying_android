@@ -32,9 +32,11 @@ import android.widget.TextView;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.BirthdayAdapter;
 import com.atman.jishang.adapter.GridEditAdapter;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.interfaces.MyTextWatcher;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.EditMemberInfoModel;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.GetMemberDetailsModel;
 import com.atman.jishang.net.model.GoodsUpLoadImgMpdel;
 import com.atman.jishang.net.model.UpdateHeadImgModel;
@@ -112,6 +114,8 @@ public class EditMemberInformationActivity extends SimpleTitleBarActivity
     LinearLayout editmenberMoreLl;
     @Bind(R.id.editmenber_display_tx)
     TextView editmenberDisplayTx;
+    @Bind(R.id.edit_member_pic_tx)
+    TextView editMemberPicTx;
 
     private Context mContext = EditMemberInformationActivity.this;
     private int id;
@@ -130,6 +134,8 @@ public class EditMemberInformationActivity extends SimpleTitleBarActivity
     private String qq;
     private String remark;
     private int type = 1;
+
+    private String baseStr = "会员";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,7 +165,19 @@ public class EditMemberInformationActivity extends SimpleTitleBarActivity
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle("编辑会员");
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        setToolbarTitle("编辑"+baseStr);
+        editMemberPicTx.setText(baseStr+"照片");
 
         editememberNameEt.addTextChangedListener(new MyTextWatcher(mContext, editememberNameEt,true,9,"您输入内容的长度不能超过10个字"));
         editmemberMobileEt.addTextChangedListener(new MyTextWatcher(mContext, editmemberMobileEt,true,19,"您输入内容的长度不能超过20个字"));

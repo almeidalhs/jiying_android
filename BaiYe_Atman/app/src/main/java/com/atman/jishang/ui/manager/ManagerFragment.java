@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.DragAdapter;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.HomeAdModel;
 import com.atman.jishang.net.model.HomeGridViewDataModel;
 import com.atman.jishang.net.model.HomeListPostModel;
@@ -88,7 +89,6 @@ public class ManagerFragment extends BaiYeBaseFragment implements
     @Override
     public void initIntentAndMemData() {
         super.initIntentAndMemData();
-        homeTitle.setText("即商");
         LinearLayout.LayoutParams params_top = new LinearLayout.LayoutParams(getmWidth()
                 , getmWidth() * 283 / 644);
         homeTopRl.setLayoutParams(params_top);
@@ -100,8 +100,13 @@ public class ManagerFragment extends BaiYeBaseFragment implements
         super.onResume();
         getDataManager().getHomeGridView(HomeGridViewDataModel.class, true);
         getDataManager().getHomeAd(HomeAdModel.class, false);
+        getStoreInformation();
+    }
+
+    private void getStoreInformation() {
         if (BaiYeBaseApplication.mLoginResultModel.getBody().getStoreId() != 0) {
             getDataManager().getShopInformation(ShopInformationModel.class, false);
+            getDataManager().getIndustryTitleConfig(GetIndustryTitleConfigModel.class, false);
         }
     }
 
@@ -142,6 +147,9 @@ public class ManagerFragment extends BaiYeBaseFragment implements
             } else {
                 BaiYeBaseApplication.mShopInformationModel = mShopInformationModel;
             }
+        } else if (response instanceof GetIndustryTitleConfigModel) {
+            GetIndustryTitleConfigModel mGetIndustryTitleConfigModel = (GetIndustryTitleConfigModel) response;
+            BaiYeBaseApplication.mGetIndustryTitleConfigModel = mGetIndustryTitleConfigModel;
         }
     }
 
@@ -271,7 +279,7 @@ public class ManagerFragment extends BaiYeBaseFragment implements
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
-
+            getStoreInformation();
         }
     }
 

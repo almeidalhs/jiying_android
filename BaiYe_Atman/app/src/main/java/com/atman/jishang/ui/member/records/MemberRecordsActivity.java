@@ -13,12 +13,17 @@ import com.android.volley.VolleyError;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.MemberRecordsAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.net.model.DeleteMemberRecordModel;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.net.model.GetMemberRecordModel;
 import com.atman.jishang.widget.YLBDialog;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshExpandableListView;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,6 +51,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
     private ExpandableListView mListView;
     private int deleteId = -1;
     private String mobile;
+    private String baseStr = "会员";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +82,18 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle("会员消费记录");
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        setToolbarTitle(baseStr+"消费记录");
         getIvRightOk().setImageResource(R.mipmap.top_right_add_img);
         showRightLl().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +108,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
         initRefreshView(PullToRefreshBase.Mode.BOTH, memberrecordListview);
         mEmpty = LayoutInflater.from(mContext).inflate(R.layout.part_list_empty, null);
         mEmptyTX = (TextView) mEmpty.findViewById(R.id.empty_list_tx);
-        mEmptyTX.setText("暂无消费记录");
+        mEmptyTX.setText("此"+baseStr+"暂无消费记录");
 
         mAdapter = new MemberRecordsAdapter(mContext, this);
         memberrecordListview.setEmptyView(mEmpty);
@@ -135,7 +152,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
                     }
                 }
             } else {
-                showToast("会员消费记录获取失败");
+                showToast(baseStr+"消费记录获取失败");
             }
         } else if (response instanceof DeleteMemberRecordModel) {
             DeleteMemberRecordModel mDeleteMemberRecordModel = (DeleteMemberRecordModel) response;
@@ -185,7 +202,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
             case R.id.item_memberrecord_delete:
                 YLBDialog.Builder builder = new YLBDialog.Builder(MemberRecordsActivity.this);
                 builder.setTitle("请问为什么要删除此订单？");
-                builder.setMessage("订单错误：删除时，优惠券将返还给会员，可继续使用\n" +
+                builder.setMessage("订单错误：删除时，优惠券将返还给"+baseStr+"，可继续使用\n" +
                         "直接删除：删除后，优惠券当已使用处理，无法再使用");
                 builder.setPositiveButton("订单错误", new DialogInterface.OnClickListener(){
                     @Override

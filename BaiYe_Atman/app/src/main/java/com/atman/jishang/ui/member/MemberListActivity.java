@@ -17,8 +17,11 @@ import com.android.volley.VolleyError;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.MemberListAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.net.GetMemberListModel;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.MemberFilterModel;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.utils.UiHelper;
 import com.corelib.util.LogUtils;
@@ -54,6 +57,8 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     LinearLayout memberlistMessageRoot;
     @Bind(R.id.memberlist_condition_tx)
     TextView memberlistConditionTx;
+    @Bind(R.id.memberlist_add_tx)
+    TextView memberlistAddTx;
     @Bind(R.id.memberlist_condition_ll)
     LinearLayout memberlistConditionLl;
 
@@ -68,6 +73,8 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     private List<GetMemberListModel.BodyEntity.DataListEntity> mListData = new ArrayList<>();
     private int page = 1;
     private int pageSize = 10;
+
+    private String baseStr = "会员";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,14 +111,27 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle(R.string.memberlist_title);
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        memberlistSearchEt.setHint("输入"+baseStr+"姓名/电话/性别等等");
+        memberlistAddTx.setText("新增"+baseStr);
+
+        setToolbarTitle(baseStr+getResources().getString(R.string.memberlist_title));
         showRightTV(R.string.memberlist_title_topright).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivityForResult(new Intent(mContext, MemberConditionFilterActivity.class), 999);
             }
         });
-        memberlistTotalTx.setText("共0位会员");
+        memberlistTotalTx.setText("共0位"+baseStr);
         memberlistSearchEt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -144,7 +164,7 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
         initRefreshView(PullToRefreshBase.Mode.BOTH, pullToRefreshListView);
         mEmpty = LayoutInflater.from(mContext).inflate(R.layout.part_list_empty, null);
         mEmptyTX = (TextView) mEmpty.findViewById(R.id.empty_list_tx);
-        mEmptyTX.setText("暂无会员");
+        mEmptyTX.setText("暂无"+baseStr);
 
         mAdapter = new MemberListAdapter(mContext, this);
         pullToRefreshListView.setEmptyView(mEmpty);
@@ -183,22 +203,22 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
                     if (mAdapter!=null && mAdapter.getCount()>0) {
                         showToast("没有更多");
                     }
-                    memberlistTotalTx.setText("共"+mAdapter.getCount()+"位会员");
+                    memberlistTotalTx.setText("共"+mAdapter.getCount()+"位"+baseStr);
                     onLoad(PullToRefreshBase.Mode.PULL_FROM_START, pullToRefreshListView);
                 } else {
                     onLoad(PullToRefreshBase.Mode.BOTH, pullToRefreshListView);
                     mAdapter.setmListData(mListData);
-                    memberlistTotalTx.setText("共"+mAdapter.getCount()+"位会员");
+                    memberlistTotalTx.setText("共"+mAdapter.getCount()+"位"+baseStr);
                     updataUi();
                 }
             } else {
-                showToast("获取会员列表失败");
+                showToast("获取"+baseStr+"列表失败");
             }
         }
     }
 
     private void updataUi() {
-        memberlistTotalTx.setText("共" + mGetMemberListModel.getBody().getDataSize() + "位会员");
+        memberlistTotalTx.setText("共" + mGetMemberListModel.getBody().getDataSize() + "位"+baseStr);
         isHitButton();
     }
 
@@ -283,9 +303,9 @@ public class MemberListActivity extends SimpleTitleBarActivity implements Adapte
         }
         if (str.equals("")) {
             if (num != 0) {
-                showToast("选择的会员没有手机号");
+                showToast("选择的"+baseStr+"没有手机号");
             } else {
-                showToast("请选择要发送短信的会员");
+                showToast("请选择要发送短信的"+baseStr);
             }
             return;
         }

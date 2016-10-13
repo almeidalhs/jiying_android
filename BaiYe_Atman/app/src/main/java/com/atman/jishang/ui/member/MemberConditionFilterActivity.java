@@ -10,9 +10,12 @@ import android.widget.ExpandableListView;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.MemberConditionFilterAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.GetMemberFilterModel;
 import com.atman.jishang.net.model.MemberFilterModel;
 import com.atman.jishang.ui.MainActivity;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
 import com.atman.jishang.ui.personal.loginandregister.LoginActivity;
 import com.corelib.util.LogUtils;
@@ -45,6 +48,8 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     private int from = 1;
     private int num = 20;
 
+    private String baseStr = "会员";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +60,18 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle("会员筛选");
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        setToolbarTitle(baseStr+"筛选");
         getLlBack().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

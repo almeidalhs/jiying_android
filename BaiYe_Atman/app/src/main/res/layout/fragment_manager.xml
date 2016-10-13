@@ -37,6 +37,7 @@
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
             android:singleLine="true"
+            android:background="@mipmap/main_img_nav_title"
             android:textColor="@color/color_242424"
             android:textSize="@dimen/main_top_text_size" />
 

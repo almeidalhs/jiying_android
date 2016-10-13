@@ -219,7 +219,7 @@
     <string name="receive_coupon_records_title">领取记录</string>
 
     <!--会员-->
-    <string name="memberlist_title">会员管理</string>
+    <string name="memberlist_title">管理</string>
     <string name="memberlist_title_topright">筛选</string>
     <string name="memberlist_search_hint">输入会员姓名/电话/性别等等</string>
     <string name="add_member_title">新增会员</string>

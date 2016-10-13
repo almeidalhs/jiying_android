@@ -20,8 +20,10 @@ import android.widget.TextView;
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.MemberDetailsGridViewAdapter;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.DeleteMemberModel;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.GetMemberDetailsModel;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
@@ -40,6 +42,7 @@ import com.corelib.widget.MyGridView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.text.DecimalFormat;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -108,6 +111,8 @@ public class MemberDetailsActivity extends SimpleTitleBarActivity implements Ada
     private GetMemberDetailsModel.BodyEntity mMemberInfo;
     private MemberDetailsGridViewAdapter adapter;
 
+    private String baseStr = "会员";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,7 +140,18 @@ public class MemberDetailsActivity extends SimpleTitleBarActivity implements Ada
     @Override
     public void initWidget(View... v) {
         super.initWidget(v);
-        setToolbarTitle("会员详情");
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
+                        && temp.get(i).getTitle()!=null) {
+                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                }
+            }
+        }
+
+        setToolbarTitle(baseStr+"详情");
         getIvRightOk().setImageResource(R.mipmap.coupon_details_topright);
         showRightLl().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,7 +179,7 @@ public class MemberDetailsActivity extends SimpleTitleBarActivity implements Ada
     private void showAddrPopupWindow(View view) {
         BottomDialog.Builder builder = new BottomDialog.Builder(mContext);
         builder.setTitle(Html.fromHtml("<font color=\"#8F8F8F\">更多</font>"));
-        builder.setItems(new String[]{"编辑会员", "删除会员"}, new DialogInterface.OnClickListener() {
+        builder.setItems(new String[]{"编辑"+baseStr, "删除"+baseStr}, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -172,8 +188,8 @@ public class MemberDetailsActivity extends SimpleTitleBarActivity implements Ada
                     startActivityForResult(EditMemberInformationActivity.buildIntent(mContext, id), TO_EDITMEMBER);
                 } else {//删除
                     YLBDialog.Builder builder = new YLBDialog.Builder(mContext);
-                    builder.setMessage("您确定要删除当前会员吗？");
-                    builder.setPositiveButton("删除会员", new DialogInterface.OnClickListener() {
+                    builder.setMessage("您确定要删除当前"+baseStr+"吗？");
+                    builder.setPositiveButton("删除"+baseStr, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
@@ -247,9 +263,9 @@ public class MemberDetailsActivity extends SimpleTitleBarActivity implements Ada
             Bimp.drr_or.add(mSelectImageItem);
         }
         if (mMemberInfo.getType() == 1) {
-            memberdetailsLevelTx.setText("普通用户");
+            memberdetailsLevelTx.setText("普通"+baseStr);
         } else {
-            memberdetailsLevelTx.setText("VIP会员");
+            memberdetailsLevelTx.setText("VIP"+baseStr);
         }
         ImageLoader.getInstance().displayImage(Urls.HEADIMG_BEFOR + mMemberInfo.getAvatar(), memberdetailsHeadIv,
                 BaiYeBaseApplication.getApp().getOptionsHead());
