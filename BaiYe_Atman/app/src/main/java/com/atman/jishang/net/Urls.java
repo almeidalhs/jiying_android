@@ -406,4 +406,19 @@ public class Urls {
      * 制码
      */
     public static final String CRESCRESTE_CODE = "/rest/commconf/createQRCode";
+
+    /**
+     * 获取已设置的呼叫服务列表
+     */
+    public static final String GET_CALLSERVICE_LIST = "/rest/commconf/getCallService";
+
+    /**
+     * 添加呼叫服务列表
+     */
+    public static final String ADD_CALLSERVICE = "/rest/commconf/createCallService";
+
+    /**
+     * 删除呼叫服务列表
+     */
+    public static final String DELETE_CALLSERVICE = "/rest/commconf/delete";
 }

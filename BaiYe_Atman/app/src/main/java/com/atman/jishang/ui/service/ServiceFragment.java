@@ -19,6 +19,7 @@ import com.atman.jishang.net.model.CommonStringModel;
 import com.atman.jishang.net.model.ModuleListModel;
 import com.atman.jishang.net.model.SetServiceStatusModel;
 import com.atman.jishang.ui.base.BaiYeBaseFragment;
+import com.atman.jishang.ui.service.callservice.CallServiceActivity;
 import com.atman.jishang.ui.service.code.CreateQRCodeActivity;
 import com.atman.jishang.ui.service.wifi.WifiActivity;
 import com.atman.jishang.widget.YLBDialog;
@@ -161,6 +162,9 @@ public class ServiceFragment extends BaiYeBaseFragment implements AdapterInterfa
         switch (moduleId) {
             case ServiceTypeInterface.moduleTypeWifi:
                 startActivity(WifiActivity.bulidIntent(getActivity(), title, id, moduleStatus));
+                break;
+            case ServiceTypeInterface.moduleTypeCallSerivce:
+                startActivity(CallServiceActivity.bulidIntent(getActivity(), title, id, moduleId, moduleStatus));
                 break;
         }
     }

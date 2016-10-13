@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.WifiAdapter;
+import com.atman.jishang.interfaces.CreateQRCodeInterface;
 import com.atman.jishang.net.model.AddWifiModel;
 import com.atman.jishang.net.model.CommonStringModel;
 import com.atman.jishang.net.model.EditWifiModel;
@@ -89,7 +90,8 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
                 ModuleListModel temp = new ModuleListModel(getIntent().getStringExtra("title")
                         , getIntent().getIntExtra("moduleId",-1), getIntent().getIntExtra("moduleStatus",-1));
                 listModel.add(temp);
-                startActivity(CreateQRCodeActivity.buildIntent(mContext, 3, 0, listModel));
+                startActivity(CreateQRCodeActivity.buildIntent(mContext,
+                        CreateQRCodeInterface.QRCodeTypeWifi, CreateQRCodeInterface.SingleType.All, listModel));
             }
         });
 
@@ -160,6 +162,8 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
                 mAdapter.addItem(temp);
                 wifiEmptyTx.setVisibility(View.GONE);
                 wifiNotemptyLl.setVisibility(View.VISIBLE);
+                wifiNameEt.setText("");
+                wifiPasswordEt.setText("");
             }
         } else if (response instanceof EditWifiModel) {
             EditWifiModel mEditWifiModel = (EditWifiModel) response;
@@ -192,7 +196,8 @@ public class WifiActivity extends SimpleTitleBarActivity implements WifiAdapter.
                 ModuleListModel temp = new ModuleListModel("wifi名称:"+mAdapter.getItem(mPosition).getWifiName()
                         , mAdapter.getItem(mPosition).getId(), getIntent().getIntExtra("moduleStatus",-1));
                 listModel.add(temp);
-                startActivity(CreateQRCodeActivity.buildIntent(mContext, 3, 1, listModel));
+                startActivity(CreateQRCodeActivity.buildIntent(mContext,
+                        CreateQRCodeInterface.QRCodeTypeWifi, CreateQRCodeInterface.SingleType.Single, listModel));
                 break;
             case R.id.tv_edit:
                 mEditWifiId = mAdapter.getItem(mPosition).getId();

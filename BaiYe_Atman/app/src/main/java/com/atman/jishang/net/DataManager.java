@@ -1166,7 +1166,7 @@ public class DataManager {
         p.put("id", id);
         p.put("wifiName", wifiName);
         p.put("wifiPassword", wifiPassword);
-        request(Urls.ADD_WIFI, p, clazz, showLoading);
+        request(Urls.EDIT_WIFI, p, clazz, showLoading);
     }
 
     /**
@@ -1184,6 +1184,57 @@ public class DataManager {
         p.put("singleType", singleType);
         p.put("moduleList", list);
         request(Urls.CRESCRESTE_CODE, p, clazz, showLoading);
+    }
+    /**
+     *  获取已经设置的呼叫服务
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void getCallServiceList(int id, Class clazz, boolean showLoading) {
+        request(Urls.GET_CALLSERVICE_LIST +"/"+id, clazz, showLoading);
+    }
+
+    /**
+     *  添加呼叫服务列表
+     *
+     * @param moduleName    服务名称
+     * @param moduleDesc    服务描述
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void addCallService(String moduleName, String moduleDesc, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        p.put("moduleName", moduleName);
+        p.put("moduleDesc", moduleDesc);
+        request(Urls.ADD_CALLSERVICE, p, clazz, showLoading);
+    }
+
+    /**
+     *  编辑呼叫服务列表
+     *
+     * @param id    服务id
+     * @param moduleName    服务名称
+     * @param moduleDesc    服务描述
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void editCallService(int id, String moduleName, String moduleDesc, Class clazz, boolean showLoading) {
+        Map<String, Object> p = new HashMap<>();
+        p.put("id", id);
+        p.put("moduleName", moduleName);
+        p.put("moduleDesc", moduleDesc);
+        request(Urls.ADD_CALLSERVICE, p, clazz, showLoading);
+    }
+
+    /**
+     *  删除呼叫服务列表
+     *
+     * @param clazz       返回Gson对象
+     * @param showLoading 是否显示对话框
+     **/
+    public void deleteCallServiceById(int id, Class clazz, boolean showLoading) {
+        requestDelete(Urls.DELETE_CALLSERVICE + "/" +id, clazz, showLoading);
     }
 
 }
