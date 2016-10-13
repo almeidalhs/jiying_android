@@ -39,7 +39,7 @@ public class OrderManageActivity extends SimpleTitleBarActivity
     TextView emptyTx;
 
     private Context mContext = OrderManageActivity.this;
-    private int mPage = 0;
+    private int mPage = 1;
     private int mCount = 10;
 
     private OrderManageAdapter mAdapter;
@@ -95,7 +95,7 @@ public class OrderManageActivity extends SimpleTitleBarActivity
     @Override
     public void doInitBaseHttp() {
         super.doInitBaseHttp();
-        mPage = 0;
+        mPage = 1;
         doHttp(true);
     }
 
@@ -128,7 +128,7 @@ public class OrderManageActivity extends SimpleTitleBarActivity
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        mPage = 0;
+        mPage = 1;
         mAdapter.clearData();
         doHttp(false);
     }
@@ -183,7 +183,7 @@ public class OrderManageActivity extends SimpleTitleBarActivity
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.empty_tx:
-                mPage = 0;
+                mPage = 1;
                 doHttp(true);
                 break;
         }

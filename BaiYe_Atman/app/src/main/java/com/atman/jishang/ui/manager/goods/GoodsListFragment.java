@@ -41,7 +41,7 @@ public class GoodsListFragment extends BaiYeBaseFragment implements AdapterInter
     private String goodsShow;
     private String stc_id;
     private String isOpen = "";
-    private int page;
+    private int page = 1;
     private int mPageSize = 20;//每页个数
     private String categoryId = "0";
     private GoodsListViewAdapter mAdapter;
@@ -66,7 +66,7 @@ public class GoodsListFragment extends BaiYeBaseFragment implements AdapterInter
         stc_id = b.getString("id");
         isOpen = b.getString("isOpen");
         isRecord = b.getBoolean("isRecord");
-        page = 0;
+        page = 1;
         LogUtils.e(title+":"+isOpen);
         return view;
     }
@@ -205,7 +205,7 @@ public class GoodsListFragment extends BaiYeBaseFragment implements AdapterInter
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        page = 0;
+        page = 1;
         mAdapter.clearBody();
         doHttp();
     }

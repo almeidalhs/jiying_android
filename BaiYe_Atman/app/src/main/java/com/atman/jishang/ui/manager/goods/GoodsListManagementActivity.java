@@ -57,7 +57,7 @@ public class GoodsListManagementActivity extends SimpleTitleBarActivity implemen
 
     private Context mContext = GoodsListManagementActivity.this;
     private int goods_show = 0;
-    private int page;
+    private int page = 1;
     private int mPageSize = 20;//每页个数
 
     private List<GetGoodsByClassIdModel.BodyEntity> mBodyEntityList;
@@ -375,7 +375,7 @@ public class GoodsListManagementActivity extends SimpleTitleBarActivity implemen
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        page = 0;
+        page = 1;
         mAdapter.clearBody();
         doInitBaseHttp();
     }

@@ -61,7 +61,7 @@ public class CouponActivity extends SimpleTitleBarActivity implements CouponAllA
     ImageView couponEmptyIv;
 
     private Context mContext = CouponActivity.this;
-    private int mPage = 0;
+    private int mPage = 1;
     private int mCount = 10;
     private String mState = "2";//满减活动的状态（1：未开始，2：进行中，3：已结束）
 
@@ -139,7 +139,7 @@ public class CouponActivity extends SimpleTitleBarActivity implements CouponAllA
     @Override
     public void doInitBaseHttp() {
         super.doInitBaseHttp();
-        mPage = 0;
+        mPage = 1;
         doHttp(true);
     }
 
@@ -194,7 +194,7 @@ public class CouponActivity extends SimpleTitleBarActivity implements CouponAllA
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.coupon_empty_iv:
-                mPage = 0;
+                mPage = 1;
                 doHttp(true);
                 break;
             case R.id.coupon_add_ll:
@@ -205,7 +205,7 @@ public class CouponActivity extends SimpleTitleBarActivity implements CouponAllA
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        mPage = 0;
+        mPage = 1;
         mAdapter.clearData();
         doHttp(false);
     }
@@ -357,7 +357,7 @@ public class CouponActivity extends SimpleTitleBarActivity implements CouponAllA
             if (mAdapter != null) {
                 mAdapter.clearData();
             }
-            mPage = 0;
+            mPage = 1;
             doHttp(true);
         }
     }

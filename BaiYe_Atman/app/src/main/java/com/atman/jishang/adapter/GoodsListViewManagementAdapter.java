@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.interfaces.AdapterInterface;
+import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.GetGoodsByClassIdModel;
 import com.atman.jishang.net.model.ModifiedClassificationModel;
 import com.atman.jishang.net.model.OrderManageListModel;
@@ -181,8 +182,11 @@ public class GoodsListViewManagementAdapter extends BaseAdapter {
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
 
-            ImageLoader.getInstance().displayImage(mBodyEntity.getFullGoodsImage(),
-                    holder.itemGoodslistviewManagermentPicture,
+            String url = mBodyEntity.getGoodsImage();
+            if (!url.startsWith("http")) {
+                url =  Urls.RWH_HOST_IMG + "by/" + mBodyEntity.getGoodsImage();
+            }
+            ImageLoader.getInstance().displayImage(url, holder.itemGoodslistviewManagermentPicture,
                     BaiYeBaseApplication.getApp().getOptions());
         } else {
             holder = (ViewHolder) convertView.getTag();

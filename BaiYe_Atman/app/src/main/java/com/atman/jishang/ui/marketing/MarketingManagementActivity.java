@@ -32,7 +32,7 @@ public class MarketingManagementActivity extends SimpleTitleBarActivity {
     @Bind(R.id.pullToRefreshListView)
     PullToRefreshListView pullToRefreshListView;
 
-    private int mPage = 0;
+    private int mPage = 1;
     private int mCount = 10;
     private List<MarketListModel.BodyEntity> mMarketListModelList = new ArrayList<>();
     private MarketingManagementAdapter mAdapter;
@@ -109,7 +109,7 @@ public class MarketingManagementActivity extends SimpleTitleBarActivity {
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        mPage = 0;
+        mPage = 1;
         mAdapter.clearBody();
         doInitBaseHttp();
     }

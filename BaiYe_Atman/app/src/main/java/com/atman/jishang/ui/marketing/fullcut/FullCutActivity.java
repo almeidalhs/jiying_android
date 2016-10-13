@@ -54,7 +54,7 @@ public class FullCutActivity extends SimpleTitleBarActivity
     ImageView fullcutEmptyIv;
 
     private Context mContext = FullCutActivity.this;
-    private int mPage = 0;
+    private int mPage = 1;
     private int mCount = 10;
     private String mState = "2";//满减活动的状态（1：未开始，2：进行中，3：已结束）
 
@@ -77,7 +77,7 @@ public class FullCutActivity extends SimpleTitleBarActivity
         if (mAdapter!=null) {
             mAdapter.clearData();
         }
-        mPage = 0;
+        mPage = 1;
         doHttp(true);
     }
 
@@ -199,7 +199,7 @@ public class FullCutActivity extends SimpleTitleBarActivity
                 startActivity(new Intent(mContext, AddFullCutActivity.class));
                 break;
             case R.id.fullcut_empty_iv:
-                mPage = 0;
+                mPage = 1;
                 doHttp(true);
                 break;
         }
@@ -207,7 +207,7 @@ public class FullCutActivity extends SimpleTitleBarActivity
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        mPage = 0;
+        mPage = 1;
         mAdapter.clearData();
         doHttp(false);
     }

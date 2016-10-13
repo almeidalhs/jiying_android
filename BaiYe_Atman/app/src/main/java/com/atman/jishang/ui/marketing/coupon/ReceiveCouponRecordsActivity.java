@@ -51,7 +51,7 @@ public class ReceiveCouponRecordsActivity extends SimpleTitleBarActivity {
     private int storage;
     private int used = 0;
     private int id;
-    private int page = 0;
+    private int page = 1;
     private int count = 20;
 
     @Override
@@ -151,7 +151,7 @@ public class ReceiveCouponRecordsActivity extends SimpleTitleBarActivity {
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
-        page = 0;
+        page = 1;
         count = 0;
         mAdapter.clearData();
         doInitBaseHttp();

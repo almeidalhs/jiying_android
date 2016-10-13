@@ -37,7 +37,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
 
     private Context mContext = MemberRecordsActivity.this;
     private int mMemberId;
-    private int page = 0;
+    private int page = 1;
     private int pageSize = 10;
     private GetMemberRecordModel mGetMemberRecordModel;
     private View mEmpty;
@@ -66,7 +66,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
         super.onResume();
         mMemberId = getIntent().getIntExtra("memberId", -1);
         mobile = getIntent().getStringExtra("mobile");
-        page = 0;
+        page = 1;
         if (mAdapter!=null) {
             mAdapter.clearData();
         }
@@ -165,7 +165,7 @@ public class MemberRecordsActivity extends SimpleTitleBarActivity implements Ada
     @Override
     public void onPullDownToRefresh(PullToRefreshBase refreshView) {
         super.onPullDownToRefresh(refreshView);
-        page = 0;
+        page = 1;
         mAdapter.clearData();
         dohttp(false);
     }
