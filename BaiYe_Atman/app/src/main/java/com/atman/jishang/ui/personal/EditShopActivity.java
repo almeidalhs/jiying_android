@@ -26,20 +26,21 @@ import android.widget.TextView;
 
 import com.atman.jishang.R;
 import com.atman.jishang.adapter.ShopTypeAdapter;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.interfaces.LimitSizeTextWatcher;
 import com.atman.jishang.net.Urls;
 import com.atman.jishang.net.model.EditShopInfoModel;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.IndustryTypeModel;
 import com.atman.jishang.net.model.ShopInformationModel;
 import com.atman.jishang.net.upload.UpLoadPicture;
+import com.atman.jishang.ui.base.BaiYeBaseApplication;
 import com.atman.jishang.ui.base.SimpleTitleBarActivity;
-import com.atman.jishang.utils.MyTools;
 import com.atman.jishang.utils.UiHelper;
 import com.atman.jishang.widget.BottomDialog;
 import com.atman.jishang.widget.WheelView.OnWheelChangedListener;
 import com.atman.jishang.widget.WheelView.OnWheelScrollListener;
 import com.atman.jishang.widget.WheelView.WheelView;
-import com.atman.jishang.widget.dateselect.DateSelectDialogUtil;
 import com.atman.jishang.widget.dateselect.TimePicker;
 import com.atman.jishang.widget.dateselect.TimeSelectDialogUtil;
 import com.corelib.util.LogUtils;
@@ -78,6 +79,12 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     EditText shopDescriptionTx;
     @Bind(R.id.shop_top_iv)
     ImageView shopTopIv;
+    @Bind(R.id.shop_name_title_tx)
+    TextView shopNameTitleTx;
+    @Bind(R.id.shop_address_title_tx)
+    TextView shopAddressTitleTx;
+    @Bind(R.id.shop_description_title_tx)
+    TextView shopDescriptionTitleTx;
 
     private Context mContext = EditShopActivity.this;
     private ShopInformationModel mShopInformationModel;
@@ -97,6 +104,11 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     private String hTwo = "00";
     private String mTwo = "00";
 
+    private String shopTitleStr = "店铺信息";
+    private String shopNameTitleStr = "店铺名称";
+    private String shopAddressTitleStr = "店铺地址";
+    private String shopDescriptionTitleStr = "店铺描述";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,16 +119,43 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     @Override
     public void initIntentAndMemData() {
         super.initIntentAndMemData();
-        setToolbarTitle(R.string.personal_shopInfo);
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigShopInformationId
+                        && temp.get(i).getTitle()!=null) {
+                    shopTitleStr = temp.get(i).getTitle();
+                    for (int j=0;j<temp.get(i).getConfPageBodyList().size();j++) {
+                        if (temp.get(i).getConfPageBodyList().get(j).getSort()==1) {
+                            shopNameTitleStr = temp.get(i).getConfPageBodyList().get(j).getTitle();
+                        } else if (temp.get(i).getConfPageBodyList().get(j).getSort()==2) {
+                            shopAddressTitleStr = temp.get(i).getConfPageBodyList().get(j).getTitle();
+                        } else if (temp.get(i).getConfPageBodyList().get(j).getSort()==3) {
+                            shopDescriptionTitleStr = temp.get(i).getConfPageBodyList().get(j).getTitle();
+                        }
+                    }
+                }
+            }
+        }
+
+        setToolbarTitle(shopTitleStr);
+        shopNameTitleTx.setText(shopNameTitleStr);
+        shopNameTx.setHint(shopNameTitleStr);
+        shopAddressTitleTx.setText(shopAddressTitleStr);
+        shopAddressTx.setHint(shopAddressTitleStr);
+        shopDescriptionTitleTx.setText(shopDescriptionTitleStr);
+        shopDescriptionTx.setHint(shopDescriptionTitleStr);
+
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getmWidth(),
                 getmWidth() * 504 / 1504);
         shopHeadRl.setLayoutParams(params);
         shopNameTx.addTextChangedListener(
-                new LimitSizeTextWatcher(mContext,shopNameTx,24,"店铺名称不能超过25个汉字"));
+                new LimitSizeTextWatcher(mContext, shopNameTx, 24, shopNameTitleStr+"不能超过25个汉字"));
         shopAddressTx.addTextChangedListener(
-                new LimitSizeTextWatcher(mContext,shopAddressTx,49,"店铺地址不能超过50个汉字"));
+                new LimitSizeTextWatcher(mContext, shopAddressTx, 49, shopAddressTitleStr+"不能超过50个汉字"));
         shopDescriptionTx.addTextChangedListener(
-                new LimitSizeTextWatcher(mContext,shopDescriptionTx,255,"店铺描述不能超过256个汉字"));
+                new LimitSizeTextWatcher(mContext, shopDescriptionTx, 255, shopDescriptionTitleStr+"不能超过256个汉字"));
     }
 
     @Override
@@ -139,7 +178,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
             } else {
                 showToast(mShopInformationModel.getBody().getMessage());
             }
-            if (mIndustryTypeModel == null || mIndustryTypeModel.getBody().size()==0) {
+            if (mIndustryTypeModel == null || mIndustryTypeModel.getBody().size() == 0) {
                 getDataManager().getIndustryType(IndustryTypeModel.class, true);
             } else {
                 setShopType();
@@ -157,7 +196,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
             super.onResponse(response, data);
             EditShopInfoModel mEditShopInfoModel = (EditShopInfoModel) response;
             if (mEditShopInfoModel.getResult().equals("1")) {
-                showToast("店铺信息更新成功");
+                showToast(shopTitleStr+"更新成功");
                 Intent mIntent = new Intent();
                 setResult(RESULT_OK, mIntent);
                 finish();
@@ -168,8 +207,8 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     }
 
     private void setShopType() {
-        if (mIndustryTypeModel != null || mIndustryTypeModel.getBody().size()>0) {
-            for(int i=0;i<mIndustryTypeModel.getBody().size();i++){
+        if (mIndustryTypeModel != null || mIndustryTypeModel.getBody().size() > 0) {
+            for (int i = 0; i < mIndustryTypeModel.getBody().size(); i++) {
                 if (mIndustryTypeModel.getBody().get(i).getId() == mShopInformationModel.getBody().getScId()) {
                     mScId = mIndustryTypeModel.getBody().get(i).getId();
                     mScName = mIndustryTypeModel.getBody().get(i).getScName();
@@ -192,10 +231,10 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     }
 
     private StringBuilder changeStr(String str) {
-        StringBuilder sb=new StringBuilder(str);
-        sb.insert(2,":");
-        sb.insert(5,"-");
-        sb.insert(8,":");
+        StringBuilder sb = new StringBuilder(str);
+        sb.insert(2, ":");
+        sb.insert(5, "-");
+        sb.insert(8, ":");
         return sb;
     }
 
@@ -204,7 +243,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
         super.onDestroy();
     }
 
-    @OnClick({R.id.shop_head_rl,R.id.shop_top_tx, R.id.shop_type_ll, R.id.shop_commit_bt, R.id.shop_time_ll})
+    @OnClick({R.id.shop_head_rl, R.id.shop_top_tx, R.id.shop_type_ll, R.id.shop_commit_bt, R.id.shop_time_ll})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.shop_head_rl:
@@ -219,7 +258,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
                 mShopAddress = shopAddressTx.getText().toString().trim();
                 mShopTel = shopPhoneTx.getText().toString().trim();
                 mDescription = shopDescriptionTx.getText().toString().trim();
-                mTime = shopTimeTx.getText().toString().replace(":","").replace("-","");
+                mTime = shopTimeTx.getText().toString().replace(":", "").replace("-", "");
                 if (!checkData()) {
                     return;
                 }
@@ -242,12 +281,12 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     TimePicker.OnChangeListener timeListenerOne = new TimePicker.OnChangeListener() {
         @Override
         public void onChange(int hour, int minute) {
-            if (hour<10) {
+            if (hour < 10) {
                 hOne = "0" + hour;
             } else {
                 hOne = "" + hour;
             }
-            if (minute<10) {
+            if (minute < 10) {
                 mOne = "0" + minute;
             } else {
                 mOne = "" + minute;
@@ -264,12 +303,12 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     TimePicker.OnChangeListener timeListenerTwo = new TimePicker.OnChangeListener() {
         @Override
         public void onChange(int hour, int minute) {
-            if (hour<10) {
+            if (hour < 10) {
                 hTwo = "0" + hour;
             } else {
                 hTwo = "" + hour;
             }
-            if (minute<10) {
+            if (minute < 10) {
                 mTwo = "0" + minute;
             } else {
                 mTwo = "" + minute;
@@ -283,7 +322,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
             showToast("请选择店铺背景");
             return false;
         } else if (mShopName.isEmpty()) {
-            showToast("请输入店铺名称");
+            showToast("请输入"+shopNameTitleStr);
             return false;
         } else if (mShopTel.isEmpty()) {
             showToast("请输入店铺联系电话");
@@ -292,13 +331,13 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
             showToast(getResources().getString(R.string.shop_phone_wran));
             return false;
         } else if (mShopAddress.isEmpty()) {
-            showToast("请输入店铺地址");
+            showToast("请输入"+shopAddressTitleStr);
             return false;
         } else if (mScId == -1) {
             showToast("请选择行业类型");
             return false;
         } else if (mDescription.isEmpty()) {
-            showToast("请输入店铺描述");
+            showToast("请输入"+shopDescriptionTitleStr);
             return false;
         }
         return true;
@@ -348,13 +387,13 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
             LogUtils.e("CHOOSE_BIG_PICTURE>>>>imageUri:" + imageUri);
             cropImageUri(imageUri, outputX, outputX, CROP_BIG_PICTURE);
         } else if (requestCode == TAKE_BIG_PICTURE) {
-            imageUri = Uri.parse("file:///"+path);
+            imageUri = Uri.parse("file:///" + path);
             LogUtils.e("TAKE_BIG_PICTURE>>>>imageUri:" + imageUri);
             cropImageUri(imageUri, outputX, outputY, CROP_BIG_PICTURE);
         } else if (requestCode == CROP_BIG_PICTURE) {
             LogUtils.e("CROP_BIG_PICTURE>>>>imageUri:" + imageUri);
             if (imageUri != null) {
-                new UpLoadPicture(mContext,Urls.UP_STOREIMG, this).execute(imageUri);
+                new UpLoadPicture(mContext, Urls.UP_STOREIMG, this).execute(imageUri);
             }
         }
     }
@@ -397,6 +436,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
     private ShopTypeAdapter mShopTypeAdapter;
     private String mScName;
     private int selcteId = 0;
+
     public void showTypePopupWindow(View view, final List<IndustryTypeModel.BodyEntity> mList) {
 
         // 一个自定义的布局，作为显示的内容
@@ -469,9 +509,9 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
         // 如果不设置PopupWindow的背景，无论是点击外部区域还是Back键都无法dismiss弹框
         mSelectTypePop.setBackgroundDrawable(getResources().getDrawable(R.drawable.pop_bg));
         // 设置好参数之后再show
-        if (mList!=null && mList.size()>0) {
+        if (mList != null && mList.size() > 0) {
             selcteId = 0;
-            if (shopTypeTx.getText().toString().isEmpty()){
+            if (shopTypeTx.getText().toString().isEmpty()) {
                 initPopwindowData(mList.get(selcteId));
             }
             mSelectTypePop.showAtLocation(view, Gravity.BOTTOM, 0, 0);
@@ -479,7 +519,7 @@ public class EditShopActivity extends SimpleTitleBarActivity implements UpLoadPi
 
     }
 
-    private void initPopwindowData(IndustryTypeModel.BodyEntity mList){
+    private void initPopwindowData(IndustryTypeModel.BodyEntity mList) {
         mScName = mList.getScName();
         mScId = mList.getId();
         shopTypeTx.setText(mScName);
