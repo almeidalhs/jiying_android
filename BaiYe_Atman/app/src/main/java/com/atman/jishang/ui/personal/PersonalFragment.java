@@ -13,7 +13,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.atman.jishang.R;
+import com.atman.jishang.interfaces.IndustryTitleConfigInterface;
 import com.atman.jishang.net.Urls;
+import com.atman.jishang.net.model.GetIndustryTitleConfigModel;
 import com.atman.jishang.net.model.ShopInformationModel;
 import com.atman.jishang.ui.MainActivity;
 import com.atman.jishang.ui.base.BaiYeBaseApplication;
@@ -21,6 +23,8 @@ import com.atman.jishang.ui.base.BaiYeBaseFragment;
 import com.atman.jishang.utils.UiHelper;
 import com.corelib.util.DensityUtil;
 import com.corelib.widget.ShapeImageView;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -59,10 +63,14 @@ public class PersonalFragment extends BaiYeBaseFragment {
     ImageView personalHeadbgImg;
     @Bind(R.id.personal_shopaddre_tx)
     TextView personalShopaddreTx;
+    @Bind(R.id.personal_shopinfo_tx)
+    TextView personalShopinfoTx;
 
     private final int toPersonalInfo = 606;
     private final int toShopInfo = 607;
     private final int toCreateShop = 608;
+
+    private String baseStr = "店铺信息";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,7 +87,23 @@ public class PersonalFragment extends BaiYeBaseFragment {
     @Override
     public void initIntentAndMemData() {
         super.initIntentAndMemData();
+
+        if (BaiYeBaseApplication.mGetIndustryTitleConfigModel!=null) {
+            List<GetIndustryTitleConfigModel.BodyBean> temp = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody();
+            for (int i=0;i< temp.size();i++) {
+                if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigPersonalId
+                        && temp.get(i).getTitle()!=null) {
+                    for (int j=0;j<temp.get(i).getConfPageBodyList().size();j++) {
+                        if (temp.get(i).getConfPageBodyList().get(j).getSort()==1) {
+                            baseStr = temp.get(i).getConfPageBodyList().get(j).getTitle();
+                        }
+                    }
+                }
+            }
+        }
+
         tvTitle.setText(getActivity().getResources().getString(R.string.personal_title));
+        personalShopinfoTx.setText(baseStr);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(getmWidth(),
                 (getmWidth() * 400 / 1504) + DensityUtil.dp2px(getActivity(), 80));

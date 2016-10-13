@@ -113,6 +113,7 @@
             android:src="@mipmap/shop_name_ic" />
 
         <TextView
+            android:id="@+id/personal_shopinfo_tx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/default_padding"

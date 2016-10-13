@@ -66,7 +66,7 @@ public class MemberConditionFilterActivity extends SimpleTitleBarActivity implem
             for (int i=0;i< temp.size();i++) {
                 if (temp.get(i).getPageNum() == IndustryTitleConfigInterface.ConfigMemberId
                         && temp.get(i).getTitle()!=null) {
-                    baseStr = BaiYeBaseApplication.mGetIndustryTitleConfigModel.getBody().get(i).getTitle();
+                    baseStr = temp.get(i).getTitle();
                 }
             }
         }
