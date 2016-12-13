@@ -8,6 +8,10 @@
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_top.xml"
     },
     {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_in_from_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_top.xml"
+    },
+    {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_in_from_bottom.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_bottom.xml"
     },
@@ -16,12 +20,24 @@
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_bottom.xml"
     },
     {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_out_to_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_in_from_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_bottom.xml"
+    },
+    {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_out_to_top.xml",
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_out_to_top.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_in_from_top.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_in_from_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_out_to_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/anim/slide_out_to_top.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/anim/slide_out_to_bottom.xml",

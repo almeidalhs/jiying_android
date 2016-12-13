@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_rotate.png",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/default_ptr_rotate.png"
+    },
+    {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/indicator_arrow.png",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/indicator_arrow.png"
     },
@@ -8,12 +12,20 @@
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/default_ptr_rotate.png"
     },
     {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_flip.png",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/default_ptr_flip.png"
+    },
+    {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_flip.png",
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/default_ptr_flip.png"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/default_ptr_flip.png",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/default_ptr_flip.png"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/indicator_arrow.png",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/handmark_pull_library/src/main/res/drawable-mdpi/indicator_arrow.png"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/handmark_pull_library/build/intermediates/res/merged/debug/drawable-mdpi-v4/indicator_arrow.png",

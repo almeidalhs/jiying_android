@@ -1,7 +1,7 @@
 [
     {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_enter.xml"
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
@@ -12,56 +12,32 @@
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_top.xml"
-    },
-    {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_in.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_top.xml"
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_top.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_bottom.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_out.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_exit.xml"
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_exit.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
         "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_top.xml"
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_grow_fade_in_from_bottom.xml"
-    },
-    {
-        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
-        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_in.xml"
     },
     {
         "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml",
@@ -78,5 +54,69 @@
     {
         "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
         "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/tangbingliang/Desktop/AndroidStudioProjects/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/tangbingliang/Desktop/gitProjects/jiying_android/BaiYe_Atman/draglistview_library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/anim/abc_popup_enter.xml"
     }
 ]
